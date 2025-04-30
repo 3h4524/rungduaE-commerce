@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khu Du Lịch Rừng Dừa Bảy Mẫu - Nét Đẹp Miền Tây Giữa Lòng Quảng Nam</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --accent-color: #ffcc80;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --dark-bg: #344e41;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            color: white;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 15px auto;
+        }
+        
+        .info-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .info-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .info-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .info-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .info-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+        
+        .info-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .contact-info {
+            background-color: var(--dark-bg) !important;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 200px;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .activity-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .activity-img {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .activity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .activity-card:hover .activity-img img {
+            transform: scale(1.1);
+        }
+        
+        .activity-info {
+            padding: 20px;
+        }
+        
+        .activity-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .team-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-info {
+            padding: 20px;
+        }
+        
+        .team-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .team-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Desktop First Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .activities {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .info-content {
+                flex-direction: column;
+            }
+            
+            .info-image {
+                order: -1;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .contact-details {
+                gap: 20px;
+            }
+            
+            .header-content {
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            header {
+                padding: 80px 0 60px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .info-box {
+                padding: 20px;
+            }
+            
+            .activities {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-button {
+                padding: 10px 20px;
+            }
+        }
+        
+        /* Device Preview Frames */
+        .device-preview {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 40px 0;
+            background-color: #222;
+        }
+        
+        .desktop-preview, .mobile-preview {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .desktop-preview {
+            width: 80%;
+            max-width: 1000px;
+            height: 600px;
+            position: relative;
+            border: 20px solid #333;
+            border-radius: 10px;
+            border-bottom-width: 40px;
+        }
+        
+        .desktop-preview:after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 10px;
+            background: #555;
+            border-radius: 5px;
+        }
+        
+        .mobile-preview {
+            width: 300px;
+            height: 600px;
+            border: 15px solid #111;
+            border-radius: 30px;
+            position: relative;
+        }
+        
+        .mobile-preview:before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 10px;
+            background: #222;
+            border-radius: 5px;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .mobile-preview:after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .device-screen {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+        
+        .device-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .device-title {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Khu Du Lịch Sinh Thái Qua</h1> 
+            <h1>Rừng Dừa</h1>
+            <p>Hành trình khám phá miền Tây thu nhỏ giữa lòng miền Trung – Hòa mình vào thiên nhiên xanh mát và trải nghiệm văn hóa đặc sắc của người dân xứ Quảng</p>
+            <a href="#contact" class="cta-button">Liên Hệ Ngay</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">GIỚI THIỆU CHUNG</h2>
+            <div class="info-box">
+                <div class="info-content">
+                    <div class="info-text">
+                        <p>Khu du lịch sinh thái Qua Rừng Dừa là điểm đến không thể bỏ lỡ khi ghé thăm Hội An – Đà Nẵng. Nằm cách trung tâm phố cổ Hội An chỉ khoảng 3km và cách thành phố Đà Nẵng 31km, nơi đây sở hữu vẻ đẹp sông nước nên thơ, đậm chất miền Tây giữa lòng miền Trung.</p>
+                        <p>Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú. Khí hậu nhiệt đới đặc trưng góp phần giúp rừng dừa phát triển mạnh mẽ, trải dài trên các thôn: Vạn Lăng, Thanh Nhứt, Thanh Tam Đông, Thanh Tam Tây và Cồn Nhàn.</p>
+                        <p>Du khách khi đến đây sẽ được trải nghiệm không gian đậm chất miền Tây Nam Bộ – từ việc ngồi thuyền thúng xuyên rừng dừa, chiêm ngưỡng kỹ năng múa thúng điêu luyện đến thưởng thức các tiết mục dân gian, ẩm thực truyền thống và khám phá văn hóa bản địa độc đáo.</p>
+                        <p><span class="highlight">Giờ mở cửa:</span> Từ 7h30 – 18h30</p>
+                        <p><span class="highlight">Địa Chỉ:</span> Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam</p>
+                    </div>
+                    <div class="info-image">
+                        <img src="/api/placeholder/600/400" alt="Rừng Dừa Bảy Mẫu">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history">
+        <div class="container">
+            <h2 class="section-title">LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN</h2>
+            <div class="info-box">
+                <div class="info-content">
+                    <div class="info-image">
+                        <img src="/api/placeholder/600/400" alt="Lịch sử Rừng Dừa Bảy Mẫu">
+                    </div>
+                    <div class="info-text"> 
+                        <p>Trong thời kỳ kháng chiến chống thực dân Pháp và đế quốc Mỹ, Rừng dừa từng là căn cứ địa cách mạng kiên cường, nơi ghi dấu nhiều trận đánh oanh liệt và sự kiện lịch sử quan trọng. Mảnh đất này từng chứng kiến tinh thần chiến đấu anh dũng, gắn bó máu thịt giữa quân và dân xứ Quảng.</p> 
+                        <p>Ngày nay, Rừng dừa Bảy Mẫu không chỉ là di tích mang giá trị lịch sử to lớn mà còn là khu rừng ngập mặn có hệ sinh thái đa dạng, cảnh quan sông nước hữu tình. Từ năm 2017, nơi đây được đưa vào quy hoạch và phát triển du lịch, trở thành một khu du lịch sinh thái đặc sắc – thu hút đông đảo du khách trong và ngoài nước.</p> 
+                        <p>Dù mới hình thành chưa lâu, khu du lịch sinh thái qua rừng dừa này đã nhanh chóng khẳng định vị thế với nhiều loại hình trải nghiệm hấp dẫn như: tham quan bằng thuyền thúng, thưởng thức đặc sản địa phương, vui chơi giải trí và du lịch cộng đồng. Tất cả góp phần tạo nên một điểm đến lý tưởng cho những ai yêu thiên nhiên, văn hóa và sự bình yên giữa lòng Hội An.</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">TẦM NHÌN VÀ SỨ MỆNH</h2>
+            <div class="info-box">
+                <div class="info-content">
+                    <div class="info-image">
+                        <img src="/api/placeholder/600/400" alt="Tầm nhìn và sứ mệnh">
+                    </div>
+                    <div class="info-text"> 
+                        <p>Dù là một điểm đến còn khá mới trên bản đồ du lịch, **khu du lịch sinh thái Qua Rừng Dừa** đã và đang tạo nên sức hút mạnh mẽ, hứa hẹn sẽ còn phát triển vượt bậc trong tương lai. Với mong muốn lan tỏa hình ảnh những rặng dừa xanh bạt ngàn, những chiếc thuyền thúng mộc mạc và nét văn hóa đặc trưng của người dân xứ Quảng, chúng tôi không ngừng nỗ lực để đưa khu du lịch đến‌ gần hơn với du khách trong và ngoài nước.</p> 
+                        <p>Khu du lịch luôn chú trọng phát triển nguồn nhân lực chất lượng, nâng cao dịch vụ nhằm đáp ứng nhanh chóng và tối ưu mọi nhu cầu của du khách. Đồng thời, chúng tôi tích cực cung cấp thông tin hữu ích, chia sẻ cẩm nang du lịch và những trải nghiệm thực tế để mỗi hành trình đến với Qua Rừng Dừa trở thành một chuyến đi đáng nhớ – nơi du khách được hòa mình vào vẻ đẹp yên bình của "miền Tây sông nước giữa lòng miền Trung".</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities">
+        <div class="container">
+            <h2 class="section-title">HOẠT ĐỘNG NỔI BẬT</h2>
+            <p>Khi đặt chân đến khu du lịch sinh thái Qua Rừng Dừa, du khách sẽ ngỡ ngàng trước khung cảnh rừng dừa nước bạt ngàn, xen lẫn những mái nhà giản dị được lợp bằng lá dừa mang đậm nét quê yên bình. Không chỉ dừng lại ở cảnh sắc thiên nhiên độc đáo, nơi đây còn mang đến hàng loạt hoạt động hấp dẫn, thú vị phù hợp với mọi lứa tuổi – từ trải nghiệm đi thuyền thúng, múa thúng dân gian cho đến thưởng thức ẩm thực địa phương đậm chất xứ Quảng.</p>
+            
+            <div class="activities">
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="/api/placeholder/400/300" alt="Đi thuyền thúng">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Đi thuyền thúng khám phá rừng dừa</h3>
+                        <p>Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du khách sẽ cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc trưng của người dân xứ Quảng.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="/api/placeholder/400/300" alt="Ẩm thực địa phương">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Thưởng thức ẩm thực địa phương</h3>
+                        <p>Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua Rừng Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm dừa béo ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="/api/placeholder/400/300" alt="Chụp ảnh lưu niệm">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Selfile giữa thiên nhiên</h3>
+                        <p>Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa xanh mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-box" style="margin-top: 40px;">
+                <div class="info-content">
+                    <div class="info-text">
+                        <p>**Tất cả những điều tuyệt vời này đều có mặt tại khu du lịch Rừng Dừa Bảy Mẫu. Nếu du khách đã quen thuộc với vẻ đẹp cổ kính, lãng mạn của Hội An, thì nơi đây sẽ mang đến một không gian hoàn toàn mới mẻ và đầy bất ngờ. Hứa hẹn một chuyến đi đầy cảm xúc và kỷ niệm khó quên.**</p>
+                    </div>
+                    <div class="info-image">
+                        <img src="/api/placeholder/600/400" alt="Trải nghiệm du lịch">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-info">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">LIÊN HỆ KHU DU LỊCH SINH THÁI QUA RỪNG DỪA</h2>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Địa chỉ</h3>
+                    <p>Tổ 7 – Thôn Vạn Lăng – Cẩm Thanh – Hội An</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Hotline</h3>
+                    <p>0934.098.169</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>camtran.170580@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Website</h3>
+                    <p>https://rungduabaymau.vn/</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© Khu Du Lịch Qua Rừng Dừa. Đẹp từ thiên nhiên - Sâu lắng từ văn hóa.</p>
+        </div>
+    </footer>
+</body>
+</html>
