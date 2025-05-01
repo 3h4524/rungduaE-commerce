@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        (function() {
+        (function () {
             emailjs.init("K-sUjcDKfXdqVAnqD");
         })();
     </script>
@@ -50,6 +51,10 @@
             padding: 120px 0 80px;
             text-align: center;
             position: relative;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         .header-content {
@@ -177,41 +182,6 @@
             transform: scale(1.05);
         }
 
-        .contact-info {
-            background-color: var(--dark-bg) !important;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .contact-details {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 200px;
-        }
-
-        .contact-item i {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: var(--accent-color);
-        }
-
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
-        }
 
         .highlight {
             color: var(--primary-color);
@@ -237,6 +207,8 @@
             transform: translateY(-10px);
         }
 
+
+
         .activity-img {
             height: 200px;
             width: 100%;
@@ -249,6 +221,7 @@
             object-fit: cover;
             transition: transform 0.5s ease;
         }
+
 
         .activity-card:hover .activity-img img {
             transform: scale(1.1);
@@ -363,6 +336,12 @@
             display: none;
         }
 
+        .main-footer .footer-links ul {
+            list-style: none;
+            padding-left: 0;
+            /* Ghi đè margin-left */
+        }
+
         /* Responsive Styles */
         @media (max-width: 1024px) {
             .container {
@@ -437,16 +416,22 @@
         <div class="container header-content">
             <h1 data-key="header-title-1">Dịch Vụ Du Lịch Qua</h1>
             <h1 data-key="header-title-2">Rừng Dừa</h1>
-            <p data-key="header-description">Đặt dịch vụ trải nghiệm độc đáo và thú vị tại Khu Du Lịch Sinh Thái Qua Rừng Dừa</p>
+            <p data-key="header-description">Đặt dịch vụ trải nghiệm độc đáo và thú vị tại Khu Du Lịch Sinh Thái Qua
+                Rừng Dừa</p>
             <a href="#booking" class="cta-button" data-key="header-cta">Đặt Lịch Ngay</a>
         </div>
     </header>
 
     <section id="featured-services" style="padding-top: 2%; padding-bottom: 5%;">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 2%;" data-key="featured-services-title">CÁC DỊCH VỤ NỔI BẬT</h2>
-            <p data-key="featured-services-p">Khi đặt chân đến khu du lịch sinh thái Qua Rừng Dừa, du khách sẽ ngỡ ngàng trước khung cảnh rừng dừa nước bạt ngàn, xen lẫn những mái nhà giản dị được lợp bằng lá dừa mang đậm nét quê yên bình. Không chỉ dừng lại ở cảnh sắc thiên nhiên độc đáo, nơi đây còn mang đến hàng loạt hoạt động hấp dẫn, thú vị phù hợp với mọi lứa tuổi – từ trải nghiệm đi thuyền thúng, múa thúng dân gian cho đến thưởng thức ẩm thực địa phương đậm chất xứ Quảng.</p>
-            
+            <h2 class="section-title" style="margin-bottom: 2%;" data-key="featured-services-title">CÁC DỊCH VỤ NỔI BẬT
+            </h2>
+            <p data-key="featured-services-p">Khi đặt chân đến khu du lịch sinh thái Qua Rừng Dừa, du khách sẽ ngỡ ngàng
+                trước khung cảnh rừng dừa nước bạt ngàn, xen lẫn những mái nhà giản dị được lợp bằng lá dừa mang đậm nét
+                quê yên bình. Không chỉ dừng lại ở cảnh sắc thiên nhiên độc đáo, nơi đây còn mang đến hàng loạt hoạt
+                động hấp dẫn, thú vị phù hợp với mọi lứa tuổi – từ trải nghiệm đi thuyền thúng, múa thúng dân gian cho
+                đến thưởng thức ẩm thực địa phương đậm chất xứ Quảng.</p>
+
             <div class="activities">
                 <div class="activity-card">
                     <div class="activity-img">
@@ -454,27 +439,32 @@
                     </div>
                     <div class="activity-info">
                         <h3 data-key="activity-1-title">Đi thuyền thúng khám phá rừng dừa</h3>
-                        <p data-key="activity-1-p">Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du khách sẽ cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc trưng của người dân xứ Quảng.</p>
+                        <p data-key="activity-1-p">Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du khách sẽ
+                            cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc trưng của người
+                            dân xứ Quảng.</p>
                     </div>
                 </div>
-                
+
                 <div class="activity-card">
                     <div class="activity-img">
                         <img src="/image/introduction-5.png" alt="Local Cuisine">
                     </div>
                     <div class="activity-info">
                         <h3 data-key="activity-2-title">Thưởng thức ẩm thực địa phương</h3>
-                        <p data-key="activity-2-p">Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua Rừng Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm dừa béo ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.</p>
+                        <p data-key="activity-2-p">Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua Rừng
+                            Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm dừa béo
+                            ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.</p>
                     </div>
                 </div>
-                
+
                 <div class="activity-card">
                     <div class="activity-img">
                         <img src="/image/introduction-6.png" alt="Nature Selfie">
                     </div>
                     <div class="activity-info">
                         <h3 data-key="activity-3-title">Selfie giữa thiên nhiên</h3>
-                        <p data-key="activity-3-p">Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa xanh mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.</p>
+                        <p data-key="activity-3-p">Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa xanh
+                            mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.</p>
                     </div>
                 </div>
             </div>
@@ -484,82 +474,99 @@
     <section id="booking" class="booking-section" style="padding-top: 0px;">
         <div class="container">
             <h2 class="section-title" data-key="booking-title">ĐẶT LỊCH DỊCH VỤ</h2>
-            
+
             <div class="booking-form">
                 <div class="success-message" id="successMessage">
-                    <i class="fas fa-check-circle me-2"></i> <span data-key="success-message">Đặt lịch thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.</span>
+                    <i class="fas fa-check-circle me-2"></i> <span data-key="success-message">Đặt lịch thành công! Chúng
+                        tôi sẽ liên hệ với bạn sớm nhất.</span>
                 </div>
-                
+
                 <form id="bookingForm">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="fullName" class="form-label" data-key="fullName-label">Họ và tên <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" data-placeholder-key="fullName-placeholder">
-                                <div class="error-feedback" id="fullNameError" data-key="fullName-error">Vui lòng nhập họ và tên</div>
+                                <label for="fullName" class="form-label" data-key="fullName-label">Họ và tên <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
+                                    data-placeholder-key="fullName-placeholder">
+                                <div class="error-feedback" id="fullNameError" data-key="fullName-error">Vui lòng nhập
+                                    họ và tên</div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="phone" class="form-label" data-key="phone-label">Số điện thoại <span class="text-danger">*</span></label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" data-placeholder-key="phone-placeholder">
-                                <div class="error-feedback" id="phoneError" data-key="phone-error">Số điện thoại phải từ 9-10 số</div>
+                                <label for="phone" class="form-label" data-key="phone-label">Số điện thoại <span
+                                        class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
+                                    data-placeholder-key="phone-placeholder">
+                                <div class="error-feedback" id="phoneError" data-key="phone-error">Số điện thoại phải từ
+                                    9-10 số</div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="service" class="form-label" data-key="service-label">Dịch vụ <span class="text-danger">*</span></label>
+                                <label for="service" class="form-label" data-key="service-label">Dịch vụ <span
+                                        class="text-danger">*</span></label>
                                 <select class="form-select" id="service">
                                     <option value="" data-key="service-option-default">-- Chọn dịch vụ --</option>
                                     <option value="thuyentung" data-key="service-option-1">Chèo thuyền</option>
                                     <option value="amthuc" data-key="service-option-2">Nấu món ăn dân gian</option>
                                     <option value="khac" data-key="service-option-3">Khác</option>
                                 </select>
-                                <div class="error-feedback" id="serviceError" data-key="service-error">Vui lòng chọn dịch vụ</div>
+                                <div class="error-feedback" id="serviceError" data-key="service-error">Vui lòng chọn
+                                    dịch vụ</div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="groupSize" class="form-label" data-key="groupSize-label">Số lượng người <span class="text-danger">*</span></label>
+                                <label for="groupSize" class="form-label" data-key="groupSize-label">Số lượng người
+                                    <span class="text-danger">*</span></label>
                                 <select class="form-select" id="groupSize">
                                     <option value="" data-key="groupSize-option-default">-- Chọn số lượng --</option>
                                     <option value="1-3" data-key="groupSize-option-1">1-3 người</option>
                                     <option value="4-6" data-key="groupSize-option-2">4-6 người</option>
                                     <option value="7-10" data-key="groupSize-option-3">7-10 người</option>
                                 </select>
-                                <div class="error-feedback" id="groupSizeError" data-key="groupSize-error">Vui lòng chọn số lượng người</div>
+                                <div class="error-feedback" id="groupSizeError" data-key="groupSize-error">Vui lòng chọn
+                                    số lượng người</div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="bookingDate" class="form-label" data-key="bookingDate-label">Ngày đặt <span class="text-danger">*</span></label>
+                                <label for="bookingDate" class="form-label" data-key="bookingDate-label">Ngày đặt <span
+                                        class="text-danger">*</span></label>
                                 <input type="date" class="form-control" id="bookingDate">
-                                <div class="error-feedback" id="bookingDateError" data-key="bookingDate-error">Vui lòng chọn ngày đặt hợp lệ</div>
+                                <div class="error-feedback" id="bookingDateError" data-key="bookingDate-error">Vui lòng
+                                    chọn ngày đặt hợp lệ</div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="bookingTime" class="form-label" data-key="bookingTime-label">Giờ đặt <span class="text-danger">*</span></label>
+                                <label for="bookingTime" class="form-label" data-key="bookingTime-label">Giờ đặt <span
+                                        class="text-danger">*</span></label>
                                 <input type="time" class="form-control" id="bookingTime" min="07:30" max="17:00">
-                                <div class="error-feedback" id="bookingTimeError" data-key="bookingTime-error">Vui lòng chọn giờ từ 7:30 - 17:00</div>
+                                <div class="error-feedback" id="bookingTimeError" data-key="bookingTime-error">Vui lòng
+                                    chọn giờ từ 7:30 - 17:00</div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="form-group mt-4">
                         <label for="notes" class="form-label" data-key="notes-label">Ghi chú</label>
-                        <textarea class="form-control" id="notes" rows="3" placeholder="Enter any special requests or additional information (if any)" data-placeholder-key="notes-placeholder"></textarea>
+                        <textarea class="form-control" id="notes" rows="3"
+                            placeholder="Enter any special requests or additional information (if any)"
+                            data-placeholder-key="notes-placeholder"></textarea>
                     </div>
-                    
+
                     <div class="mt-4">
                         <button type="submit" class="submit-btn" data-key="submit-btn">Đặt Lịch</button>
                     </div>
@@ -568,49 +575,24 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-info">
-        <div class="container">
-            <h2 class="section-title" style="color: white;" data-key="contact-title">LIÊN HỆ KHU DU LỊCH SINH THÁI QUA RỪNG DỪA</h2>
-            
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3 data-key="contact-address-label">Địa chỉ</h3>
-                    <p data-key="contact-address">Vùng Nhì - Cẩm Thanh - Hội An</p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3 data-key="contact-phone-label">Hotline</h3>
-                    <p>0985.402.302</p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3 data-key="contact-email-label">Email</h3>
-                    <p>khudulichrungduabaymau@gmail.com</p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <h3 data-key="contact-website-label">Website</h3>
-                    <p>https://rungduabaymau.vn</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="footer-placeholder"></div>
 
-    <footer>
-        <div class="container">
-            <p data-key="footer-text">© Khu Du Lịch Qua Rừng Dừa. Đẹp từ thiên nhiên - Sâu lắng từ văn hóa.</p>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1); // Lấy id từ href (bỏ #)
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
         // Object chứa các bản dịch
         const translations = {
             vi: {
@@ -771,6 +753,42 @@
             const savedLang = localStorage.getItem('language') || 'vi';
             changeLanguage(savedLang);
 
+            fetch('footer.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load footer.html');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Tạo một DOM tạm thời để phân tích nội dung footer.html
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+
+                    // Lấy nội dung HTML của footer (section và footer)
+                    const footerContent = doc.querySelector('body').innerHTML;
+
+                    // Lấy các thẻ <style> từ footer.html
+                    const footerStyles = doc.querySelector('style')?.innerHTML || '';
+
+                    // Thêm styles vào head của trang chính
+                    if (footerStyles) {
+                        const styleElement = document.createElement('style');
+                        styleElement.textContent = footerStyles;
+                        document.head.appendChild(styleElement);
+                    }
+
+                    // Thêm nội dung footer vào placeholder
+                    document.getElementById('footer-placeholder').innerHTML = footerContent;
+
+                    // Cập nhật lại ngôn ngữ cho footer sau khi tải
+                    changeLanguage(savedLang);
+                })
+                .catch(error => {
+                    console.error('Error loading footer:', error);
+                    document.getElementById('footer-placeholder').innerHTML = '<p>Error loading footer. Please try again later.</p>';
+                });
+
             // Set min date to today
             const today = new Date();
             const dd = String(today.getDate()).padStart(2, '0');
@@ -892,4 +910,5 @@
         });
     </script>
 </body>
+
 </html>

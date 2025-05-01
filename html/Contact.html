@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        (function() {
+        (function () {
             emailjs.init("K-sUjcDKfXdqVAnqD");
         })();
     </script>
@@ -24,15 +25,19 @@
             --text-color: #333;
             --light-bg: #f8f9fa;
             --dark-bg: #344e41;
+            --footer-bg: #1c2e1e;
+            --footer-text: #ffffff;
+            --footer-link: #a7c957;
+            --footer-link-hover: #f4d35e;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             color: var(--text-color);
             background-color: #f5f5f5;
@@ -45,7 +50,7 @@
             padding: 60px 0;
             text-align: center;
         }
-        
+
         .contact-details {
             display: flex;
             justify-content: center;
@@ -53,13 +58,13 @@
             flex-wrap: wrap;
             margin-top: 30px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         /* Banner section */
         .banner {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/image/contact-banner.png') center/cover no-repeat;
@@ -92,7 +97,7 @@
             background: var(--accent-color);
             color: var(--dark-bg);
         }
-        
+
         .banner-title {
             font-size: 3rem;
             font-weight: 700;
@@ -108,7 +113,7 @@
             position: relative;
             font-weight: 700;
         }
-        
+
         .section-title::after {
             content: "";
             display: block;
@@ -117,7 +122,7 @@
             background-color: var(--accent-color);
             margin: 15px auto;
         }
-        
+
         .contact-section {
             padding: 3% 0;
             background-color: var(--light-bg);
@@ -140,7 +145,7 @@
             height: 100%;
             transition: transform 0.3s ease;
         }
-        
+
         .contact-box:hover {
             transform: translateY(-5px);
         }
@@ -185,7 +190,7 @@
             align-items: center;
             min-width: 200px;
         }
-        
+
         .contact-item2 i {
             font-size: 2rem;
             margin-bottom: 15px;
@@ -250,14 +255,6 @@
             background-color: var(--light-bg);
         }
 
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
-        }
-
         .form-title {
             color: var(--primary-color);
             font-size: 1.5rem;
@@ -292,18 +289,211 @@
             box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
         }
 
+        /* FOOTER CSS */
+        /* Footer Contact Section */
+        .footer-contact-info {
+            background-color: var(--dark-bg);
+            color: var(--footer-text);
+            padding: 50px 0;
+        }
+
+        .footer-section-title {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .footer-section-title::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .footer-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-contact-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .footer-contact-icon {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-right: 15px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .footer-contact-text h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .footer-contact-text p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* Main Footer */
+        .main-footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .footer-about p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--footer-text);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: var(--accent-color);
+            color: var(--footer-bg);
+            transform: scale(1.1);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: var(--footer-link);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a i {
+            margin-right: 6px;
+            font-size: 0.75rem;
+            color: var(--accent-color);
+        }
+
+        .footer-links a:hover {
+            color: var(--footer-link-hover);
+            transform: translateX(5px);
+        }
+
+        .footer-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .footer-gallery-item {
+            height: 80px;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .footer-gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
         /* Responsive styles */
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
             .banner-title {
                 font-size: 2.2rem;
             }
-            
+
             .contact-container {
                 margin: 0 15px;
             }
-            
-            .contact-info-box, .contact-form-box {
+
+            .contact-info-box,
+            .contact-form-box {
                 padding: 30px 20px;
+            }
+
+            .footer-section-title {
+                font-size: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-gallery {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -311,25 +501,44 @@
             .banner-title {
                 font-size: 1.8rem;
             }
-            
+
             .banner {
                 padding: 80px 0 60px;
             }
-            
+
             .section-title {
                 font-size: 1.5rem;
             }
-            
+
             .contact-box {
                 padding: 20px;
             }
-            
+
             .submit-btn {
                 padding: 10px 20px;
             }
+
+            .footer-contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-contact-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
         }
+
+        
+        .main-footer .footer-links ul {
+            list-style: none;
+            padding-left: 0;
+            /* Ghi đè margin-left */
+        }
+
     </style>
 </head>
+
 <body>
     <!-- Banner Section -->
     <section class="banner">
@@ -347,8 +556,10 @@
         <div class="container">
             <h2 class="section-title" data-key="contact-section-title">THÔNG TIN LIÊN HỆ</h2>
             <p class="contact-intro" data-key="contact-intro">
-                Để không ngừng nâng cao chất lượng dịch vụ và đáp ứng tốt hơn nữa các yêu cầu của Quý khách, chúng tôi mong muốn
-                nhận được các thông tin phản hồi. Nếu Quý khách có bất kỳ thắc mắc hoặc đóng góp nào, xin vui lòng liên hệ với chúng
+                Để không ngừng nâng cao chất lượng dịch vụ và đáp ứng tốt hơn nữa các yêu cầu của Quý khách, chúng tôi
+                mong muốn
+                nhận được các thông tin phản hồi. Nếu Quý khách có bất kỳ thắc mắc hoặc đóng góp nào, xin vui lòng liên
+                hệ với chúng
                 tôi theo thông tin dưới đây. Chúng tôi sẽ phản hồi tới Quý khách trong thời gian sớm nhất.
             </p>
 
@@ -361,7 +572,8 @@
                                 <i class="fas fa-info-circle"></i>
                             </div>
                             <div data-key="customer-service-info">
-                                Bộ phận tiếp nhận và giải quyết các yêu cầu, đề nghị, ý kiến liên quan đến chất lượng dịch vụ Qua Rừng Dừa
+                                Bộ phận tiếp nhận và giải quyết các yêu cầu, đề nghị, ý kiến liên quan đến chất lượng
+                                dịch vụ Qua Rừng Dừa
                             </div>
                         </div>
                         <div class="contact-item">
@@ -377,7 +589,8 @@
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
-                                <strong data-key="phone-label">Điện thoại:</strong> <a href="tel:0934098169" style="color: var(--primary-color); text-decoration: none;">0934.098.169</a>
+                                <strong data-key="phone-label">Điện thoại:</strong> <a href="tel:0934098169"
+                                    style="color: var(--primary-color); text-decoration: none;">0934.098.169</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -385,7 +598,8 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <strong data-key="email-label">Email:</strong> <a href="mailto:camtran.170580@gmail.com" style="color: var(--primary-color); text-decoration: none;">camtran.170580@gmail.com</a>
+                                <strong data-key="email-label">Email:</strong> <a href="mailto:camtran.170580@gmail.com"
+                                    style="color: var(--primary-color); text-decoration: none;">camtran.170580@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -403,27 +617,36 @@
                     <div class="contact-box">
                         <h4 class="text-center" data-key="feedback-title">GỬI PHẢN HỒI</h4>
                         <div class="success-message" id="successMessage">
-                            <i class="fas fa-check-circle me-2"></i> <span data-key="success-message">Gửi phản hồi thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.</span>
+                            <i class="fas fa-check-circle me-2"></i> <span data-key="success-message">Gửi phản hồi thành
+                                công! Chúng tôi sẽ liên hệ với bạn sớm nhất.</span>
                         </div>
                         <form id="contactForm" novalidate>
                             <div class="mb-3">
                                 <label for="fullName" class="form-label" data-key="fullName-label">Họ & tên *</label>
-                                <input type="text" class="form-control" id="fullName" name="fullName" required data-placeholder-key="fullName-placeholder">
-                                <div class="error-message" id="fullNameError" data-key="fullName-error">Vui lòng nhập họ tên</div>
+                                <input type="text" class="form-control" id="fullName" name="fullName" required
+                                    data-placeholder-key="fullName-placeholder">
+                                <div class="error-message" id="fullNameError" data-key="fullName-error">Vui lòng nhập họ
+                                    tên</div>
                             </div>
                             <div class="mb-3">
-                                <label for="phone" class="form-label" data-key="phone-label-form">Số điện thoại *</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" required data-placeholder-key="phone-placeholder">
-                                <div class="error-message" id="phoneError" data-key="phone-error">Vui lòng nhập số điện thoại hợp lệ (9-10 số)</div>
+                                <label for="phone" class="form-label" data-key="phone-label-form">Số điện thoại
+                                    *</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required
+                                    data-placeholder-key="phone-placeholder">
+                                <div class="error-message" id="phoneError" data-key="phone-error">Vui lòng nhập số điện
+                                    thoại hợp lệ (9-10 số)</div>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label" data-key="email-label-form">Email *</label>
-                                <input type="email" class="form-control" id="email" name="email" required data-placeholder-key="email-placeholder">
-                                <div class="error-message" id="emailError" data-key="email-error">Vui lòng nhập địa chỉ email hợp lệ (@gmail.com)</div>
+                                <input type="email" class="form-control" id="email" name="email" required
+                                    data-placeholder-key="email-placeholder">
+                                <div class="error-message" id="emailError" data-key="email-error">Vui lòng nhập địa chỉ
+                                    email hợp lệ (@gmail.com)</div>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label" data-key="message-label">Thông điệp</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" data-placeholder-key="message-placeholder"></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="4"
+                                    data-placeholder-key="message-placeholder"></textarea>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="submit-btn" data-key="submit-btn">GỬI NGAY</button>
@@ -457,7 +680,8 @@
                                         <i class="fas fa-phone-alt"></i>
                                     </div>
                                     <div>
-                                        <a href="tel:0934098169" style="color: inherit; text-decoration: none;">0934.098.169</a>
+                                        <a href="tel:0934098169"
+                                            style="color: inherit; text-decoration: none;">0934.098.169</a>
                                     </div>
                                 </div>
                                 <div class="contact-item">
@@ -465,7 +689,8 @@
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                     <div>
-                                        <a href="mailto:camtran.170580@gmail.com" style="color: inherit; text-decoration: none;">camtran.170580@gmail.com</a>
+                                        <a href="mailto:camtran.170580@gmail.com"
+                                            style="color: inherit; text-decoration: none;">camtran.170580@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -475,23 +700,31 @@
                         <div class="contact-form-box">
                             <h3 class="form-title" data-key="quick-form-title">LIÊN HỆ NGAY</h3>
                             <div class="success-message" id="quickSuccessMessage">
-                                <i class="fas fa-check-circle me-2"></i> <span data-key="success-message">Gửi phản hồi thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.</span>
+                                <i class="fas fa-check-circle me-2"></i> <span data-key="success-message">Gửi phản hồi
+                                    thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.</span>
                             </div>
                             <form id="quickContactForm" novalidate>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="quickName" name="fullName" required data-placeholder-key="quickName-placeholder">
-                                    <div class="error-message" id="quickNameError" data-key="quickName-error">Vui lòng nhập họ tên</div>
+                                    <input type="text" class="form-control" id="quickName" name="fullName" required
+                                        data-placeholder-key="quickName-placeholder">
+                                    <div class="error-message" id="quickNameError" data-key="quickName-error">Vui lòng
+                                        nhập họ tên</div>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="tel" class="form-control" id="quickPhone" name="phone" required data-placeholder-key="quickPhone-placeholder">
-                                    <div class="error-message" id="quickPhoneError" data-key="quickPhone-error">Vui lòng nhập số điện thoại hợp lệ (9-10 số)</div>
+                                    <input type="tel" class="form-control" id="quickPhone" name="phone" required
+                                        data-placeholder-key="quickPhone-placeholder">
+                                    <div class="error-message" id="quickPhoneError" data-key="quickPhone-error">Vui lòng
+                                        nhập số điện thoại hợp lệ (9-10 số)</div>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" id="quickEmail" name="email" required data-placeholder-key="quickEmail-placeholder">
-                                    <div class="error-message" id="quickEmailError" data-key="quickEmail-error">Vui lòng nhập địa chỉ email hợp lệ (@gmail.com)</div>
+                                    <input type="email" class="form-control" id="quickEmail" name="email" required
+                                        data-placeholder-key="quickEmail-placeholder">
+                                    <div class="error-message" id="quickEmailError" data-key="quickEmail-error">Vui lòng
+                                        nhập địa chỉ email hợp lệ (@gmail.com)</div>
                                 </div>
                                 <div class="mb-3">
-                                    <textarea class="form-control" id="quickMessage" name="message" rows="4" data-placeholder-key="quickMessage-placeholder"></textarea>
+                                    <textarea class="form-control" id="quickMessage" name="message" rows="4"
+                                        data-placeholder-key="quickMessage-placeholder"></textarea>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="submit-btn" data-key="submit-btn">GỬI NGAY</button>
@@ -504,41 +737,77 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-info">
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
         <div class="container">
-            <h2 class="section-title" style="color: white;" data-key="contact-footer-title">LIÊN HỆ KHU DU LỊCH SINH THÁI QUA RỪNG DỪA</h2>
-            
-            <div class="contact-details">
-                <div class="contact-item2">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3 data-key="contact-address-label">Địa chỉ</h3>
-                    <p data-key="contact-address-footer">Tổ 7 – Thôn Vạn Lăng – Cẩm Thanh – Hội An</p>
+            <div class="footer-content">
+                <!-- About Column -->
+                <div class="footer-column footer-about">
+                    <h3>Về Chúng Tôi</h3>
+                    <p>Khu Du Lịch Sinh Thái Qua Rừng Dừa Bảy Mẫu mang đến trải nghiệm độc đáo với vẻ đẹp hoang sơ của rừng dừa nước Cẩm Thanh - Di sản Văn hóa Phi vật thể Quốc gia.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
                 </div>
                 
-                <div class="contact-item2">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3 data-key="contact-phone-label">Hotline</h3>
-                    <p>0934.098.169</p>
+                <!-- Quick Links -->
+                <div class="footer-column footer-links">
+                    <h3>Liên Kết Nhanh</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Trang Chủ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Giới Thiệu</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Dịch Vụ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tour Du Lịch</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Liên Hệ</a></li>
+                    </ul>
                 </div>
                 
-                <div class="contact-item2">
-                    <i class="fas fa-envelope"></i>
-                    <h3 data-key="contact-email-label">Email</h3>
-                    <p>camtran.170580@gmail.com</p>
+                <!-- Services -->
+                <div class="footer-column footer-links">
+                    <h3>Dịch Vụ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tour Thuyền Thúng</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Ẩm Thực Dân Gian</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Nghề Thủ Công Truyền Thống</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Trải Nghiệm Văn Hóa</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Đặt Tour Nhóm</a></li>
+                    </ul>
                 </div>
                 
-                <div class="contact-item2">
-                    <i class="fas fa-globe"></i>
-                    <h3 data-key="contact-website-label">Website</h3>
-                    <p>https://rungduabaymau.vn</p>
+                <!-- Gallery -->
+                <div class="footer-column">
+                    <h3>Thư Viện Ảnh</h3>
+                    <div class="footer-gallery">
+                        <div class="footer-gallery-item">
+                            <img src="/image/introduction-1.png" alt="Rừng dừa nước">
+                        </div>
+                        <div class="footer-gallery-item">
+                            <img src="/image/introduction-2.png" alt="Thuyền thúng">
+                        </div>
+                        <div class="footer-gallery-item">
+                            <img src="/image/contact-1.png" alt="Ngư dân">
+                        </div>
+                        <div class="footer-gallery-item">
+                            <img src="/image/introduction-4.png" alt="Ẩm thực">
+                        </div>
+                        <div class="footer-gallery-item">
+                            <img src="/image/introduction-5.png" alt="Làng nghề">
+                        </div>
+                        <div class="footer-gallery-item">
+                            <img src="/image/introduction-6.png" alt="Cảnh đẹp">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p data-key="footer-text">© Khu Du Lịch Qua Rừng Dừa. Đẹp từ thiên nhiên - Sâu lắng từ văn hóa.</p>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>© 2025 Khu Du Lịch Qua Rừng Dừa. Đẹp từ thiên nhiên - Sâu lắng từ văn hóa.</p>
+            </div>
         </div>
     </footer>
 
@@ -718,7 +987,7 @@
             }
 
             // Validate and submit main contact form
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
                 event.preventDefault();
                 const errorElements = document.querySelectorAll('.error-message');
                 errorElements.forEach(el => el.style.display = 'none');
@@ -776,7 +1045,7 @@
             });
 
             // Validate and submit quick contact form
-            document.getElementById('quickContactForm').addEventListener('submit', function(event) {
+            document.getElementById('quickContactForm').addEventListener('submit', function (event) {
                 event.preventDefault();
                 const errorElements = document.querySelectorAll('.error-message');
                 errorElements.forEach(el => el.style.display = 'none');
@@ -836,7 +1105,7 @@
             // Real-time validation
             const inputs = document.querySelectorAll('input[required], textarea');
             inputs.forEach(input => {
-                input.addEventListener('input', function() {
+                input.addEventListener('input', function () {
                     const id = this.id;
 
                     if (id === 'fullName' || id === 'quickName') {
@@ -870,4 +1139,5 @@
         });
     </script>
 </body>
+
 </html>
