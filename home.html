@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rừng Dừa Bảy Mẫu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Bay Mau Coconut Forest Tourism Sections CSS
+ * Combines custom styling with Bootstrap compatibility
+ * Updated with equal width card fixes
+ */
+
+        :root {
+            --primary-color: #008000;
+            --primary-color-dark: #3d6c05;
+            --secondary-color: #ff9900;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --dark-bg: #212529;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* General Section Styling */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+
+        /* Typography */
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            font-size: 2rem;
+        }
+
+        h2.text-center:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 15px auto 25px;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Row & Column System (Compatible with Bootstrap) */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .row-small {
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+
+        .row-small>.col {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .col {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-inner {
+            height: 100%;
+            padding-bottom: 10px;
+        }
+
+        /* Responsive column classes */
+        .small-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .medium-4 {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+
+        .medium-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .large-4 {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+
+        .large-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .large-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        /* Divider styling */
+        .is-divider {
+            height: 3px;
+            display: block;
+            background-color: var(--primary-color);
+            margin: 1.5em auto;
+            width: 100%;
+            max-width: 30px;
+        }
+
+        /* Image styles */
+        .img {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .img-inner {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+
+        .img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+            border-radius: var(--border-radius);
+        }
+
+        .image-zoom img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-cover {
+            position: relative;
+            height: 0;
+            padding-bottom: 75%;
+            overflow: hidden;
+        }
+
+        .image-cover img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Box styling */
+        .box {
+            position: relative;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .box-text {
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .has-hover:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Featured Activities Section */
+        #section_1274328272 {
+            background-color: var(--light-bg);
+        }
+
+        /* Feature boxes */
+        .feature-box {
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            background-color: white;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-box__icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .feature-box__title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .feature-box__content {
+            color: var(--text-color);
+        }
+
+        /* Slider styles */
+        .slider-wrapper {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+
+        .loading-spin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Call to action */
+        .call-to-action {
+            background-color: #f1f8e9;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 2rem 0;
+            box-shadow: var(--box-shadow);
+        }
+
+        .call-to-action h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .call-to-action p {
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid var(--primary-color);
+        }
+
+        .button:hover {
+            background-color: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+        }
+
+        .button.is-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .button.is-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .button.success {
+            background-color: var(--primary-color);
+        }
+
+        .button.primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .button.secondary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color-dark);
+            text-decoration: underline;
+        }
+
+        /* Featured activity items */
+        .activity-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .activity-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .activity-item__image {
+            position: relative;
+            height: 0;
+            padding-bottom: 66.67%;
+            /* 2:3 aspect ratio */
+            overflow: hidden;
+        }
+
+        .activity-item__image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .activity-item:hover .activity-item__image img {
+            transform: scale(1.05);
+        }
+
+        .activity-item__content {
+            padding: 1.5rem;
+        }
+
+        .activity-item__title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .activity-item__description {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Testimonial section */
+        .testimonial {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .testimonial:before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(81, 144, 7, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial__content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial__author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .testimonial__author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial__author-info h5 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .testimonial__author-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* FIX: Equal width cards in section_607468113 */
+        #section_607468113 .row .col.medium-4 {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            display: flex;
+        }
+
+        #section_607468113 .box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
+            margin-bottom: 0;
+        }
+
+        #section_607468113 .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        #section_607468113 .box-image {
+            overflow: hidden;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        #section_607468113 .box-image img {
+            width: 100%;
+            height: 250px;
+            /* Fixed height for all box images */
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        #section_607468113 .box:hover .box-image img {
+            transform: scale(1.05);
+        }
+
+        #section_607468113 .box-text {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+
+        #section_607468113 .box-text-inner {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        #section_607468113 h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        #section_607468113 p {
+            flex-grow: 1;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Ensure the image in the last card has the same style as the others */
+        #section_607468113 .image-cover {
+            height: 250px;
+            padding-bottom: 0;
+        }
+
+        #section_607468113 .image-cover img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Fix for slider controls */
+        #section_607468113 .slider-nav-circle .flickity-prev-next-button {
+            opacity: 0.8;
+            background-color: white;
+        }
+
+        #section_607468113 .slider-nav-circle .flickity-prev-next-button:hover {
+            opacity: 1;
+            background-color: var(--primary-color);
+        }
+
+        /* Fixes for section_1274328272 */
+        #section_1274328272 .img {
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        #section_1274328272 .img-inner {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+
+        #section_1274328272 .img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        /* Make row images have consistent heights */
+        #row-1190175637 .img-inner {
+            /* height: 250px; Fixed height for all images in the bottom row */
+        }
+
+        #row-1190175637 .img img {
+            width: 100%;
+            /* height: 100%; */
+            object-fit: cover;
+        }
+
+        /* Make first row images have consistent heights */
+        #row-2044023330 .img-inner {
+            height: 350px;
+            /* Fixed height for all images in the top row */
+        }
+
+        #row-2044023330 .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Hover effects */
+        #section_1274328272 .img:hover img {
+            transform: scale(1.05);
+        }
+
+        #section_1274328272 .img:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive fixes */
+        @media (max-width: 767.98px) {
+
+            #section_607468113 .box-image img,
+            #row-1190175637 .img-inner,
+            #row-2044023330 .img-inner {
+                height: 200px;
+            }
+
+            #section_607468113 .box,
+            #section_1274328272 .img {
+                margin-bottom: 1rem;
+            }
+
+            .medium-4,
+            .medium-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+
+            #section_607468113 .box-image img,
+            #row-1190175637 .img-inner,
+            #row-2044023330 .img-inner {
+                height: 180px;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+            .section {
+                padding: 50px 0;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .section {
+                padding: 40px 0;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .col-inner {
+                padding: 15px;
+            }
+
+            .activity-item {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .section {
+                padding: 30px 0;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .box-text {
+                padding: 1rem;
+            }
+
+            .testimonial {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+
+            /* Ensure cards stack vertically on mobile with proper spacing */
+            #section_607468113 .row .col.medium-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            /* Make sure the slider adapts to mobile view */
+            #section_607468113 .slider-wrapper {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+
+            /* Adjust card styling for mobile */
+            #section_607468113 .box {
+                margin-bottom: 0;
+                height: auto;
+            }
+
+            /* Make image height consistent on mobile */
+            #section_607468113 .box-image img {
+                height: 200px;
+            }
+
+            /* Increase text readability on small screens */
+            #section_607468113 .box-text {
+                padding: 15px;
+            }
+
+            #section_607468113 .box-text h4 {
+                font-size: 1.1rem;
+            }
+
+            #section_607468113 .box-text p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            /* Fix slider navigation for touch devices */
+            #section_607468113 .slider-nav-circle .flickity-prev-next-button {
+                opacity: 0.8;
+                width: 36px;
+                height: 36px;
+            }
+
+            /* Ensure proper wrapping for slider content */
+            #section_607468113 .row-small.align-equal {
+                display: block;
+            }
+
+            /* Add space between stacked cards */
+            #section_607468113 .col.medium-4 .col-inner {
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 575.98px) {
+            #section_607468113 .box-image img {
+                height: 180px;
+            }
+
+            #section_607468113 .box-text {
+                padding: 12px;
+            }
+
+            /* Further reduce font sizes for very small screens */
+            #section_607468113 .box-text h4 {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
+            #section_607468113 .box-text p {
+                font-size: 0.85rem;
+                margin-bottom: 10px;
+            }
+
+            /* Adjust section padding for smaller screens */
+            #section_607468113 {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            /* Fix divider position on small screens */
+            #section_607468113 .is-divider {
+                margin: 1em auto;
+            }
+        }
+
+        /* Fix the slider row for proper vertical stacking */
+        @media (max-width: 767.98px) {
+            #row-1506874856 {
+                display: block !important;
+            }
+
+            #row-1506874856>.col {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+
+
+
+
+        /* Testimonials Section Styling */
+        #section_1230317820 {
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+            background-color: rgb(237, 237, 237);
+            background-image: url('https://rungduabaymau.vn/wp-content/uploads/2022/06/rung-dua-bay-mau-2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #section_1230317820 .section-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(237, 237, 237, 0.93);
+            z-index: 1;
+        }
+
+        #section_1230317820 .section-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        #section_1230317820 h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        #section_1230317820 h3 span {
+            display: inline-block;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .is-divider {
+            height: 3px;
+            display: block;
+            background-color: var(--primary-color);
+            margin: 1.5em auto;
+            width: 100%;
+            max-width: 213px;
+        }
+
+        .testimonial-box {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-image {
+            flex: 0 0 121px;
+            margin-right: 20px;
+        }
+
+        .testimonial-image img {
+            width: 121px;
+            height: 121px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-box:hover .testimonial-image img {
+            transform: scale(1.05);
+        }
+
+        .testimonial-text {
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            margin-bottom: 15px;
+            font-style: italic;
+            color: var(--text-color);
+        }
+
+        .testimonial-text:before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 4rem;
+            color: rgba(81, 144, 7, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-meta {
+            font-size: 0.9rem;
+            padding-top: 10px;
+        }
+
+        .testimonial-name {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .star-rating {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #ffc107;
+        }
+
+        /* Fix for star rating */
+        #section_1230317820 .star-rating span:before {
+            content: "★★★★★";
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+            #section_1230317820 {
+                padding: 50px 0;
+            }
+
+            #section_1230317820 h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            #section_1230317820 {
+                padding: 40px 0;
+            }
+
+            #section_1230317820 h3 {
+                font-size: 1.4rem;
+            }
+
+            /* Fix testimonial box on mobile */
+            .testimonial-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .testimonial-image {
+                margin: 0 auto 15px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            #section_1230317820 {
+                padding: 30px 0;
+            }
+
+            #section_1230317820 h3 {
+                font-size: 1.2rem;
+            }
+
+            #section_1230317820 h3 span {
+                padding: 8px 15px !important;
+            }
+        }
+
+        /* Carousel controls */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--primary-color);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .carousel-indicators {
+            bottom: -40px;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: var(--primary-color);
+        }
+
+
+
+
+
+
+
+
+
+        /* Map and News Section Styling */
+        #section_1481625345 {
+            padding: 60px 0;
+            background-color: var(--light-bg);
+        }
+
+        #section_1481625345 h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        #section_1481625345 iframe {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 20px;
+        }
+
+        /* News styling */
+        #tintuc-home {
+            margin-top: 20px;
+        }
+
+        #tintuc-home .rpwe-ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #tintuc-home .rpwe-li {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        #tintuc-home .rpwe-li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        #tintuc-home .rpwe-img {
+            float: left;
+            margin-right: 15px;
+        }
+
+        #tintuc-home .rpwe-thumb {
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        #tintuc-home .rpwe-li:hover .rpwe-thumb {
+            transform: scale(1.05);
+        }
+
+        #tintuc-home .rpwe-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        #tintuc-home .rpwe-title a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        #tintuc-home .rpwe-title a:hover {
+            color: var(--primary-color-dark);
+            text-decoration: underline;
+        }
+
+        #tintuc-home .rpwe-time {
+            color: #666;
+            font-size: 0.85rem;
+            display: block;
+            margin: 5px 0;
+        }
+
+        #tintuc-home .rpwe-summary {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-color);
+        }
+
+        /* Slider Navigation */
+        #slider-1410161476 .slider-nav-circle .flickity-prev-next-button,
+        #slider-1460185014 .slider-nav-circle .flickity-prev-next-button {
+            opacity: 0.8;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        #slider-1410161476 .slider-nav-circle .flickity-prev-next-button:hover,
+        #slider-1460185014 .slider-nav-circle .flickity-prev-next-button:hover {
+            opacity: 1;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Loading spinner */
+        .loading-spin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s linear infinite;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+
+            #section_1230317820,
+            #section_1481625345 {
+                padding: 50px 0;
+            }
+
+            #section_1230317820 h3 {
+                font-size: 1.6rem;
+            }
+
+            #section_1481625345 h2 {
+                font-size: 1.6rem !important;
+            }
+
+            #tintuc-home .rpwe-title {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+
+            #section_1230317820,
+            #section_1481625345 {
+                padding: 40px 0;
+            }
+
+            #section_1230317820 h3 {
+                font-size: 1.4rem;
+            }
+
+            #section_1481625345 h2 {
+                font-size: 1.4rem !important;
+            }
+
+            /* Fix testimonial box on mobile */
+            #section_1230317820 .icon-box-img.testimonial-image {
+                float: none;
+                margin: 0 auto 15px;
+            }
+
+            #section_1230317820 .icon-box-text {
+                text-align: center;
+            }
+
+            /* Fix map and news columns on mobile */
+            #section_1481625345 .col.medium-6 {
+                margin-bottom: 30px;
+            }
+
+            #section_1481625345 iframe {
+                height: 300px;
+            }
+
+            /* Fix news layout on mobile */
+            #tintuc-home .rpwe-img {
+                float: none;
+                display: block;
+                margin: 0 0 15px 0;
+                text-align: center;
+            }
+
+            #tintuc-home .rpwe-thumb {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+
+            #section_1230317820,
+            #section_1481625345 {
+                padding: 30px 0;
+            }
+
+            #section_1230317820 h3 {
+                font-size: 1.2rem;
+            }
+
+            #section_1230317820 h3 span {
+                padding: 8px 15px !important;
+            }
+
+            #section_1481625345 h2 {
+                font-size: 1.2rem !important;
+            }
+
+            #section_1481625345 iframe {
+                height: 250px;
+            }
+
+            #tintuc-home .rpwe-summary {
+                display: none;
+                /* Hide summary on very small screens */
+            }
+        }
+
+        /* Press Mentions Section Styling */
+        #section_300955165 {
+            padding: 50px 0;
+            background-color: var(--light-bg);
+            position: relative;
+        }
+
+        /* Section Title Styling */
+        #section_300955165 h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* Custom Divider */
+        #section_300955165 .is-divider {
+            max-width: 213px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 1rem auto 2rem;
+            display: block;
+        }
+
+        /* Press Logo Box Styling */
+        #section_300955165 .box {
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            height: 100%;
+        }
+
+        #section_300955165 .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        #section_300955165 .box-image {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section_300955165 .box-image img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        #section_300955165 .box:hover .box-image img {
+            transform: scale(1.05);
+        }
+
+        #section_300955165 .box-text {
+            padding: 10px 15px 15px;
+            text-align: center;
+            border-top: 1px solid #f5f5f5;
+        }
+
+        #section_300955165 .box-text p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        #section_300955165 .box-text a {
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #section_300955165 .box-text a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Press Logo Columns */
+        #section_300955165 .col-inner {
+            padding: 0 35px;
+            height: 100%;
+        }
+
+        /* Fix for slider in press mentions */
+        #section_300955165 .slider-wrapper {
+            margin-bottom: 0;
+        }
+
+        #section_300955165 .slider {
+            border-radius: 0;
+        }
+
+        #section_300955165 .slider-nav-circle .flickity-prev-next-button {
+            opacity: 0.8;
+            background-color: white;
+            top: 40%;
+        }
+
+        #section_300955165 .slider-nav-circle .flickity-prev-next-button:hover {
+            opacity: 1;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Mobile version styling */
+        #section_300955165 .show-for-small .img-inner {
+            background-color: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section_300955165 .show-for-small .img-inner img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        #section_300955165 .row-collapse.row-solid {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        #section_300955165 .row-collapse.row-solid .col {
+            padding: 10px;
+        }
+
+        /* Mobile logo hover effects */
+        #section_300955165 .show-for-small .img-inner {
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            background-color: white;
+            padding: 10px;
+        }
+
+        #section_300955165 .show-for-small .img-inner img {
+            transition: transform 0.3s ease;
+        }
+
+        #section_300955165 .show-for-small .img:hover .img-inner {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        #section_300955165 .show-for-small .img:hover .img-inner img {
+            transform: scale(1.05);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+            #section_300955165 {
+                padding: 40px 0;
+            }
+
+            #section_300955165 h2 {
+                font-size: 1.8rem;
+            }
+
+            #section_300955165 .col-inner {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            #section_300955165 {
+                padding: 30px 0;
+            }
+
+            #section_300955165 h2 {
+                font-size: 1.6rem;
+            }
+
+            #section_300955165 .is-divider {
+                max-width: 180px;
+                margin: 0.8rem auto 1.5rem;
+            }
+
+            /* Fix for mobile slider */
+            #section_300955165 .slider-wrapper {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+
+            /* Adjust logo spacing on mobile */
+            #section_300955165 .row-collapse.row-solid .col {
+                padding: 5px;
+            }
+
+            #section_300955165 .img {
+                margin-bottom: 0.5rem !important;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            #section_300955165 {
+                padding: 25px 0;
+            }
+
+            #section_300955165 h2 {
+                font-size: 1.4rem;
+            }
+
+            #section_300955165 .is-divider {
+                max-width: 150px;
+                margin: 0.7rem auto 1.2rem;
+            }
+        }
+
+
+
+        /* Enhanced Banner */
+        .hero-banner {
+            width: 100%;
+            height: 500px;
+            background-image: url(https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .banner-title {
+            color: white;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            margin-bottom: 15px;
+        }
+
+        .banner-subtitle {
+            color: #ffffff;
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .banner-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 400px;
+            }
+
+            .banner-title {
+                font-size: 2.5rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .info-item {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-banner {
+                height: 300px;
+            }
+
+            .banner-title {
+                font-size: 2rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1rem;
+            }
+
+            .info-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+
+
+        .bg-image-section {
+            background-image: url('https://hoiana.com/wp-content/uploads/2024/12/rung-dua-bay-mau-hoi-an-11.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            padding: 80px 0;
+        }
+
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            height: 100%;
+            transition: transform 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title a {
+            color: #008000 !important;
+            text-decoration: none;
+        }
+
+        .divider {
+            max-width: 213px;
+            height: 3px;
+            background-color: rgb(81, 144, 7);
+            margin: 0 auto 30px;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* Style cho các box giá và thông tin */
+        .price-box,
+        .info-box,
+        .notice-box {
+            background-color: rgba(243, 243, 243, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #008000;
+        }
+
+        .price-box-header,
+        .info-box-title,
+        .notice-box-title {
+            color: #008000;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .notice-box {
+            border-left-color: #993300;
+        }
+
+        .notice-box-title {
+            color: #993300;
+        }
+
+        .call-to-action {
+            background-color: rgba(243, 243, 243, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            border-left: 4px solid #ff6600;
+        }
+
+        /* Style cho danh sách */
+        .info-box-content ul {
+            padding-left: 20px;
+        }
+
+        .info-box-content li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive padding */
+        @media (max-width: 768px) {
+            .bg-image-section {
+                padding: 40px 0;
+            }
+
+            .card-body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main" class="">
+
+
+        <!-- <div id="content" role="main" class="content-area">
+
+
+            <div class="slider-wrapper relative" id="slider-19995644">
+                <div class="slider slider-nav-dots-simple slider-nav-simple slider-nav-large slider-nav-light slider-style-normal is-draggable flickity-enabled"
+                    data-flickity-options="{
+                    &quot;cellAlign&quot;: &quot;center&quot;,
+                    &quot;imagesLoaded&quot;: true,
+                    &quot;lazyLoad&quot;: 1,
+                    &quot;freeScroll&quot;: false,
+                    &quot;wrapAround&quot;: true,
+                    &quot;autoPlay&quot;: 6000,
+                    &quot;pauseAutoPlayOnHover&quot; : true,
+                    &quot;prevNextButtons&quot;: true,
+                    &quot;contain&quot; : true,
+                    &quot;adaptiveHeight&quot; : true,
+                    &quot;dragThreshold&quot; : 10,
+                    &quot;percentPosition&quot;: true,
+                    &quot;pageDots&quot;: false,
+                    &quot;rightToLeft&quot;: false,
+                    &quot;draggable&quot;: true,
+                    &quot;selectedAttraction&quot;: 0.1,
+                    &quot;parallax&quot; : 0,
+                    &quot;friction&quot;: 0.6        }" tabindex="0">
+
+
+
+
+
+
+
+
+
+                    <div class="flickity-viewport" style="height: 338.237px; touch-action: pan-y;">
+                        <div class="flickity-slider" style="left: 0px; transform: translateX(-100%);">
+                            <div class="banner has-hover" id="banner-143459273" style="position: absolute; left: 0%;"
+                                aria-hidden="true">
+                                <div class="banner-inner fill">
+                                    <div class="banner-bg fill">
+                                        <div class="bg fill bg-fill bg-loaded"></div>
+
+                                    </div>
+
+                                    <div class="banner-layers container">
+                                        <div class="fill banner-link"></div>
+                                    </div>
+                                </div>
+
+
+                                <style>
+                                    #banner-143459273 {
+                                        padding-top: 56.25%;
+                                    }
+
+                                    #banner-143459273 .bg.bg-loaded {
+                                        background-image: url(https://rungduabaymau.vn/wp-content/uploads/2022/06/du-khach-di-tour-rung-dua-bay-mau-1.jpg);
+                                    }
+
+                                    #banner-143459273 .bg {
+                                        background-position: 0% 100%;
+                                    }
+
+                                    @media (min-width:550px) {
+                                        #banner-143459273 {
+                                            padding-top: 35%;
+                                        }
+                                    }
+                                </style>
+                            </div>
+                            <div class="banner has-hover is-selected" id="banner-641714266"
+                                style="position: absolute; left: 100%;">
+                                <div class="banner-inner fill">
+                                    <div class="banner-bg fill">
+                                        <div class="bg fill bg-fill bg-loaded"></div>
+
+                                    </div>
+
+                                    <div class="banner-layers container">
+                                        <div class="fill banner-link"></div>
+                                    </div>
+                                </div>
+
+
+                                <style>
+                                    #banner-641714266 {
+                                        padding-top: 56.25%;
+                                    }
+
+                                    #banner-641714266 .bg.bg-loaded {
+                                        background-image: url(https://rungduabaymau.vn/wp-content/uploads/2022/06/du-khach-di-tour-rung-dua-bay-mau.jpg);
+                                    }
+
+                                    #banner-641714266 .bg {
+                                        background-position: 0% 100%;
+                                    }
+
+                                    @media (min-width:550px) {
+                                        #banner-641714266 {
+                                            padding-top: 35%;
+                                        }
+                                    }
+                                </style>
+                            </div>
+                        </div>
+                    </div><button class="flickity-button flickity-prev-next-button previous" type="button"
+                        aria-label="Previous" fdprocessedid="7stpxk"><svg class="flickity-button-icon"
+                            viewBox="0 0 100 100">
+                            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></button><button class="flickity-button flickity-prev-next-button next" type="button"
+                        aria-label="Next" fdprocessedid="nucxj"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                                transform="translate(100, 100) rotate(180) "></path>
+                        </svg></button>
+                </div>
+
+                <div class="loading-spin dark large centered" style="display: none;"></div>
+
+            </div>
+
+
+            
+            <div class="banner" style="background-image: url('https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg');">
+                <div class="banner-content">
+                    <h1 class="animate__animated animate__fadeInDown">Rừng Dừa Bảy Mẫu</h1>
+                    <p class="animate__animated animate__fadeInUp">Khám phá vẻ đẹp hoang sơ của thiên nhiên Hội An</p>
+                </div>
+            </div> -->
+
+
+        <div class="hero-banner">
+            <div class="banner-content">
+                <h1 class="banner-title">Rừng Dừa Bảy Mẫu</h1>
+                <p class="banner-subtitle">Khám phá vẻ đẹp hoang sơ của thiên nhiên Hội An</p>
+            </div>
+        </div>
+
+        <section class="section" id="section_1965568449">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col medium-6 small-12 large-6">
+                        <div class="col-inner">
+                            <div class="text">
+                                <h2 class="title"><strong><span style="color: #008000;"><span
+                                                style="font-size: 120%;">GIỚI THIỆU VỀ KHU DI TÍCH LỊCH SỬ VĂN HOÁ
+                                                RỪNG DỪA BẢY MẪU</span></span></strong></h2>
+                                <hr>
+                                <p style="font-size: 17px;"><strong>Rừng Dừa Bảy Mẫu</strong>, còn được biết đến với tên
+                                    gọi khu du lịch Rừng Dừa Cẩm Thanh, là một điểm đến nổi bật tại thành phố Hội An.
+                                    Nhiều du khách cũng quen gọi nơi đây là <strong>Vườn Dừa Bảy Mẫu</strong>. Khi đến
+                                    tham quan, quý khách sẽ có dịp được ngồi trên những chiếc <strong>thuyền
+                                        thúng</strong> truyền thống, do các ngư dân địa phương chất phác và mến khách
+                                    trực tiếp điều khiển. Chuyến hành trình sẽ đưa quý vị len lỏi giữa những hàng dừa
+                                    xanh mát, hòa mình vào cảnh sắc sông nước hữu tình, nơi mây trời và thiên nhiên giao
+                                    hòa tạo nên một bức tranh thơ mộng.
+                                    Tại đây, quý khách có thể chiêm ngưỡng những màn trình diễn nghệ thuật chèo thúng
+                                    độc đáo như múa thúng, chém nước – những kỹ năng được thể hiện một cách điêu luyện
+                                    và đầy ấn tượng. Bên cạnh đó, trong không gian yên bình đặc trưng của Rừng Dừa, quý
+                                    khách còn có cơ hội hóa thân thành ngư dân, tham gia trải nghiệm vung chài, bắt cá
+                                    đầy thú vị. Đặc biệt, những làn điệu dân ca xứ Quảng ngọt ngào, sâu lắng qua tiếng
+                                    hát của các cô gái Cẩm Thanh duyên dáng chắc chắn sẽ để lại trong lòng du khách
+                                    nhiều cảm xúc khó quên.</p>
+                            </div>
+                            <a href="https://rungduabaymau.vn/ve-chung-toi/" class="button success">
+                                <span>XEM THÊM</span>
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col phong-nen medium-6 small-12 large-6">
+                        <div class="col-inner">
+                            <div class="banner" id="banner-2047734886">
+                                <div class="banner-inner fill">
+                                    <div class="banner-bg fill">
+                                        <div class="bg fill bg-loaded"
+                                            style="background-image: url('https://rungduabaymau.vn/wp-content/uploads/2022/02/21.jpg');">
+                                        </div>
+                                    </div>
+                                    <div class="banner-layers container">
+                                        <div class="fill banner-link"></div>
+                                        <div class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                            <div class="text-box-content text dark">
+                                                <div class="text-inner text-center">
+                                                    <img src="https://vinwondershoian.com/userfiles/image/hoian-danang/2022/rung-dua/rungdua-bay-mau-2.jpg"
+                                                        alt="Rừng Dừa Bảy Mẫu" class="img-fluid rounded"
+                                                        style="width: 100%; height: auto; border-radius: 15px; object-fit: cover;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-image-section">
+            <div class="bg-overlay"></div>
+            <div class="container content-wrapper">
+
+
+                <!-- Một khung lớn bao quanh tất cả nội dung bảng giá -->
+                <div class="card main-card mb-5">
+                    <div class="card-body">
+                        <div class="banggia123">
+                            <h2 style="text-align: center; color: #008000; margin-bottom: 20px;">BẢNG GIÁ VÉ KHU DU LỊCH
+                                RỪNG DỪA BẢY MẪU</h2>
+
+                            <p>Nhằm tạo điều kiện thuận lợi cho quý du khách trong việc sắp xếp thời gian tham quan,
+                                <span style="color: #339966;">khu du lịch Rừng Dừa Bảy Mẫu</span> hoạt động từ 7 giờ
+                                sáng đến 17
+                                giờ chiều hằng ngày. Xin lưu ý rằng, giá vé có thể thay đổi tùy theo thời điểm, phụ
+                                thuộc vào
+                                các chương trình lễ hội, sự kiện và hoạt động giải trí được tổ chức thường xuyên tại khu
+                                du
+                                lịch. Quý khách vui lòng truy cập <a href="https://rungduabaymau.vn/"
+                                    style="color: #ff9900;">Website chính thức của Rừng Dừa Bảy Mẫu</a> để cập nhật
+                                những thông
+                                tin mới nhất.
+                            </p>
+
+                            <div class="row gia1 mt-4">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="price-box mb-4">
+                                        <h4 class="price-box-header">VÉ VÀO CỔNG</h4>
+                                        <div class="price-box-content">
+                                            <p>Người lớn: 30.000 VNĐ</p>
+                                            <p>Trẻ em từ 5 tuổi đến 9 tuổi: Giá 50%</p>
+                                            <p class="mb-0">Trẻ em dưới 5 tuổi: Miễn phí</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="price-box mb-4">
+                                        <h4 class="price-box-header">VÉ THUYỀN THÚNG</h4>
+                                        <div class="price-box-content">
+                                            <p>Người lớn: 100.000 VNĐ /1 người / 1 chuyến</p>
+                                            <p>Trẻ em từ 5 tuổi đến 9 tuổi: Giá 50%</p>
+                                            <p class="mb-0">Trẻ em dưới 5 tuổi: Miễn phí</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="info-box mb-4">
+                                        <h4 class="info-box-title">Giá dành cho du khách <strong>Quốc Tế</strong> sẽ
+                                            cao hơn du khách <strong>Việt Nam</strong>, cụ thể như sau:</h4>
+                                        <div class="info-box-content">
+                                            <ul>
+                                                <li>Khách Việt Nam 1 thúng : <strong>200.000đ/2 khách</strong>.</li>
+                                                <li>Khách Quốc Tế 1 thúng : <strong>250.000đ/2 khách</strong>. Du khách
+                                                    quốc tế có cân nặng trên 100kg thì chỉ được ngồi 1 thúng không thêm
+                                                    người để đảm bảo an toàn.</li>
+                                            </ul>
+                                            <p class="mb-0">Thời gian trải nghiệm thuyền thúng khám phá Rừng Dừa Bảy Mẫu
+                                                từ 70 – 90
+                                                phút. Quý khách có nhu cầu mua vé tham quan liên hệ phòng sale của ban
+                                                quản lý khu du lịch để nhận ưu đãi tốt nhất.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 text-center">
+                                    <div class="call-to-action mb-4">
+                                        <h4 style="font-size: 25px; color: #008000; margin-bottom: 0;">
+                                            LIÊN HỆ NGAY SỐ ĐIỆN THOẠI (hoặc Zalo) <a href="tel:0985402302"
+                                                style="color: #ff6600; font-weight: bold;">0985.402.302</a>
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="notice-box">
+                                        <h4 class="notice-box-title">Lưu ý</h4>
+                                        <div class="notice-box-content">
+                                            <p class="mb-0">
+                                                Thời gian gần đây rất nhiều du khách đã phản ánh, hiện nay có vài cơ sở
+                                                tự
+                                                phát ra đón khách lấy giá cao gấp 2-3 lần bình thường. Vì thế du khách
+                                                có
+                                                nhu cầu đi Rừng Dừa Bảy Mẫu thì nên đặt vé tham quan và thuyền thúng
+                                                trước
+                                                khi đến để nhận ưu đãi và chính sách giảm giá. <strong
+                                                    style="color: #993300;">Ban quản lý chúng tôi sẽ có nhân viên liên
+                                                    hệ và
+                                                    đón quý khách ngay tại cổng khu du lịch và dẫn vào trong.</strong>
+                                                Chỉ
+                                                áp dụng giảm giá cho du khách đăng ký trước khi đến !!!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mb-4">
+                    <div class="divider" style="background-color: white;"></div>
+                </div>
+                <!-- Giữ nguyên phần cards tour -->
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="https://rungduabaymau.vn/wp-content/uploads/2022/06/tour-rung-dua-bay-mau-c.jpg"
+                                class="card-img-top" alt="tour rừng dừa Bảy Mẫu">
+                            <div class="card-body text-center">
+                                <h4 class="card-title mb-3">
+                                    <a href="https://rungduabaymau.vn/tour-rung-dua-bay-mau/">
+                                        <strong>TOUR RỪNG DỪA BẢY MẪU GIÁ RẺ</strong>
+                                    </a>
+                                </h4>
+                                <p class="card-text text-start">
+                                    Tour du lịch Rừng Dừa Bảy Mẫu được xem là linh hồn của khu du lịch Rừng Dừa Bảy Mẫu.
+                                    Với những hướng dẫn viên có nhiều năm kinh nghiệm của KDL Rừng Dừa, bạn sẽ có những
+                                    trải nghiệm tuyệt vời nhất cùng gia đình và bạn bè tại đây
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="https://rungduabaymau.vn/wp-content/uploads/2022/06/du-lich-rung-dua-bay-mau-tu-tuc-4-1.jpg"
+                                class="card-img-top" alt="Kinh nghiệm Rừng Dừa Bảy Mẫu">
+                            <div class="card-body text-center">
+                                <h4 class="card-title mb-3">
+                                    <a href="https://rungduabaymau.vn/du-lich-rung-dua-bay-mau/">
+                                        <strong>KINH NGHIỆM DU LỊCH RỪNG DỪA BẢY MẪU</strong>
+                                    </a>
+                                </h4>
+                                <p class="card-text text-start">
+                                    Ngồi thuyền thúng tham quan khu rừng dừa xanh mát, múa thúng, đua thuyền hay các trò
+                                    chơi dân gian,… hẳn sẽ khiến bạn vô cùng thích thú. Nếu chưa biết gì về nơi này hãy
+                                    đọc trước những kinh nghiệm <strong>du lịch rừng dừa Bảy Mẫu</strong> này và lên kế
+                                    hoach khám phá ngay nào!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6 mx-auto">
+                        <div class="card h-100">
+                            <img src="https://rungduabaymau.vn/wp-content/uploads/2022/06/gia-ve-rung-dua-bay-mau-2.jpg"
+                                class="card-img-top" alt="giá vé rừng dừa Bảy Mẫu">
+                            <div class="card-body text-center">
+                                <h4 class="card-title mb-3">
+                                    <a href="https://rungduabaymau.vn/gia-ve-rung-dua-bay-mau/">
+                                        <strong>GIÁ VÉ RỪNG DỪA BẢY MẪU</strong>
+                                    </a>
+                                </h4>
+                                <p class="card-text text-start">
+                                    Với giá vé vô Khu di tích lịch sử văn hoá Rừng dừa Bảy Mẫu bạn sẽ được trải nghiệm
+                                    nhiều điều khác biệt, ngoài đi thuyền thúng còn được xem múa thúng, và tham gia các
+                                    trò chơi dân gian vô cùng vui nhộn.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="section_1274328272">
+            <div class="bg section-bg fill bg-fill  bg-loaded">
+
+
+
+
+
+            </div>
+
+
+
+            <div class="section-content relative">
+
+                <div class="row row-small" id="row-12797860">
+
+                    <div id="col-2026728575" class="col small-12 large-12">
+                        <div class="col-inner">
+
+
+                            <div id="text-3773158737" class="text">
+
+                                <h2 style="text-align: center;"><strong><span style="color: #008000;">HOẠT ĐỘNG NỔI
+                                            BẬT TẠI RỪNG DỪA BẢY MẪU</span></strong></h2>
+                                <p><strong>Khu du lịch Rừng Dừa Bảy Mẫu</strong> luôn hướng tới việc mang lại cho quý du
+                                    khách, cùng gia đình, bạn bè và người thân, những trải nghiệm đáng nhớ trong không
+                                    gian thiên nhiên xanh mát và thanh bình. Tại đây, nhiều hoạt động đặc sắc được tổ
+                                    chức thường xuyên, tiêu biểu như: <span style="color: #339966;">chèo thuyền thúng,
+                                        thưởng thức màn múa thúng độc đáo, xem đua thuyền, tham gia giăng lưới đánh bắt
+                                        cá theo cách truyền thống, trải nghiệm ẩm thực đặc trưng của vùng rừng
+                                        dừa</span>…
+                                    Bên cạnh đó, khu du lịch còn giới thiệu nhiều sản phẩm lưu niệm mang đậm bản sắc địa
+                                    phương, là những món quà ý nghĩa dành tặng cho người thân hoặc lưu giữ những kỷ niệm
+                                    đẹp trong chuyến hành trình khám phá Rừng Dừa Bảy Mẫu.</p>
+
+                                <style>
+                                    #text-3773158737 {
+                                        color: rgb(0, 0, 0);
+                                    }
+
+                                    #text-3773158737>* {
+                                        color: rgb(0, 0, 0);
+                                    }
+                                </style>
+                                </p>
+                            </div>
+
+                            <div class="row row-small" id="row-2044023330">
+
+                                <div id="col-427682191" class="col medium-6 small-12 large-6">
+                                    <div class="col-inner">
+
+
+                                        <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_437979150">
+                                            <div class="img-inner image-zoom dark">
+                                                <img loading="lazy" decoding="async" width="1020" height="680"
+                                                    src="https://dntour.vn/uploads/photos/q1%20(1).jpg"
+                                                    class="attachment-large size-large"
+                                                    alt="Khu du lịch sinh thái rừng dừa bảy mẫu" srcset=""
+                                                    sizes="auto, (max-width: 1020px) 100vw, 1020px">
+                                            </div>
+
+                                            <style>
+                                                #image_437979150 {
+                                                    width: 100%;
+                                                }
+                                            </style>
+                                        </div>
+
+                                    </div>
+
+                                    <style>
+                                        #col-427682191>.col-inner {
+                                            border-radius: 10px;
+                                        }
+                                    </style>
+                                </div>
+
+
+
+                                <div id="col-1664981861" class="col medium-6 small-12 large-6">
+                                    <div class="col-inner">
+
+
+                                        <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_953810282">
+                                            <div class="img-inner image-zoom dark">
+                                                <img loading="lazy" decoding="async" width="800" height="533"
+                                                    src="https://lh7-us.googleusercontent.com/ZKSYJmWMGA80K0nGBT7pn9WW9AD63Dnx4viQ0YKglLtEecD4FcW1PdzSxsOdXfBGCEJ9SYewjo89j10G_0E6R8J5s7m1pIFQhB51fOU1xYrHKutNo5PN3MFO4rkvRCpoxR8vkhEJzcbprobqXf4eRHw"
+                                                    class="attachment-large size-large"
+                                                    alt="Cảnh đẹp rừng dừa Bảy Mẫu ở Cẩm Thanh, Hội An" srcset=""
+                                                    sizes="auto, (max-width: 800px) 100vw, 800px">
+                                            </div>
+
+                                            <style>
+                                                #image_953810282 {
+                                                    width: 100%;
+                                                }
+                                            </style>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="row row-small" id="row-1190175637">
+
+                                <div id="col-372129041" class="col medium-4 small-12 large-4">
+                                    <div class="col-inner">
+
+
+                                        <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_99882678">
+                                            <div class="img-inner image-zoom dark">
+                                                <img loading="lazy" decoding="async" width="800" height="528"
+                                                    src="https://rungduabaymau.vn/wp-content/uploads/2022/06/giang-luoi-bat-ca-tai-rung-dua-bay-mau.jpg"
+                                                    class="attachment-large size-large" alt="rừng dừa bảy mẫu" srcset=""
+                                                    sizes="auto, (max-width: 800px) 100vw, 800px">
+                                            </div>
+
+                                            <style>
+                                                #image_99882678 {
+                                                    width: 100%;
+                                                }
+                                            </style>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div id="col-1860427391" class="col medium-4 small-12 large-4">
+                                    <div class="col-inner">
+
+
+                                        <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1353168376">
+                                            <div class="img-inner image-zoom image-cover dark">
+                                                <img loading="lazy" decoding="async" width="800" height="600"
+                                                    src="https://hoiana.com/wp-content/uploads/2024/12/rung-dua-bay-mau-hoi-an-3.webp"
+                                                    class="attachment-large size-large"
+                                                    alt="hoạt động giăng lưới đánh bắt cá Khu du lịch rừng dừa 7 mẫu"
+                                                    srcset="" sizes="auto, (max-width: 800px) 100vw, 800px">
+                                            </div>
+
+                                            <style>
+                                                #image_1353168376 {
+                                                    width: 100%;
+                                                }
+                                            </style>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div id="col-1333054848" class="col medium-4 small-12 large-4">
+                                    <div class="col-inner">
+
+
+                                        <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1440329537">
+                                            <div class="img-inner image-zoom dark">
+                                                <img loading="lazy" decoding="async" width="800" height="528"
+                                                    src="https://rungduabaymau.vn/wp-content/uploads/2022/06/am-thuc-rung-dua-bay-mau.jpg"
+                                                    class="attachment-large size-large"
+                                                    alt="Khu du lịch rừng dừa bảy mẫu"
+                                                    srcset="https://rungduabaymau.vn/wp-content/uploads/2022/06/am-thuc-rung-dua-bay-mau.jpg 800w, https://rungduabaymau.vn/wp-content/uploads/2022/06/am-thuc-rung-dua-bay-mau-600x396.jpg 600w, https://rungduabaymau.vn/wp-content/uploads/2022/06/am-thuc-rung-dua-bay-mau-606x400.jpg 606w, https://rungduabaymau.vn/wp-content/uploads/2022/06/am-thuc-rung-dua-bay-mau-768x507.jpg 768w"
+                                                    sizes="auto, (max-width: 800px) 100vw, 800px">
+                                            </div>
+
+                                            <style>
+                                                #image_1440329537 {
+                                                    width: 100%;
+                                                }
+                                            </style>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <style>
+                #section_1274328272 {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+            </style>
+        </section>
+
+        <section class="section" id="section_1230317820">
+            <div class="bg section-bg fill bg-fill  ">
+
+
+                <div class="section-bg-overlay absolute fill"></div>
+
+
+            </div>
+
+
+
+            <div class="section-content relative">
+
+                <div class="row row-small" id="row-268539023">
+
+                    <div id="col-928892046" class="col small-12 large-12">
+                        <div class="col-inner">
+
+
+                            <h3 style="text-align: center;"><strong><span
+                                        style="color: #008000; background-color: white; padding: 10px 20px; border-radius: 30px;">ĐÁNH
+                                        GIÁ CỦA KHÁCH DU LỊCH</span></strong></h3>
+                            <div class="text-center">
+                                <div class="is-divider divider clearfix"
+                                    style="max-width:213px;background-color:rgb(81, 144, 7);"></div>
+                            </div>
+                            <div class="slider-wrapper relative" id="slider-1410161476">
+                                <div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal"
+                                    data-flickity-options="{
+                    &quot;cellAlign&quot;: &quot;center&quot;,
+                    &quot;imagesLoaded&quot;: true,
+                    &quot;lazyLoad&quot;: 1,
+                    &quot;freeScroll&quot;: false,
+                    &quot;wrapAround&quot;: true,
+                    &quot;autoPlay&quot;: 6000,
+                    &quot;pauseAutoPlayOnHover&quot; : true,
+                    &quot;prevNextButtons&quot;: true,
+                    &quot;contain&quot; : true,
+                    &quot;adaptiveHeight&quot; : true,
+                    &quot;dragThreshold&quot; : 10,
+                    &quot;percentPosition&quot;: true,
+                    &quot;pageDots&quot;: true,
+                    &quot;rightToLeft&quot;: false,
+                    &quot;draggable&quot;: true,
+                    &quot;selectedAttraction&quot;: 0.1,
+                    &quot;parallax&quot; : 0,
+                    &quot;friction&quot;: 0.6        }">
+
+                                    <div class="row row-small" id="row-13776707">
+
+                                        <div id="col-295156751" class="col medium-6 small-12 large-6">
+                                            <div class="col-inner">
+
+
+                                                <div class="row" id="row-1156113306">
+
+                                                    <div id="col-901866113" class="col small-12 large-12">
+                                                        <div class="col-inner">
+
+
+                                                            <div
+                                                                class="icon-box testimonial-box icon-box-left text-left">
+                                                                <div class="icon-box-img testimonial-image circle"
+                                                                    style="width: 121px">
+                                                                    <img loading="lazy" decoding="async" width="280"
+                                                                        height="280"
+                                                                        src="https://rungduabaymau.vn/wp-content/uploads/2022/06/danh-gia-rung-dua-bay-mau-280x280.jpg"
+                                                                        class="attachment-thumbnail size-thumbnail"
+                                                                        alt="Đánh giá rừng dừa bảy mẫu"
+                                                                        srcset="https://rungduabaymau.vn/wp-content/uploads/2022/06/danh-gia-rung-dua-bay-mau-280x280.jpg 280w, https://rungduabaymau.vn/wp-content/uploads/2022/06/danh-gia-rung-dua-bay-mau-300x300.jpg 300w, https://rungduabaymau.vn/wp-content/uploads/2022/06/danh-gia-rung-dua-bay-mau-100x100.jpg 100w"
+                                                                        sizes="auto, (max-width: 280px) 100vw, 280px">
+                                                                </div>
+                                                                <div class="icon-box-text p-last-0">
+                                                                    <div class="star-rating"><span
+                                                                            style="width:100%"><strong
+                                                                                class="rating"></strong></span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="testimonial-text line-height-small italic test_text first-reset last-reset is-italic">
+
+                                                                        <p>Chuyến tham quan tại <strong>khu du lịch Rừng
+                                                                                Dừa Bảy Mẫu</strong> thực sự là một trải
+                                                                            nghiệm tuyệt vời đối với tôi và gia đình.
+                                                                            Chúng tôi đã có dịp thưởng thức những màn múa
+                                                                            thuyền thúng đặc sắc và cùng nhau ca hát
+                                                                            trong không khí vui tươi, ấm áp tại nơi đây.Dịch vụ nơi đây đã mang đến cho tôi sự trải nghiệm và những
+                                                                            khoảnh khắc đáng nhớ như vậy.</p>
+                                                                    </div>
+                                                                    <div class="testimonial-meta pt-half">
+                                                                        <strong class="testimonial-name test_name">Hồ
+                                                                            Nhi</strong>
+                                                                        <span class="testimonial-name-divider"> /
+                                                                        </span> <span
+                                                                            class="testimonial-company test_company">Du
+                                                                            Lịch Sơn Trà</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div id="col-1158059376" class="col medium-6 small-12 large-6">
+                                            <div class="col-inner">
+
+
+                                                <div class="icon-box testimonial-box icon-box-left text-left">
+                                                    <div class="icon-box-img testimonial-image circle"
+                                                        style="width: 121px">
+                                                        <img loading="lazy" decoding="async" width="280" height="280"
+                                                            src="https://rungduabaymau.vn/wp-content/uploads/2022/06/rung-dua-bay-mau-8-280x280.jpg"
+                                                            class="attachment-thumbnail size-thumbnail"
+                                                            alt="Đánh giá rừng dừa Bảy Mẫu"
+                                                            srcset="https://rungduabaymau.vn/wp-content/uploads/2022/06/rung-dua-bay-mau-8-280x280.jpg 280w, https://rungduabaymau.vn/wp-content/uploads/2022/06/rung-dua-bay-mau-8-300x300.jpg 300w, https://rungduabaymau.vn/wp-content/uploads/2022/06/rung-dua-bay-mau-8-100x100.jpg 100w"
+                                                            sizes="auto, (max-width: 280px) 100vw, 280px">
+                                                    </div>
+                                                    <div class="icon-box-text p-last-0">
+                                                        <div class="star-rating"><span style="width:100%"><strong
+                                                                    class="rating"></strong></span></div>
+                                                        <div
+                                                            class="testimonial-text line-height-small italic test_text first-reset last-reset is-italic">
+
+                                                            <p>Đội ngũ nhân viên tại <strong>khu du lịch Rừng Dừa Bảy
+                                                                    Mẫu</strong> vô cùng thân thiện và hiếu khách, luôn
+                                                                niềm nở chào đón du khách bằng nụ cười tươi tắn. Khu du
+                                                                lịch còn có nhiều hoạt động vui chơi hấp dẫn, phù hợp
+                                                                cho cả người lớn và trẻ nhỏ. Tôi rất hài lòng với chuyến
+                                                                đi lần này và chắc chắn sẽ quay lại để tiếp tục khám phá
+                                                                những điều thú vị nơi đây.</p>
+                                                        </div>
+                                                        <div class="testimonial-meta pt-half">
+                                                            <strong class="testimonial-name test_name">Thu
+                                                                Hà</strong>
+                                                            <span class="testimonial-name-divider"> / </span> <span
+                                                                class="testimonial-company test_company">Hà
+                                                                Nội</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="loading-spin dark large centered" style="display: none;"></div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <style>
+                #section_1230317820 {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    background-color: rgb(237, 237, 237);
+                }
+
+                #section_1230317820 .section-bg-overlay {
+                    background-color: rgba(237, 237, 237, 0.93);
+                }
+
+                #section_1230317820 .section-bg.bg-loaded {
+                    background-image: url(https://rungduabaymau.vn/wp-content/uploads/2022/06/rung-dua-bay-mau-2.jpg);
+                }
+            </style>
+        </section>
+
+        <section class="section" id="section_1481625345">
+            <div class="bg section-bg fill bg-fill  bg-loaded">
+
+
+
+
+
+            </div>
+
+
+
+            <div class="section-content relative">
+
+                <div class="row row-small" id="row-1305495599">
+
+                    <div id="col-1598397226" class="col small-12 large-12">
+                        <div class="col-inner">
+
+
+                            <div class="text-center">
+                                <div class="is-divider divider clearfix"
+                                    style="max-width:213px;background-color:rgb(81, 144, 7);"></div>
+                            </div>
+                            <div class="slider-wrapper relative" id="slider-1460185014">
+                                <div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal"
+                                    data-flickity-options="{
+                    &quot;cellAlign&quot;: &quot;center&quot;,
+                    &quot;imagesLoaded&quot;: true,
+                    &quot;lazyLoad&quot;: 1,
+                    &quot;freeScroll&quot;: false,
+                    &quot;wrapAround&quot;: true,
+                    &quot;autoPlay&quot;: 6000,
+                    &quot;pauseAutoPlayOnHover&quot; : true,
+                    &quot;prevNextButtons&quot;: true,
+                    &quot;contain&quot; : true,
+                    &quot;adaptiveHeight&quot; : true,
+                    &quot;dragThreshold&quot; : 10,
+                    &quot;percentPosition&quot;: true,
+                    &quot;pageDots&quot;: true,
+                    &quot;rightToLeft&quot;: false,
+                    &quot;draggable&quot;: true,
+                    &quot;selectedAttraction&quot;: 0.1,
+                    &quot;parallax&quot; : 0,
+                    &quot;friction&quot;: 0.6        }">
+
+                                    <div class="row row-small" id="row-895719373">
+
+                                        <div id="col-302560024" class="col medium-6 small-12 large-6">
+                                            <div class="col-inner">
+
+
+                                                <div class="row" id="row-1567554463">
+
+                                                    <div id="col-578887667" class="col small-12 large-12">
+                                                        <div class="col-inner">
+
+
+
+                                                            <h2 style="color: #008000; font-size: 35px;">Bản đồ khu
+                                                                du lịch Rừng Dừa</h2>
+                                                            <p><iframe loading="lazy" style="border: 0;"
+                                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1613.378582155822!2d108.3613025296979!3d15.894260126070156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420d0ddb39b425%3A0x7885bef8f71eefd6!2zUuG7qk5HIEThu6pBIELhuqJZIE3huqpVIEjhu5hJIEFO!5e0!3m2!1svi!2s!4v1654160973597!5m2!1svi!2s"
+                                                                    width="600" height="400"
+                                                                    allowfullscreen="allowfullscreen"></iframe><br>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div id="col-1089954406" class="col medium-6 small-12 large-6">
+                                            <div class="col-inner">
+
+
+
+                                                <h2 style="color: #008000; font-size: 35px;">Tin tức Rừng Dừa Bảy
+                                                    Mẫu</h2>
+
+                                                <div id="text-3152825648" class="text">
+
+                                                    <div id="tintuc-home" class="rpwe-block">
+                                                        <ul class="rpwe-ul">
+                                                            <li class="rpwe-li rpwe-clearfix"><a class="rpwe-img"
+                                                                    href="https://rungduabaymau.vn/cha-bo-da-nang/"
+                                                                    target="_self"><img
+                                                                        class="rpwe-alignleft rpwe-thumb"
+                                                                        src="https://rungduabaymau.vn/wp-content/uploads/2025/03/cha-bo-da-nang-ba-tam-120x120.jpg"
+                                                                        alt="Top 10 địa chỉ bán chả bò Đà Nẵng ngon được mọi người tin dùng"
+                                                                        height="120" width="120" loading="lazy"
+                                                                        decoding="async"></a>
+                                                                <h3 class="rpwe-title"><a
+                                                                        href="https://rungduabaymau.vn/cha-bo-da-nang/"
+                                                                        target="_self">Top 10 địa chỉ bán chả bò Đà
+                                                                        Nẵng ngon được mọi người tin dùng</a></h3>
+                                                                <time class="rpwe-time published"
+                                                                    datetime="2025-03-11T21:27:40+07:00">11 Tháng 3,
+                                                                    2025</time>
+                                                                <div class="rpwe-summary">Chả bò Đà Nẵng, một trong
+                                                                    nhiều đặc sản được khách du lịch yêu thích và
+                                                                    chọn mua về làm …</div>
+                                                            </li>
+                                                            <li class="rpwe-li rpwe-clearfix"><a class="rpwe-img"
+                                                                    href="https://rungduabaymau.vn/chup-anh-rung-dua-bay-mau/"
+                                                                    target="_self"><img
+                                                                        class="rpwe-alignleft rpwe-thumb"
+                                                                        src="https://rungduabaymau.vn/wp-content/uploads/2024/05/chup-anh-rung-dua-bay-mau-16-120x120.jpg"
+                                                                        alt="Tips chụp ảnh rừng dừa Bảy Mẫu đẹp, phù hợp với bối cảnh"
+                                                                        height="120" width="120" loading="lazy"
+                                                                        decoding="async"></a>
+                                                                <h3 class="rpwe-title"><a
+                                                                        href="https://rungduabaymau.vn/chup-anh-rung-dua-bay-mau/"
+                                                                        target="_self">Tips chụp ảnh rừng dừa Bảy
+                                                                        Mẫu đẹp, phù hợp với bối cảnh</a></h3><time
+                                                                    class="rpwe-time published"
+                                                                    datetime="2024-05-29T16:14:50+07:00">29 Tháng 5,
+                                                                    2024</time>
+                                                                <div class="rpwe-summary">Rừng dừa là một trong
+                                                                    những điểm đến được ví như sông nước miền Tây
+                                                                    thật nên thơ và bình …</div>
+                                                            </li>
+                                                            <li class="rpwe-li rpwe-clearfix"><a class="rpwe-img"
+                                                                    href="https://rungduabaymau.vn/hinh-anh-dep-nhat-ve-khu-du-lich-rung-dua-bay-mau/"
+                                                                    target="_self"><img
+                                                                        class="rpwe-alignleft rpwe-thumb"
+                                                                        src="https://rungduabaymau.vn/wp-content/uploads/2024/05/hinh-anh-dep-nhat-ve-khu-du-lich-rung-dua-bay-mau-13-120x120.jpg"
+                                                                        alt="Những hình ảnh đẹp nhất về khu du lịch Rừng Dừa Bảy Mẫu"
+                                                                        height="120" width="120" loading="lazy"
+                                                                        decoding="async"></a>
+                                                                <h3 class="rpwe-title"><a
+                                                                        href="https://rungduabaymau.vn/hinh-anh-dep-nhat-ve-khu-du-lich-rung-dua-bay-mau/"
+                                                                        target="_self">Những hình ảnh đẹp nhất về
+                                                                        khu du lịch Rừng Dừa Bảy Mẫu</a></h3><time
+                                                                    class="rpwe-time published"
+                                                                    datetime="2024-05-28T15:56:41+07:00">28 Tháng 5,
+                                                                    2024</time>
+                                                                <div class="rpwe-summary">Hội An, ngoài vẻ đẹp về
+                                                                    những ngôi nhà cổ, bức tường vàng… thì hình ảnh
+                                                                    đẹp nhất về khu …</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Generated by http://wordpress.org/plugins/recent-posts-widget-extended/ -->
+
+                                                    <style>
+                                                        #text-3152825648 {
+                                                            font-size: 1rem;
+                                                        }
+                                                    </style>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="loading-spin dark large centered" style="display: none;"></div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <style>
+                #section_1481625345 {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+            </style>
+        </section>
+        </div>
+
+
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js"></script>
+
+    <script>
+        // Initialize Flickity slider
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.slider');
+            var flkty = new Flickity(elem, {
+                cellAlign: 'center',
+                imagesLoaded: true,
+                lazyLoad: 1,
+                freeScroll: false,
+                wrapAround: true,
+                autoPlay: 6000,
+                pauseAutoPlayOnHover: true,
+                prevNextButtons: true,
+                contain: true,
+                adaptiveHeight: true,
+                dragThreshold: 10,
+                percentPosition: true,
+                pageDots: false,
+                rightToLeft: false,
+                draggable: true,
+                selectedAttraction: 0.1,
+                friction: 0.6
+            });
+        });
+    </script>
+</body>
+
+</html>

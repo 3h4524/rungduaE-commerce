@@ -1,0 +1,300 @@
+/* CSS cho phần Liên Hệ Rừng Dừa Bảy Mẫu */
+/* Layout chính */
+.row-small {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Container chung */
+  .col-inner {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Layout 2 cột chính */
+  .row-small > .col {
+    width: 100%;
+  }
+  
+  .row-small #row-51938177 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Thiết lập cấu trúc ngang */
+  #col-796266231,
+  #col-1131761391 {
+    padding: 0 15px;
+  }
+  
+  #col-796266231 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  
+  #col-1131761391 {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  
+  /* Tiêu đề */
+  p[style*="color: #519007"] strong {
+    font-size: 24px;
+    color: #519007;
+    display: block;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  /* Thông tin liên hệ bên trái */
+  /* Icon boxes */
+  .icon-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .icon-box-img {
+    width: 30px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .icon-inner {
+    color: #519007;
+  }
+  
+  .icon-box-text {
+    flex-grow: 1;
+  }
+  
+  .text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  /* SVG icons */
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .icon-box .icon svg path,
+  .icon-box .icon svg g {
+    fill: #519007;
+  }
+  
+  /* Form liên hệ bên phải */
+  .form-lien-he input[type="text"],
+  .form-lien-he input[type="tel"],
+  .form-lien-he input[type="email"],
+  .form-lien-he textarea,
+  .wpcf7-form input[type="text"],
+  .wpcf7-form input[type="tel"],
+  .wpcf7-form input[type="email"],
+  .wpcf7-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .form-lien-he textarea,
+  .wpcf7-form textarea {
+    height: 140px;
+    resize: vertical;
+  }
+  
+  /* Nút gửi ngay */
+  .btn-gui,
+  .wpcf7-submit {
+    display: inline-block;
+    background-color: #e9b06e !important;
+    color: #ffffff !important;
+    padding: 12px 35px !important;
+    border: none !important;
+    border-radius: 30px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+  }
+  
+  .btn-gui:hover,
+  .wpcf7-submit:hover {
+    background-color: #d89e5a !important;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive cho điện thoại */
+  @media screen and (max-width: 767px) {
+    /* Chuyển sang cấu trúc dọc */
+    #col-796266231,
+    #col-1131761391 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    
+    #col-796266231 {
+      margin-bottom: 30px;
+    }
+    
+    /* Giảm padding cho mobile */
+    .col-inner {
+      padding: 20px;
+    }
+    
+    /* Điều chỉnh lại kích thước tiêu đề */
+    p[style*="color: #519007"] strong {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    
+    /* Tinh chỉnh form */
+    .form-lien-he input[type="text"],
+    .form-lien-he input[type="tel"],
+    .form-lien-he input[type="email"],
+    .form-lien-he textarea,
+    .wpcf7-form input[type="text"],
+    .wpcf7-form input[type="tel"],
+    .wpcf7-form input[type="email"],
+    .wpcf7-form textarea {
+      padding: 10px;
+    }
+    
+    /* Điều chỉnh nút gửi */
+    .btn-gui,
+    .wpcf7-submit {
+      width: 100%;
+      padding: 12px 20px !important;
+    }
+  }
+  /* Footer Section Styling */
+.section {
+    padding: 30px 0;
+    background-color: #f8f8f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  
+  .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .col {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .medium-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  
+  /* Logo and Company Info */
+  .img {
+    margin-bottom: 20px;
+  }
+  
+  .img-inner img {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  /* Column Headings */
+  p strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-transform: uppercase;
+  }
+  
+  /* List Styling */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  ul li a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+  
+  /* Regular Text */
+  p {
+    margin: 0 0 10px 0;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Phone Number Styling */
+  p a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .medium-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    
+    .row {
+      flex-direction: column;
+    }
+  }
+  
+  /* Custom Bullet Points for Lists */
+  ul li {
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-size: 18px;
+    line-height: 1;
+  }

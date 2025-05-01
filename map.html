@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rừng Dừa Bảy Mẫu - Bản Đồ</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f9f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 0;
+            padding-top: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin: 40px 0 30px;
+            color: #0e7c3f;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: #0e7c3f;
+            margin: 12px auto;
+            border-radius: 2px;
+        }
+
+        /* Enhanced Banner */
+        .hero-banner {
+            width: 100%;
+            height: 500px;
+            background-image: url(https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .banner-title {
+            color: white;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            margin-bottom: 15px;
+        }
+
+        .banner-subtitle {
+            color: #ffffff;
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Map Styles */
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(14, 124, 63, 0.15);
+            margin-bottom: 40px;
+        }
+
+        /* Improved Info Section */
+        .map-info {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            padding: 25px;
+            border-radius: 12px;
+            background: linear-gradient(145deg, #ffffff, #f0f8f4);
+            box-shadow: 0 8px 20px rgba(14, 124, 63, 0.1);
+        }
+
+        .info-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(14, 124, 63, 0.2);
+        }
+
+        .info-icon {
+            background: linear-gradient(135deg, #0e7c3f, #15a555);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(14, 124, 63, 0.3);
+        }
+
+        .info-text h4 {
+            margin-bottom: 12px;
+            color: #0e7c3f;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .info-text p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .map-info {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+            
+            .banner-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 400px;
+            }
+            
+            .banner-title {
+                font-size: 2.5rem;
+            }
+            
+            .banner-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .info-item {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-banner {
+                height: 300px;
+            }
+            
+            .banner-title {
+                font-size: 2rem;
+            }
+            
+            .banner-subtitle {
+                font-size: 1rem;
+            }
+            
+            .info-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Enhanced Hero Banner -->
+    <div class="hero-banner">
+        <div class="banner-content">
+            <h1 class="banner-title">Rừng Dừa Bảy Mẫu</h1>
+            <p class="banner-subtitle">Khám phá vẻ đẹp hoang sơ của thiên nhiên Hội An</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Map Section -->
+        <h2 class="section-title">Bản Đồ & Thông Tin</h2>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15350.512940141947!2d108.36526626977536!3d15.876124900000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420df2d67f24f1%3A0xf3b4112d16069f6d!2zS2h1IGRpIHTDrWNoIFLhu6tuZyBE4burYSBC4bqjeSBN4bqrdQ!5e0!3m2!1svi!2s!4v1644630888938!5m2!1svi!2s"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <!-- Improved Info Section -->
+        <div class="map-info">
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div class="info-text">
+                    <h4>Địa Chỉ</h4>
+                    <p>Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🕒</div>
+                <div class="info-text">
+                    <h4>Giờ Mở Cửa</h4>
+                    <p>7:00 - 17:00 hàng ngày</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

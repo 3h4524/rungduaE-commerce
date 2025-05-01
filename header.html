@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rừng Dừa Bảy Mẫu</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    /* Header Styles */
+    :root {
+      --primary-color: #519007;
+      --text-color: #333;
+      --hover-color: #387105; 
+      --white: #ffffff;
+      --header-height: 90px;
+      --header-height-scrolled: 70px;
+      --transition-speed: 0.3s;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: var(--header-height);
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-height);
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .header-scrolled {
+      height: var(--header-height-scrolled);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-scrolled .header-logo {
+      max-height: 50px;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .header-logo {
+      max-height: 70px;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .navbar-nav .nav-item {
+      position: relative;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .navbar-nav .nav-link {
+      color: var(--text-color);
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+      color: var(--primary-color);
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .navbar-nav .nav-item:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .navbar-nav .nav-item:hover:after,
+    .navbar-nav .nav-item.active:after {
+      width: 80%;
+    }
+
+    /* Search icon */
+    .search-icon {
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .search-icon:hover {
+      background-color: rgba(81, 144, 7, 0.1);
+    }
+
+    /* Search dropdown */
+    .search-dropdown {
+      min-width: 280px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-form {
+      position: relative;
+    }
+
+    .search-input {
+      padding-right: 40px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+    }
+
+    .search-button {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      background: transparent;
+      border: none;
+      color: var(--primary-color);
+    }
+
+    /* Mobile menu */
+    .navbar-toggler {
+      border: none;
+      padding: 0;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    /* Animation for navbar items */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .navbar-collapse .navbar-nav .nav-item {
+      animation: fadeIn 0.3s ease forwards;
+      animation-delay: calc(0.1s * var(--animation-order));
+      opacity: 0;
+    }
+
+    /* Mobile menu adjustments */
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background-color: var(--white);
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+      
+      .navbar-nav .nav-item:after {
+        display: none;
+      }
+      
+      .navbar-nav .nav-link {
+        padding: 10px 15px;
+        border-radius: 5px;
+      }
+      
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-item.active .nav-link {
+        background-color: rgba(81, 144, 7, 0.1);
+      }
+      
+      .search-dropdown {
+        position: static !important;
+        box-shadow: none;
+        padding: 15px 0;
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="https://rungduabaymau.vn/" title="rungduabaymau.vn">
+          <img src="https://rungduabaymau.vn/wp-content/uploads/2022/06/logo2.jpg" class="header-logo" alt="rungduabaymau.vn">
+        </a>
+        
+        <!-- Mobile menu toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navigation items -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item active" style="--animation-order: 1;">
+              <a class="nav-link" href="https://rungduabaymau.vn/">Rừng dừa bảy mẫu</a>
+            </li>
+            <li class="nav-item" style="--animation-order: 2;">
+              <a class="nav-link" href="https://rungduabaymau.vn/ve-chung-toi/">Về chúng tôi</a>
+            </li>
+            <li class="nav-item" style="--animation-order: 3;">
+              <a class="nav-link" href="https://rungduabaymau.vn/tour-rung-dua-bay-mau/">Tour rừng dừa bảy mẫu</a>
+            </li>
+            <li class="nav-item" style="--animation-order: 4;">
+              <a class="nav-link" href="https://rungduabaymau.vn/hinh-anh/">Hình ảnh</a>
+            </li>
+            <li class="nav-item" style="--animation-order: 5;">
+              <a class="nav-link" href="https://rungduabaymau.vn/tin-tuc/">Tin tức</a>
+            </li>
+            <li class="nav-item" style="--animation-order: 6;">
+              <a class="nav-link" href="https://rungduabaymau.vn/ban-do/">Bản đồ</a>
+            </li>
+            <li class="nav-item" style="--animation-order: 7;">
+              <a class="nav-link" href="https://rungduabaymau.vn/lien-he/">Liên hệ</a>
+            </li>
+            
+            <!-- Search dropdown -->
+            <li class="nav-item dropdown" style="--animation-order: 8;">
+              <a class="nav-link search-icon" href="#" id="searchDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-search"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end search-dropdown" aria-labelledby="searchDropdown">
+                <form class="search-form" role="search" method="get" action="https://rungduabaymau.vn/">
+                  <div class="input-group">
+                    <input type="search" class="form-control search-input" placeholder="Tìm kiếm..." aria-label="Search" name="s">
+                    <input type="hidden" name="post_type" value="product">
+                    <button class="search-button" type="submit">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script for scroll effect and close menu when clicking outside -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.getElementById('header');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      
+      // Function to handle scroll effect
+      function handleScroll() {
+        if (window.scrollY > 50) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+      }
+      
+      // Listen for scroll events
+      window.addEventListener('scroll', handleScroll);
+      
+      // Check initial scroll position
+      handleScroll();
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isNavbarCollapse = navbarCollapse.contains(event.target);
+        const isNavbarToggler = navbarToggler.contains(event.target);
+        
+        // If clicking outside the menu and the toggle button, and menu is expanded
+        if (!isNavbarCollapse && !isNavbarToggler && navbarCollapse.classList.contains('show')) {
+          // Using Bootstrap's collapse API to hide the menu
+          bootstrap.Collapse.getInstance(navbarCollapse).hide();
+        }
+      });
+      
+      // Close dropdown search when clicking outside
+      const searchDropdown = document.getElementById('searchDropdown');
+      const searchDropdownMenu = document.querySelector('.search-dropdown');
+      
+      document.addEventListener('click', function(event) {
+        if (!searchDropdown.contains(event.target) && 
+            !searchDropdownMenu.contains(event.target) && 
+            searchDropdownMenu.classList.contains('show')) {
+          // Using Bootstrap's dropdown API
+          bootstrap.Dropdown.getInstance(searchDropdown).hide();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
