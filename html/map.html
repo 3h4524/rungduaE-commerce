@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-key="title">Qua Rừng Dừa - Khu du lịch sinh thái</title>
-    <link rel="stylesheet" href="/css/header-style.css">
+    <link rel="stylesheet" href="../css/header-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <style>
         /* Biến màu chính */
@@ -32,7 +32,6 @@
 
         html {
             font-size: 16px;
-            /* Font-size gốc */
         }
 
         body {
@@ -45,7 +44,6 @@
         /* Hero Section */
         .hero-section {
             height: 43.75rem;
-            /* 700px / 16 */
             width: 100%;
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg);
             background-size: cover;
@@ -59,9 +57,7 @@
         .hero-content {
             text-align: center;
             max-width: 56.25rem;
-            /* 900px / 16 */
             padding: 0 1.25rem;
-            /* 20px / 16 */
             animation: fadeIn 1.5s ease;
         }
 
@@ -69,7 +65,6 @@
             from {
                 opacity: 0;
                 transform: translateY(1.25rem);
-                /* 20px / 16 */
             }
 
             to {
@@ -100,9 +95,7 @@
             background-color: var(--accent-color);
             color: var(--dark-bg);
             padding: 0.75rem 1.875rem;
-            /* 12px, 30px */
             border-radius: 3.125rem;
-            /* 50px / 16 */
             font-size: 1.2rem;
             font-weight: 600;
             text-decoration: none;
@@ -113,18 +106,14 @@
         .hero-btn:hover {
             background-color: white;
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
             box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
-            /* 10px, 20px */
         }
 
         /* Container chung */
         .container {
             max-width: 81.25rem;
-            /* 1300px / 16 */
             margin: 0 auto;
             padding: 5rem 1.25rem;
-            /* 5rem, 20px */
         }
 
         /* Heading styles */
@@ -145,14 +134,12 @@
             font-size: 1.3rem;
             color: var(--secondary-color);
             max-width: 43.75rem;
-            /* 700px / 16 */
             margin: 0 auto;
         }
 
         .section-divider {
             height: 4px;
             width: 6.25rem;
-            /* 100px / 16 */
             background-color: var(--accent-color);
             margin: 1.5rem auto;
             border-radius: 2px;
@@ -181,10 +168,8 @@
             position: relative;
             z-index: 1;
             border-radius: 0.9375rem;
-            /* 15px / 16 */
             overflow: hidden;
             box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.15);
-            /* 20px, 40px */
             margin-bottom: 4rem;
         }
 
@@ -192,7 +177,6 @@
             display: block;
             width: 100%;
             height: 31.25rem;
-            /* 500px / 16 */
             border: none;
         }
 
@@ -200,7 +184,6 @@
         .info-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-            /* 300px / 16 */
             gap: 2rem;
             position: relative;
             z-index: 1;
@@ -209,11 +192,9 @@
         .info-card {
             background: white;
             border-radius: 0.9375rem;
-            /* 15px / 16 */
             padding: 2.5rem;
             transition: all 0.4s ease;
             box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.05);
-            /* 10px, 25px */
             position: relative;
             overflow: hidden;
             display: flex;
@@ -229,22 +210,17 @@
             left: 0;
             width: 100%;
             height: 0.3125rem;
-            /* 5px / 16 */
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
         }
 
         .info-card:hover {
             transform: translateY(-0.625rem);
-            /* 10px / 16 */
             box-shadow: 0 1.25rem 1.875rem rgba(0, 0, 0, 0.12);
-            /* 20px, 30px */
         }
 
         .info-icon {
             width: 5rem;
-            /* 80px / 16 */
             height: 5rem;
-            /* 80px / 16 */
             background: var(--light-bg);
             border-radius: 50%;
             display: flex;
@@ -261,7 +237,6 @@
             background: var(--primary-color);
             color: white;
             box-shadow: 0 0.625rem 1.25rem rgba(46, 125, 50, 0.3);
-            /* 10px, 20px */
         }
 
         .info-title {
@@ -287,10 +262,8 @@
 
         .highlights-container {
             max-width: 81.25rem;
-            /* 1300px / 16 */
             margin: 0 auto;
             padding: 0 1.25rem;
-            /* 20px / 16 */
         }
 
         .highlights-heading {
@@ -307,7 +280,6 @@
         .highlights-divider {
             height: 4px;
             width: 6.25rem;
-            /* 100px / 16 */
             background-color: var(--accent-color);
             margin: 1.5rem auto;
             border-radius: 2px;
@@ -317,21 +289,18 @@
             font-size: 1.3rem;
             color: var(--secondary-color);
             max-width: 43.75rem;
-            /* 700px / 16 */
             margin: 0 auto;
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-            /* 300px / 16 */
             gap: 2.5rem;
         }
 
         .feature-item {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 0.9375rem;
-            /* 15px / 16 */
             padding: 2.5rem;
             transition: all 0.4s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -340,7 +309,6 @@
         .feature-item:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-0.625rem);
-            /* 10px / 16 */
         }
 
         .feature-icon {
@@ -369,13 +337,10 @@
 
         .footer-container {
             max-width: 81.25rem;
-            /* 1300px / 16 */
             margin: 0 auto;
             padding: 0 1.25rem;
-            /* 20px / 16 */
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-            /* 250px / 16 */
             gap: 3rem;
         }
 
@@ -384,7 +349,6 @@
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.625rem;
-            /* 10px / 16 */
         }
 
         .footer-col h4::after {
@@ -393,7 +357,6 @@
             bottom: 0;
             left: 0;
             width: 3.125rem;
-            /* 50px / 16 */
             height: 2px;
             background-color: var(--footer-link);
         }
@@ -409,7 +372,6 @@
 
         .footer-links li {
             margin-bottom: 0.9375rem;
-            /* 15px / 16 */
         }
 
         .footer-links a {
@@ -422,7 +384,6 @@
         .footer-links a:hover {
             color: var(--footer-link-hover);
             transform: translateX(0.3125rem);
-            /* 5px / 16 */
         }
 
         .social-links {
@@ -432,16 +393,13 @@
 
         .social-links a {
             width: 2.5rem;
-            /* 40px / 16 */
             height: 2.5rem;
-            /* 40px / 16 */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
             margin-right: 0.9375rem;
-            /* 15px / 16 */
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -451,7 +409,6 @@
             background: var(--accent-color);
             color: var(--dark-bg);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
         }
 
         .copyright {
@@ -467,13 +424,9 @@
         .back-to-top {
             position: fixed;
             bottom: 1.875rem;
-            /* 30px / 16 */
             right: 1.875rem;
-            /* 30px / 16 */
             width: 3.125rem;
-            /* 50px / 16 */
             height: 3.125rem;
-            /* 50px / 16 */
             border-radius: 50%;
             background-color: var(--primary-color);
             color: white;
@@ -497,14 +450,12 @@
         .back-to-top:hover {
             background-color: var(--accent-color);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
         }
 
         /* Responsive */
         @media (max-width: 992px) {
             html {
                 font-size: 15px;
-                /* Giảm font-size gốc */
             }
 
             .hero-title {
@@ -523,12 +474,10 @@
         @media (max-width: 768px) {
             html {
                 font-size: 14px;
-                /* Giảm font-size gốc */
             }
 
             .hero-section {
                 height: 37.5rem;
-                /* 600px / 16 */
             }
 
             .hero-title {
@@ -547,7 +496,6 @@
         @media (max-width: 576px) {
             html {
                 font-size: 12px;
-                /* Giảm font-size gốc */
             }
 
             .hero-title {
@@ -560,7 +508,6 @@
 
             .hero-btn {
                 padding: 0.75rem 1.5625rem;
-                /* 12px, 25px */
                 font-size: 1rem;
             }
 
@@ -570,22 +517,32 @@
 
             .info-icon {
                 width: 4.375rem;
-                /* 70px / 16 */
                 height: 4.375rem;
-                /* 70px / 16 */
                 font-size: 1.8rem;
             }
 
             .map-iframe {
                 height: 21.875rem;
-                /* 350px / 16 */
             }
 
             .language-switcher .lang-btn {
                 font-size: 0.8rem;
                 padding: 0.1875rem 0.375rem;
-                /* 3px, 6px */
             }
+        }
+
+        /* Override header background color */
+        .header-container header {
+            background-color: #4D8055 !important;
+            transition: all 0.3s ease;
+        }
+
+        .header-container header.scrolled {
+            height: 4.375rem;
+            background-color: rgba(77, 128, 85, 0.95) !important;
+            backdrop-filter: blur(0.625rem);
+            -webkit-backdrop-filter: blur(0.625rem);
+            box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
         }
     </style>
 </head>
@@ -596,8 +553,7 @@
         <header>
             <div class="navbar">
                 <a href="#" class="logo">
-                    <span class="logo-icon"><i class="fas fa-tree"></i></span>
-                    <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                    <img src="../image/logo.png" alt="Qua Rừng Dừa Logo" class="logo-icon">
                 </a>
                 <div class="navbar-right">
                     <nav>
@@ -782,7 +738,7 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <script src="/js/header.js"></script>
+    <script src="../js/header.js"></script>
 
     <!-- JavaScript -->
     <script>

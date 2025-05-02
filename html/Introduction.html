@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- Roboto Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/header-style.css">
+    <link rel="stylesheet" href="../css/header-style.css">
     <style>
         :root {
             --primary-color: #2e7d32;
@@ -35,7 +35,6 @@
 
         html {
             font-size: 16px;
-            /* Font-size gốc */
             scroll-behavior: smooth;
         }
 
@@ -59,10 +58,7 @@
             justify-content: center;
             height: 43.75rem;
             width: 100%;
-
-            /* 120px, 80px */
             text-align: center;
-            position: relative;
         }
 
         .banner-title {
@@ -70,15 +66,12 @@
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 1.25rem;
-            /* 20px / 16 */
         }
 
         .container {
             max-width: 75rem;
-            /* 1200px / 16 */
             margin: 0 auto;
             padding: 0 1.25rem;
-            /* 20px / 16 */
         }
 
         section {
@@ -92,7 +85,6 @@
         .section-title {
             text-align: center;
             margin-bottom: 3.125rem;
-            /* 50px / 16 */
             color: var(--primary-color);
             position: relative;
             font-weight: 700;
@@ -102,23 +94,17 @@
             content: "";
             display: block;
             width: 6.25rem;
-            /* 100px / 16 */
             height: 0.1875rem;
-            /* 3px / 16 */
             background-color: var(--accent-color);
             margin: 0.9375rem auto;
-            /* 15px / 16 */
         }
 
         .info-box {
             background-color: white;
             border-radius: 0.625rem;
-            /* 10px / 16 */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             padding: 1.875rem;
-            /* 30px / 16 */
             margin-bottom: 1.875rem;
-            /* 30px / 16 */
             transition: transform 0.3s ease;
         }
 
@@ -126,22 +112,18 @@
             display: flex;
             align-items: center;
             gap: 1.875rem;
-            /* 30px / 16 */
             flex-wrap: wrap;
         }
 
         .info-text {
             flex: 1;
             min-width: 18.75rem;
-            /* 300px / 16 */
         }
 
         .info-image {
             flex: 1;
             min-width: 18.75rem;
-            /* 300px / 16 */
             border-radius: 0.625rem;
-            /* 10px / 16 */
             overflow: hidden;
         }
 
@@ -160,24 +142,19 @@
         .activities {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-            /* 300px / 16 */
             gap: 1.25rem;
-            /* 20px / 16 */
             margin-top: 2.5rem;
-            /* 40px / 16 */
         }
 
         .activity-card {
             background-color: white;
             border-radius: 0.625rem;
-            /* 10px / 16 */
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .activity-img {
             height: 12.5rem;
-            /* 200px / 16 */
             width: 100%;
             overflow: hidden;
         }
@@ -190,13 +167,11 @@
 
         .activity-info {
             padding: 1.25rem;
-            /* 20px / 16 */
         }
 
         .activity-info h3 {
             color: var(--primary-color);
             margin-bottom: 0.625rem;
-            /* 10px / 16 */
         }
 
         /* Footer */
@@ -208,13 +183,10 @@
 
         .footer-container {
             max-width: 81.25rem;
-            /* 1300px / 16 */
             margin: 0 auto;
             padding: 0 1.25rem;
-            /* 20px / 16 */
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-            /* 250px / 16 */
             gap: 3rem;
         }
 
@@ -223,7 +195,6 @@
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.625rem;
-            /* 10px / 16 */
         }
 
         .footer-col h4::after {
@@ -232,7 +203,6 @@
             bottom: 0;
             left: 0;
             width: 3.125rem;
-            /* 50px / 16 */
             height: 2px;
             background-color: var(--footer-link);
         }
@@ -248,7 +218,6 @@
 
         .footer-links li {
             margin-bottom: 0.9375rem;
-            /* 15px / 16 */
         }
 
         .footer-links a {
@@ -266,7 +235,6 @@
         .footer-links a:hover {
             color: var(--footer-link-hover);
             transform: translateX(0.3125rem);
-            /* 5px / 16 */
         }
 
         .social-links {
@@ -276,16 +244,13 @@
 
         .social-links a {
             width: 2.5rem;
-            /* 40px / 16 */
             height: 2.5rem;
-            /* 40px / 16 */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
             margin-right: 0.9375rem;
-            /* 15px / 16 */
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -295,7 +260,6 @@
             background: var(--accent-color);
             color: var(--dark-bg);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
         }
 
         .copyright {
@@ -312,9 +276,7 @@
             background-color: var(--accent-color);
             color: var(--dark-bg);
             padding: 0.75rem 1.875rem;
-            /* 12px, 30px */
             border-radius: 3.125rem;
-            /* 50px / 16 */
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
@@ -325,22 +287,16 @@
             background-color: white;
             border: 2px solid var(--accent-color);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
             box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
-            /* 10px, 20px */
         }
 
         /* Back to top button */
         .back-to-top {
             position: fixed;
             bottom: 1.875rem;
-            /* 30px / 16 */
             right: 1.875rem;
-            /* 30px / 16 */
             width: 3.125rem;
-            /* 50px / 16 */
             height: 3.125rem;
-            /* 50px / 16 */
             border-radius: 50%;
             background-color: var(--primary-color);
             color: white;
@@ -364,14 +320,12 @@
         .back-to-top:hover {
             background-color: var(--accent-color);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
         }
 
         /* Responsive */
         @media (max-width: 992px) {
             html {
                 font-size: 15px;
-                /* Giảm font-size gốc */
             }
 
             .banner-title {
@@ -382,7 +336,6 @@
         @media (max-width: 768px) {
             html {
                 font-size: 14px;
-                /* Giảm font-size gốc */
             }
 
             .banner-title {
@@ -401,7 +354,6 @@
         @media (max-width: 576px) {
             html {
                 font-size: 12px;
-                /* Giảm font-size gốc */
             }
 
             .banner-title {
@@ -410,7 +362,6 @@
 
             .banner {
                 padding: 5rem 0 3.75rem;
-                /* 80px, 60px */
             }
 
             .section-title {
@@ -419,12 +370,25 @@
 
             .info-box {
                 padding: 1.25rem;
-                /* 20px / 16 */
             }
 
             .activities {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* Override header background color */
+        .header-container header {
+            background-color: #4D8055 !important;
+            transition: all 0.3s ease;
+        }
+
+        .header-container header.scrolled {
+            height: 4.375rem;
+            background-color: rgba(77, 128, 85, 0.95) !important;
+            backdrop-filter: blur(0.625rem);
+            -webkit-backdrop-filter: blur(0.625rem);
+            box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
         }
     </style>
 </head>
@@ -433,8 +397,7 @@
     <header>
         <div class="navbar">
             <a href="#" class="logo">
-                <span class="logo-icon"><i class="fas fa-tree"></i></span>
-                <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                <img src="../image/logo.png" alt="Qua Rừng Dừa Logo" class="logo-icon">
             </a>
             <div class="navbar-right">
                 <nav>
@@ -835,7 +798,7 @@
         });
     });
 </script>
-<script src="/js/header.js"></script>
+<script src="../js/header.js"></script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <link rel="stylesheet" href="/css/header-style.css">
+    <link rel="stylesheet" href="../css/header-style.css">
     <script>
         (function () {
             emailjs.init("K-sUjcDKfXdqVAnqD");
@@ -604,6 +604,19 @@
             list-style: none;
             padding-left: 0 !important;
         }
+
+        .header-container header {
+            background-color: #4D8055 !important;
+            transition: all 0.3s ease;
+        }
+
+        .header-container header.scrolled {
+            height: 4.375rem;
+            background-color: rgba(77, 128, 85, 0.95) !important;
+            backdrop-filter: blur(0.625rem);
+            -webkit-backdrop-filter: blur(0.625rem);
+            box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+        }
     </style>
 </head>
 
@@ -613,8 +626,7 @@
         <header>
             <div class="navbar">
                 <a href="#" class="logo">
-                    <span class="logo-icon"><i class="fas fa-tree"></i></span>
-                    <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                    <img src="../image/logo.png" alt="Qua Rừng Dừa Logo" class="logo-icon">
                 </a>
                 <div class="navbar-right">
                     <nav>
@@ -1268,7 +1280,7 @@
             });
         });
     </script>
-    <script src="/js/header.js"></script>
+    <script src="../js/header.js"></script>
 </body>
 
 </html>

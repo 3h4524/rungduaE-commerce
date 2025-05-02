@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-key="title">Qua Rừng Dừa – Trải Nghiệm Miền Sông Nước Giữa Phố Cổ Hội An</title>
-    <link rel="stylesheet" href="/css/header-style.css">
+    <link rel="stylesheet" href="../css/header-style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -663,6 +663,19 @@
                 font-size: 1rem;
             }
         }
+
+        .header-container header {
+            background-color: #4D8055 !important;
+            transition: all 0.3s ease;
+        }
+
+        .header-container header.scrolled {
+            height: 4.375rem;
+            background-color: rgba(77, 128, 85, 0.95) !important;
+            backdrop-filter: blur(0.625rem);
+            -webkit-backdrop-filter: blur(0.625rem);
+            box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+        }
     </style>
 </head>
 
@@ -672,8 +685,7 @@
         <header>
             <div class="navbar">
                 <a href="#" class="logo">
-                    <span class="logo-icon"><i class="fas fa-tree"></i></span>
-                    <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                    <img src="../image/logo.png" alt="Qua Rừng Dừa Logo" class="logo-icon">
                 </a>
                 <div class="navbar-right">
                     <nav>
@@ -925,7 +937,7 @@
     <div class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </div>
-    <script src="/js/header.js"></script>
+    <script src="../js/header.js"></script>
     <script>
         const translations = {
             vi: {
