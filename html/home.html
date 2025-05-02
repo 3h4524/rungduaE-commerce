@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="title">Qua Rừng Dừa – Trải Nghiệm Miền Sông Nước Giữa Phố Cổ Hội An</title>
+    <link rel="stylesheet" href="/css/header-style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --accent-color: #f4d35e;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --dark-bg: #344e41;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+            --footer-bg: #1c2e1e;
+            --footer-text: #ffffff;
+            --footer-link: #a7c957;
+            --footer-link-hover: #f4d35e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.7;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        /* Header và Navigation */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: var(--accent-color);
+            display: block;
+            margin: 15px auto;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .btn-custom {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom:hover {
+            background-color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* Introduction Section */
+        .intro-section {
+            background: var(--light-bg);
+        }
+
+        .intro-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://hoiana.com/wp-content/uploads/2024/12/rung-dua-bay-mau-hoi-an-11.webp') center/cover fixed;
+            color: #fff;
+        }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            color: var(--text-color);
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card h4 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .call-to-action {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .notice-box {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            border-left: 5px solid #d32f2f;
+            margin-top: 30px;
+        }
+
+        /* Activities Section */
+        .activities-section {
+            background: #fff;
+        }
+
+        .activities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .activity-card {
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .activity-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .activity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .activity-info {
+            padding: 20px;
+        }
+
+        .activity-info h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Food Section */
+        .food-section {
+            background: var(--light-bg);
+        }
+
+        .food-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .food-card {
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .food-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .food-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .food-info {
+            padding: 20px;
+        }
+
+        .food-info h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Map Section */
+        .map-section {
+            background: #fff;
+        }
+
+        .map-container {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 450px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 4rem 1rem 0.5rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--footer-link);
+        }
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--footer-link);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--footer-link-hover);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin-right: 15px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section {
+                height: 500px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-section p {
+                font-size: 1.3rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .intro-content {
+                flex-direction: column;
+            }
+
+            .intro-image {
+                order: -1;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .hero-section {
+                height: 450px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h4 {
+                font-size: 1.3rem;
+            }
+
+            .intro-image img {
+                height: 300px;
+            }
+
+            .pricing-container,
+            .activities-container,
+            .food-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 400px;
+            }
+
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .btn-custom {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .intro-image img {
+                height: 250px;
+            }
+
+            .activity-img,
+            .food-img {
+                height: 200px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <div class="header-container">
+        <header>
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fas fa-tree"></i></span>
+                    <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                </a>
+                <div class="navbar-right">
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="#" class="nav-link" data-key="home">Trang chủ</a></li>
+                            <li><a href="#about" class="nav-link" data-key="about">Giới thiệu</a></li>
+                            <li><a href="#map" class="nav-link" data-key="map">Bản đồ</a></li>
+                            <li><a href="#services" class="nav-link" data-key="services">Dịch vụ</a></li>
+                            <li><a href="#contact" class="nav-link" data-key="contact">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                    <div class="language-switcher">
+                        <button id="lang-vi" class="lang-btn active" onclick="changeLanguage('vi')">VI</button>
+                        <button id="lang-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    </div>
+                </div>
+                <button class="mobile-nav-toggle">
+                    <div class="menu-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </button>
+            </div>
+        </header>
+        <!-- Overlay for mobile menu -->
+        <div class="overlay"></div>
+    </div>
+
+
+    <main id="main">
+        <section class="hero-section">
+            <div class="container">
+                <h1 data-key="hero-title">Qua Rừng Dừa</h1>
+                <p data-key="hero-subtitle">Đắm mình trong vẻ đẹp nguyên sơ và tận hưởng không gian thiên nhiên yên bình
+                    giữa lòng Hội An</p>
+                <a href="/html/contact.html" class="btn-custom" data-key="hero-button">Liên Hệ Ngay</a>
+            </div>
+        </section>
+
+        <section class="intro-section section">
+            <div class="container">
+                <h2 data-key="intro-title">Giới Thiệu Qua Rừng Dừa</h2>
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <p data-key="intro-p1">Qua Rừng Dừa, điểm du lịch sinh thái nổi bật tại Hội An, chỉ cách phố cổ
+                            3km và Đà Nẵng 31km, mang vẻ đẹp sông nước thơ mộng, đậm chất miền Tây giữa lòng miền Trung.
+                        </p>
+                        <p data-key="intro-p2"> Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi
+                            tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được
+                            bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú..</p>
+                        <p data-key="intro-p3">Du khách sẽ trải nghiệm chèo thuyền thúng qua rừng dừa xanh mát, thưởng
+                            thức múa thúng điêu luyện, dân ca xứ Quảng và ẩm thực truyền thống, hòa mình vào không gian
+                            văn hóa miền Tây Nam Bộ độc đáo.</p>
+                        <a href="gioi-thieu.html" class="btn-custom" data-key="intro-button">Xem Thêm</a>
+                    </div>
+                    <div class="intro-image">
+                        <img src="https://rungduabaymau.vn/wp-content/uploads/2022/02/21.jpg" alt="Qua Rừng Dừa"
+                            data-key="intro-img-alt">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-section section">
+            <div class="container">
+                <h2 data-key="pricing-title">Bảng Giá Vé</h2>
+                <p class="text-center text-white mb-5" data-key="pricing-subtitle">Khu du lịch hoạt động từ 7h30 sáng
+                    đến 18h30 chiều. Giá vé có thể thay đổi tùy theo sự kiện. Vui lòng liên hệ trực tiếp để cập nhật
+                    thông tin mới nhất.</p>
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <h4 data-key="pricing-boat-title">Vé Thuyền Thúng</h4>
+                        <p data-key="pricing-boat-adult">Người lớn: 100.000 VNĐ/người/chuyến</p>
+                        <p data-key="pricing-boat-child">Trẻ em (5-9 tuổi): 50.000 VNĐ</p>
+                        <p data-key="pricing-boat-infant">Trẻ em dưới 5 tuổi: Miễn phí</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h4 data-key="pricing-international-title">Giá Vé Cho Du Khách Quốc Tế</h4>
+                        <p data-key="pricing-international-vietnamese">Khách Việt Nam: 200.000 VNĐ/2 khách/thúng</p>
+                        <p data-key="pricing-international-foreigner">Khách Quốc Tế: 250.000 VNĐ/2 khách/thúng</p>
+                        <p data-key="pricing-international-note">(khách trên 100kg: 1 khách/thúng)</p>
+                        <p data-key="pricing-international-time">Thời gian trải nghiệm: 70-90 phút</p>
+                    </div>
+                </div>
+                <div class="call-to-action">
+                    <h4 data-key="pricing-contact">Liên Hệ: <a href="tel:0985402302"
+                            class="text-warning">0985.402.302</a> (Zalo)</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="activities-section section">
+            <div class="container">
+                <h2 data-key="activities-title">Hoạt Động Nổi Bật</h2>
+                <p class="text-center mb-5" data-key="activities-subtitle">Tham gia các hoạt động độc đáo như chèo
+                    thuyền thúng, thưởng thức ẩm thực địa phương và chụp ảnh giữa thiên nhiên xanh mát.</p>
+                <div class="activities-container">
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="/image/introduction-4.png" alt="Đi Thuyền Thúng Khám Phá Rừng Dừa"
+                                data-key="activity1-img-alt">
+                        </div>
+                        <div class="activity-info">
+                            <h4 data-key="activity1-title">Đi Thuyền Thúng Khám Phá Rừng Dừa</h4>
+                            <p data-key="activity1-desc">Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du
+                                khách sẽ cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc
+                                trưng của người dân xứ Quảng.</p>
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="/image/introduction-5.png" alt="Thưởng Thức Ẩm Thực Địa Phương"
+                                data-key="activity2-img-alt">
+                        </div>
+                        <div class="activity-info">
+                            <h4 data-key="activity2-title">Thưởng Thức Ẩm Thực Địa Phương</h4>
+                            <p data-key="activity2-desc">Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua
+                                Rừng Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm
+                                dừa béo ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.</p>
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="/image/introduction-6.png" alt="Selfie Giữa Thiên Nhiên"
+                                data-key="activity3-img-alt">
+                        </div>
+                        <div class="activity-info">
+                            <h4 data-key="activity3-title">Selfie Giữa Thiên Nhiên</h4>
+                            <p data-key="activity3-desc">Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa
+                                xanh mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="food-section section">
+            <div class="container">
+                <h2 data-key="food-title">Món Ăn Ngon Địa Phương</h2>
+                <p class="text-center mb-5" data-key="food-subtitle">Thưởng thức những món ăn đặc trưng của phố cổ Hội
+                    An, đậm đà hương vị miền Trung với nguyên liệu tươi ngon, chế biến tinh tế, tất cả hội tụ ngay tại
+                    khu du lịch sinh thái Qua Rừng Dừa.</p>
+                <div class="food-container">
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="/image/caolau.png" alt="Cao Lầu" data-key="food1-img-alt">
+                        </div>
+                        <div class="food-info">
+                            <h4 data-key="food1-title">Cao Lầu</h4>
+                            <p data-key="food1-desc">Món mì đặc trưng với sợi mì dai, thịt heo xá xíu, rau sống và nước
+                                dùng đậm đà, mang hương vị Hội An.</p>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="/image/banhxeo.png" alt="Bánh Xèo" data-key="food2-img-alt">
+                        </div>
+                        <div class="food-info">
+                            <h4 data-key="food2-title">Bánh Xèo</h4>
+                            <p data-key="food2-desc">Bánh xèo vàng giòn, nhân đầy đặn với tôm, thịt, giá và hành, ăn kèm
+                                rau sống tươi mát và nước mắm chua ngọt đậm đà.</p>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="https://cdn.tgdd.vn/Files/2022/06/22/1441757/cach-lam-banh-bao-banh-vac-hoi-an-don-gian-tai-nha-202206221135418058.jpg"
+                                alt="Bánh Bao - Bánh Vạc" data-key="food3-img-alt">
+                        </div>
+                        <div class="food-info">
+                            <h4 data-key="food3-title">Bánh Bao - Bánh Vạc</h4>
+                            <p data-key="food3-desc">Bánh nhân tôm thịt, được hấp mềm mịn, chấm với nước mắm cay ngọt,
+                                là món ăn tinh tế của Hội An.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section section">
+            <div class="container">
+                <h2 data-key="map-title">Bản Đồ Khu Du Lịch</h2>
+                <p class="text-center mb-5" data-key="map-subtitle">Tọa lạc tại xã Cẩm Thanh, Hội An, Qua Rừng Dừa là
+                    điểm đến lý tưởng để khám phá thiên nhiên và văn hóa địa phương.</p>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1613.378582155822!2d108.3613025296979!3d15.894260126070156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420d0ddb39b425%3A0x7885bef8f71eefd6!2zUuG7qk5HIEThu6pBIELhuqJZIE3huqpVIEjhu5hJIEFO!5e0!3m2!1svi!2s!4v1654160973597!5m2!1svi!2s"
+                        allowfullscreen="allowfullscreen" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 data-key="footer-about-title">Qua Rừng Dừa</h4>
+                <p data-key="footer-about-text">Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên
+                    nhiên tuyệt vời cho du khách trong và ngoài nước.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-key="footer-links-quick-title">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="#" data-key="footer-link-home">Trang chủ</a></li>
+                    <li><a href="#about" data-key="footer-link-intro">Giới thiệu</a></li>
+                    <li><a href="#map" data-key="footer-link-services">Bản đồ</a></li>
+                    <li><a href="#services" data-key="footer-link-tours">Dịch vụ</a></li>
+                    <li><a href="#contact" data-key="footer-link-contact">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-key="contact-title">Liên Hệ</h4>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-key="contact-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm
+                        Thanh,
+                        Thành phố Hội An, Tỉnh Quảng Nam</span></p>
+                <p><i class="fas fa-phone"></i> <span data-key="contact-phone">0934.098.169</span></p>
+                <p><i class="fas fa-envelope"></i> <span data-key="contact-email">camtran.170580@gmail.com</span></p>
+                <p><i class="fas fa-clock"></i> <span data-key="footer-contact-hours">Mở cửa: 7:00 - 17:00 hàng
+                        ngày</span></p>
+            </div>
+            <div class="footer-col">
+                <h4 data-key="footer-tour-title">Đặt Tour</h4>
+                <p data-key="footer-tour-text">Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa</p>
+                <a href="#contact"
+                    style="display: inline-block; background-color: var(--accent-color); color: var(--dark-bg); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">
+                    <span data-key="footer-tour-button">Đặt Ngay</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p data-key="footer-bottom-text">© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <script src="/js/header.js"></script>
+    <script>
+        const translations = {
+            vi: {
+                title: "Qua Rừng Dừa – Trải Nghiệm Miền Sông Nước Giữa Phố Cổ Hội An",
+                "hero-title": "Qua Rừng Dừa",
+                "hero-subtitle": "Đắm mình trong vẻ đẹp nguyên sơ và tận hưởng không gian thiên nhiên yên bình giữa lòng Hội An",
+                "hero-button": "Liên Hệ Ngay",
+                "intro-title": "Giới Thiệu Qua Rừng Dừa",
+                "intro-p1": "Qua Rừng Dừa, điểm du lịch sinh thái nổi bật tại Hội An, chỉ cách phố cổ 3km và Đà Nẵng 31km, mang vẻ đẹp sông nước thơ mộng, đậm chất miền Tây giữa lòng miền Trung.",
+                "intro-p2": "Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú.",
+                "intro-p3": "Du khách sẽ trải nghiệm chèo thuyền thúng qua rừng dừa xanh mát, thưởng thức múa thúng điêu luyện, dân ca xứ Quảng và ẩm thực truyền thống, hòa mình vào không gian văn hóa miền Tây Nam Bộ độc đáo.",
+                "intro-button": "Xem Thêm",
+                "intro-img-alt": "Qua Rừng Dừa",
+                "pricing-title": "Bảng Giá Vé",
+                "pricing-subtitle": "Khu du lịch hoạt động từ 7h30 sáng đến 18h30 chiều. Giá vé có thể thay đổi tùy theo sự kiện. Vui lòng liên hệ trực tiếp để cập nhật thông tin mới nhất.",
+                "pricing-boat-title": "Vé Thuyền Thúng",
+                "pricing-boat-adult": "Người lớn: 100.000 VNĐ/người/chuyến",
+                "pricing-boat-child": "Trẻ em (5-9 tuổi): 50.000 VNĐ",
+                "pricing-boat-infant": "Trẻ em dưới 5 tuổi: Miễn phí",
+                "pricing-international-title": "Giá Vé Cho Du Khách Quốc Tế",
+                "pricing-international-vietnamese": "Khách Việt Nam: 200.000 VNĐ/2 khách/thúng",
+                "pricing-international-foreigner": "Khách Quốc Tế: 250.000 VNĐ/2 khách/thúng",
+                "pricing-international-note": "(khách trên 100kg: 1 khách/thúng)",
+                "pricing-international-time": "Thời gian trải nghiệm: 70-90 phút",
+                "footer-tour-button": "Đặt Ngay",
+                "pricing-contact": "Liên Hệ: <a href='tel:0985402302' class='text-warning'>0985.402.302</a> (Zalo)",
+                "pricing-notice-title": "Lưu Ý",
+                "pricing-notice-content": "Để tránh bị tính giá cao, quý khách nên đặt vé trước qua ban quản lý. Nhân viên sẽ đón bạn tại cổng khu du lịch. Ưu đãi chỉ áp dụng cho khách đăng ký trước.",
+                "activities-title": "Hoạt Động Nổi Bật",
+                "activities-subtitle": "Tham gia các hoạt động độc đáo như chèo thuyền thúng, thưởng thức ẩm thực địa phương và chụp ảnh giữa thiên nhiên xanh mát.",
+                "activity1-title": "Đi Thuyền Thúng Khám Phá Rừng Dừa",
+                "activity1-desc": "Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du khách sẽ cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc trưng của người dân xứ Quảng.",
+                "activity1-img-alt": "Đi Thuyền Thúng Khám Phá Rừng Dừa",
+                "activity2-title": "Thưởng Thức Ẩm Thực Địa Phương",
+                "activity2-desc": "Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua Rừng Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm dừa béo ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.",
+                "activity2-img-alt": "Thưởng Thức Ẩm Thực Địa Phương",
+                "activity3-title": "Selfie Giữa Thiên Nhiên",
+                "activity3-desc": "Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa xanh mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.",
+                "activity3-img-alt": "Selfie Giữa Thiên Nhiên",
+                "food-title": "Món Ăn Ngon Địa Phương",
+                "food-subtitle": "Thưởng thức những món ăn đặc trưng của phố cổ Hội An, đậm đà hương vị miền Trung với nguyên liệu tươi ngon, chế biến tinh tế, tất cả hội tụ ngay tại khu du lịch sinh thái Qua Rừng Dừa.",
+                "food1-title": "Cao Lầu",
+                "food1-desc": "Món mì đặc trưng với sợi mì dai, thịt heo xá xíu, rau sống và nước dùng đậm đà, mang hương vị Hội An.",
+                "food1-img-alt": "Cao Lầu",
+                "food2-title": "Bánh Xèo",
+                "food2-desc": "Bánh xèo vàng giòn, nhân đầy đặn với tôm, thịt, giá và hành, ăn kèm rau sống tươi mát và nước mắm chua ngọt đậm đà.",
+                "food2-img-alt": "Bánh Xèo",
+                "food3-title": "Bánh Bao - Bánh Vạc",
+                "food3-desc": "Bánh nhân tôm thịt, được hấp mềm mịn, chấm với nước mắm cay ngọt, là món ăn tinh tế của Hội An.",
+                "food3-img-alt": "Bánh Bao - Bánh Vạc",
+                "map-title": "Bản Đồ Khu Du Lịch",
+                // Thêm các key cho header
+                "logo-text": "Qua Rừng Dừa",
+                "home": "Trang chủ",
+                "about": "Giới thiệu",
+                "map": "Bản đồ",
+                "services": "Dịch vụ",
+                "contact": "Liên hệ",
+                "map-subtitle": "Tọa lạc tại xã Cẩm Thanh, Hội An, Qua Rừng Dừa là điểm đến lý tưởng để khám phá thiên nhiên và văn hóa địa phương.",
+                "footer-about-title": "Qua Rừng Dừa",
+                "footer-about-text": "Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên nhiên tuyệt vời cho du khách trong và ngoài nước.",
+                "footer-links-quick-title": "Liên Kết Nhanh",
+                "footer-link-home": "Trang Chủ",
+                "footer-link-intro": "Giới Thiệu",
+                "footer-link-services": "Bản đồ",
+                "footer-link-tours": "Dịch Vụ",
+                "footer-link-contact": "Liên Hệ",
+                "footer-contact-hours": "Mở cửa: 7:00 - 17:00 hàng ngày",
+                "footer-tour-title": "Đặt Tour",
+                "footer-tour-text": "Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa",
+                "footer-tour-button": "Đặt Ngay",
+                "footer-bottom-text": "© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu."
+
+            },
+            en: {
+                title: "Qua Coconut Forest – A Riverine Experience in the Heart of Hoi An",
+                "hero-title": "Qua Coconut Forest",
+                "hero-subtitle": "Immerse yourself in pristine beauty and enjoy a tranquil natural setting in the heart of Hoi An",
+                "hero-button": "Contact Now",
+                "intro-title": "About Qua Coconut Forest",
+                "intro-p1": "Qua Coconut Forest, a standout eco-tourism destination in Hoi An, is just 3km from the ancient town and 31km from Da Nang, offering poetic riverine beauty reminiscent of the Mekong Delta in Central Vietnam.",
+                "intro-p3": "Visitors can enjoy basket boat rides through lush coconut groves, skillful basket boat dances, Quang folk songs, and traditional cuisine, immersing in the unique Mekong Delta-like cultural vibe.",
+                "intro-p2": "Spanning over 100 hectares, this eco-tourism area is situated along three famous rivers – the Hoai River, Thu Bon River, and De Vong River – blending into a brackish water ecosystem, surrounded by lush coconut groves and a rich biodiversity",
+                "intro-button": "Learn More",
+                "intro-img-alt": "Qua Coconut Forest",
+                "pricing-title": "Ticket Prices",
+                "logo-text": "Qua Rừng Dừa Eco-Tourism Area",
+                "home": "Home",
+                "about": "About",
+                "footer-tour-button": "Book Now",
+                "map": "Map",
+                "services": "Services",
+                "contact": "Contact",
+                "pricing-subtitle": "The eco-tourism area operates from 7:30 AM to 6:30 PM. Ticket prices may vary depending on events. Please contact directly for the latest updates.",
+                "pricing-boat-title": "Basket Boat Ticket",
+                "pricing-boat-adult": "Adult: 100,000 VND/person/trip",
+                "pricing-boat-child": "Children (5-9 years): 50,000 VND",
+                "pricing-boat-infant": "Children under 5 years: Free",
+                "pricing-international-title": "Ticket Prices for International Visitors",
+                "pricing-international-vietnamese": "Vietnamese Guests: 200,000 VND/2 guests/boat",
+                "pricing-international-foreigner": "International Guests: 250,000 VND/2 guests/boat",
+                "pricing-international-note": "(Guests over 100kg: 1 guest/boat)",
+                "pricing-international-time": "Experience duration: 70-90 minutes",
+                "pricing-contact": "Contact: <a href='tel:Lead-in:0985402302' class='text-warning'>0985.402.302</a> (Zalo)",
+                "pricing-notice-title": "Note",
+                "pricing-notice-content": "To avoid inflated prices, guests should book tickets in advance through the management. Staff will greet you at the entrance. Discounts are only available for pre-registered guests.",
+                "activities-title": "Featured Activities",
+                "activities-subtitle": "Join unique activities such as basket boat tours, savoring local cuisine, and capturing photos amidst lush nature.",
+                "activity1-title": "Basket Boat Tour Through Coconut Forest",
+                "activity1-desc": "Experience a basket boat journey weaving through lush coconut groves, where visitors can feel the serene, rustic charm of the riverine countryside and the unique culture of Quang Nam locals.",
+                "activity1-img-alt": "Basket Boat Tour Through Coconut Forest",
+                "activity2-title": "Savor Local Cuisine",
+                "activity2-desc": "Enjoy Quang Nam’s rich flavors at Qua Coconut Forest with dishes like crispy bánh xèo, refreshing banana blossom salad, fragrant grilled cá chai fish, and creamy coconut rice – a rustic yet unforgettable meal.",
+                "activity2-img-alt": "Savor Local Cuisine",
+                "activity3-title": "Nature Selfie",
+                "activity3-desc": "Capture memorable moments with check-in photos amidst lush coconut groves, expansive rivers, and a stunning blue sky.",
+                "activity3-img-alt": "Nature Selfie",
+                "footer-tour-title": "Book a Tour",
+                "footer-tour-text": "Book a tour in advance for the best experience at Qua Rừng Dừa",
+                "food-title": "Local Delicacies",
+                "footer-contact-hours": "Mở cửa: 7:00 - 17:00 hàng ngày",
+                "food-subtitle": "Savor Hoi An’s signature dishes, rich in Central Vietnam’s flavors with fresh ingredients and refined preparation, all available at Qua Coconut Forest Eco-Tourism Area.",
+                "food1-title": "Cao Lầu",
+                "food1-desc": "A signature noodle dish with chewy noodles, char siu pork, fresh greens, and a rich broth, embodying Hoi An’s flavor.",
+                "food1-img-alt": "Cao Lầu",
+                "food2-title": "Bánh Xèo",
+                "food2-desc": "Crispy golden bánh xèo filled with shrimp, pork, bean sprouts, and scallions, served with fresh herbs and a tangy-sweet fish sauce.",
+                "food2-img-alt": "Bánh Xèo",
+                "food3-title": "Bánh Bao - Bánh Vạc",
+                "food3-desc": "Steamed dumplings with shrimp and pork filling, served with sweet-spicy fish sauce, a refined Hoi An delicacy.",
+                "food3-img-alt": "Bánh Bao - Bánh Vạc",
+                "map-title": "Eco-Tourism Area Map",
+                "footer-contact-hours": "Open: 7:00 AM - 5:00 PM daily",
+                "map-subtitle": "Located in Cam Thanh, Hoi An, Qua Coconut Forest is an ideal destination to explore nature and local culture.",
+                "contact-title": "Contact",
+                "contact-address": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
+                "contact-phone": "0934.098.169",
+                "contact-email": "camtran.170580@gmail.com",
+                "footer-about-title": "About Us",
+                "footer-about-text": "Qua Coconut Forest Eco-Tourism Area offers a unique experience with the pristine beauty of Cam Thanh’s coconut forest - a National Intangible Cultural Heritage.",
+                "footer-links-quick-title": "Quick Links",
+                "footer-link-home": "Home",
+                "footer-link-intro": "Introduction",
+                "footer-link-services": "Services",
+                "footer-link-tours": "Tours",
+                "footer-link-contact": "Contact",
+                "footer-bottom-text": "© 2025 Qua Coconut Forest. Beautiful by nature - Profound by culture."
+            }
+        };
+
+        function changeLanguage(lang) {
+            localStorage.setItem('language', lang);
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`lang-${lang}`).classList.add('active');
+            document.documentElement.lang = lang;
+            document.title = translations[lang].title;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('language') || 'vi';
+            changeLanguage(savedLang);
+
+            // Mobile Navigation
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const mobileNavClose = document.querySelector('.mobile-nav-close');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileNavToggle && navLinks) {
+                mobileNavToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            if (mobileNavClose && navLinks) {
+                mobileNavClose.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            }
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Back to top button
+            const backToTopButton = document.querySelector('.back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

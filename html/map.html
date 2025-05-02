@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-key="title">Qua Rừng Dừa - Khu du lịch sinh thái</title>
+    <link rel="stylesheet" href="/css/header-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        /* Biến màu chính */
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --accent-color: #ffcc80;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --dark-bg: #344e41;
+            --footer-bg: #1c2e1e;
+            --footer-text: #ffffff;
+            --footer-link: #a7c957;
+            --footer-link-hover: #f4d35e;
+        }
+
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 700px;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-btn:hover {
+            background-color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Container chung */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 5rem 20px;
+        }
+
+        /* Heading styles */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            height: 4px;
+            width: 100px;
+            background-color: var(--accent-color);
+            margin: 1.5rem auto;
+            border-radius: 2px;
+        }
+
+        /* Map Section */
+        .map-section {
+            background-color: white;
+            padding: 0.3rem 0;
+            position: relative;
+        }
+
+        .map-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2381c784' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .map-container {
+            position: relative;
+            z-index: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            margin-bottom: 4rem;
+        }
+
+        .map-iframe {
+            display: block;
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .info-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover .info-icon {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 10px 20px rgba(46, 125, 50, 0.3);
+        }
+
+        .info-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .info-text {
+            color: var(--text-color);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Highlight Section */
+        .highlights-section {
+            background-color: var(--dark-bg);
+            padding: 3rem 0;
+            color: white;
+            position: relative;
+        }
+
+        .highlights-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .highlights-heading {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .highlights-title {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .highlights-divider {
+            height: 4px;
+            width: 100px;
+            background-color: var(--accent-color);
+            margin: 1.5rem auto;
+            border-radius: 2px;
+        }
+
+        .highlights-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .feature-text {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--footer-link);
+        }
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--footer-link);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--footer-link-hover);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin-right: 15px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 600px;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .info-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .info-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+            }
+
+            .map-iframe {
+                height: 350px;
+            }
+
+            .language-switcher .lang-btn {
+                font-size: 0.8rem;
+                padding: 3px 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <div class="header-container">
+        <header>
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fas fa-tree"></i></span>
+                    <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                </a>
+                <div class="navbar-right">
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="#" class="nav-link" data-key="home">Trang chủ</a></li>
+                            <li><a href="#about" class="nav-link" data-key="about">Giới thiệu</a></li>
+                            <li><a href="#map" class="nav-link" data-key="map">Bản đồ</a></li>
+                            <li><a href="#services" class="nav-link" data-key="services">Dịch vụ</a></li>
+                            <li><a href="#contact" class="nav-link" data-key="contact">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                    <div class="language-switcher">
+                        <button id="lang-vi" class="lang-btn active" onclick="changeLanguage('vi')">VI</button>
+                        <button id="lang-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    </div>
+                </div>
+                <button class="mobile-nav-toggle">
+                    <div class="menu-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </button>
+            </div>
+        </header>
+        <!-- Overlay for mobile menu -->
+        <div class="overlay"></div>
+    </div>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title" data-key="hero-title">Qua Rừng Dừa</h1>
+            <p class="hero-subtitle" data-key="hero-subtitle">Khám phá vẻ đẹp hoang sơ của thiên nhiên Hội An</p>
+            <a href="#map" class="hero-btn" data-key="hero-btn">Xem vị trí <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-title" data-key="map-title">Bản Đồ & Thông Tin</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-key="map-subtitle">Khám phá vị trí và thông tin chi tiết về khu du lịch
+                    sinh thái Qua Rừng Dừa</p>
+            </div>
+
+            <div class="map-container">
+                <iframe class="map-iframe"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15350.512940141947!2d108.36526626977536!3d15.876124900000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420df2d67f24f1%3A0xf3b4112d16069f6d!2zS2h1IGRpIHTDrWNoIFLhu6tuZyBE4burYSBC4bqjeSBN4bqrdQ!5e0!3m2!1svi!2s!4v1644630888938!5m2!1svi!2s"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="info-title" data-key="info-address-title">Địa Chỉ</h3>
+                    <p class="info-text" data-key="info-address-text">Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <h3 class="info-title" data-key="info-hours-title">Giờ Mở Cửa</h3>
+                    <p class="info-text" data-key="info-hours-text">7:00 - 17:00 hàng ngày<br>Mở cửa tất cả các ngày
+                        trong tuần</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3 class="info-title" data-key="info-ticket-title">Giá Vé</h3>
+                    <p class="info-text" data-key="info-ticket-text">Người lớn: 150.000 VNĐ<br>Trẻ em: 75.000 VNĐ<br>Trẻ
+                        dưới 5 tuổi: Miễn phí</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="highlights-container">
+            <div class="highlights-heading">
+                <h2 class="highlights-title" data-key="highlights-title">Điểm Nổi Bật</h2>
+                <div class="highlights-divider"></div>
+                <p class="highlights-subtitle" data-key="highlights-subtitle">Trải nghiệm độc đáo tại Qua Rừng Dừa
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3 class="feature-title" data-key="feature-boat-title">Thuyền Thúng</h3>
+                    <p class="feature-text" data-key="feature-boat-text">Trải nghiệm đi thuyền thúng truyền thống, len
+                        lỏi qua những rặng dừa nước xanh mát tạo nên kỷ niệm khó quên.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="feature-title" data-key="feature-photo-title">Chụp Ảnh Đẹp</h3>
+                    <p class="feature-text" data-key="feature-photo-text">Không gian tự nhiên hoang sơ là nơi lý tưởng
+                        để chụp ảnh đẹp với phong cảnh thiên nhiên hùng vĩ.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="feature-title" data-key="feature-food-title">Ẩm Thực Địa Phương</h3>
+                    <p class="feature-text" data-key="feature-food-text">Thưởng thức các món ăn đặc sản địa phương được
+                        chế biến từ nguyên liệu tươi ngon tại chỗ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 data-key="footer-about-title">Qua Rừng Dừa</h4>
+                <p data-key="footer-about-text">Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên
+                    nhiên tuyệt vời cho du khách trong và ngoài nước.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-key="footer-links-title">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="#" data-key="home">Trang chủ</a></li>
+                    <li><a href="/html/Introduction.html" data-key="about">Giới thiệu</a></li>
+                    <li><a href="/html/map.html" data-key="map">Bản đồ</a></li>
+                    <li><a href="/html/service.html" data-key="services">Dịch vụ</a></li>
+                    <li><a href="/html/contact.html" data-key="gallery">Liên lạclạc</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-key="footer-contact-title">Liên Hệ</h4>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-key="footer-contact-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam</span></p>
+                <p><i class="fas fa-phone"></i> 0934.098.169</p>
+                <p><i class="fas fa-envelope"></i> camtran.170580@gmail.com</p>
+                <p><i class="fas fa-clock"></i> <span data-key="footer-contact-hours">Mở cửa: 7:00 - 17:00 hàng
+                        ngày</span></p>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-key="footer-tour-title">Đặt Tour</h4>
+                <p data-key="footer-tour-text">Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa</p>
+                <a href="#contact"
+                    style="display: inline-block; background-color: var(--accent-color); color: var(--dark-bg); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;"
+                    data-key="footer-tour-btn">
+                    Đặt Ngay <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p data-key="copyright">© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="/js/header.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        const translations = {
+            vi: {
+                title: "Qua Rừng Dừa - Khu du lịch sinh thái",
+                "logo-text": "Qua Rừng Dừa",
+                home: "Trang chủ",
+                about: "Giới thiệu",
+                map: "Bản đồ",
+                services: "Dịch vụ",
+                contact: "Liên hệ",
+                gallery: "Thư viện ảnh",
+                "hero-title": "Qua Rừng Dừa",
+                "hero-subtitle": "Khám phá vẻ đẹp hoang sơ của thiên nhiên Hội An",
+                "hero-btn": "Xem vị trí <i class='fas fa-arrow-right'></i>",
+                "map-title": "Bản Đồ & Thông Tin",
+                "map-subtitle": "Khám phá vị trí và thông tin chi tiết về khu du lịch sinh thái Qua Rừng Dừa",
+                "info-address-title": "Địa Chỉ",
+                "info-address-text": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
+                "info-hours-title": "Giờ Mở Cửa",
+                "info-hours-text": "7:00 - 17:00 hàng ngày<br>Mở cửa tất cả các ngày trong tuần",
+                "info-ticket-title": "Giá Vé",
+                "info-ticket-text": "Người lớn: 150.000 VNĐ<br>Trẻ em: 75.000 VNĐ<br>Trẻ dưới 5 tuổi: Miễn phí",
+                "highlights-title": "Điểm Nổi Bật",
+                "highlights-subtitle": "Trải nghiệm độc đáo tại Qua Rừng Dừa",
+                "feature-boat-title": "Thuyền Thúng",
+                "feature-boat-text": "Trải nghiệm đi thuyền thúng truyền thống, len lỏi qua những rặng dừa nước xanh mát tạo nên kỷ niệm khó quên.",
+                "feature-photo-title": "Chụp Ảnh Đẹp",
+                "feature-photo-text": "Không gian tự nhiên hoang sơ là nơi lý tưởng để chụp ảnh đẹp với phong cảnh thiên nhiên hùng vĩ.",
+                "feature-food-title": "Ẩm Thực Địa Phương",
+                "feature-food-text": "Thưởng thức các món ăn đặc sản địa phương được chế biến từ nguyên liệu tươi ngon tại chỗ.",
+                "footer-about-title": "Qua Rừng Dừa",
+                "footer-about-text": "Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên nhiên tuyệt vời cho du khách trong và ngoài nước.",
+                "footer-links-title": "Liên Kết Nhanh",
+                "footer-contact-title": "Liên Hệ",
+                "footer-contact-address": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
+                "footer-contact-hours": "Mở cửa: 7:00 - 17:00 hàng ngày",
+                "footer-tour-title": "Đặt Tour",
+                "footer-tour-text": "Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa",
+                "footer-tour-btn": "Đặt Ngay <i class='fas fa-arrow-right'></i>",
+                copyright: "© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu."
+            },
+            en: {
+                title: "Qua Coconut Forest - Eco-Tourism Area",
+                "logo-text": "Qua Coconut Forest",
+                home: "Home",
+                about: "About",
+                map: "Map",
+                services: "Services",
+                contact: "Contact",
+                gallery: "Gallery",
+                "hero-title": "Qua Coconut Forest",
+                "hero-subtitle": "Discover the pristine beauty of Hoi An's nature",
+                "hero-btn": "View Location <i class='fas fa-arrow-right'></i>",
+                "map-title": "Map & Information",
+                "map-subtitle": "Explore the location and detailed information about Qua Coconut Forest Eco-Tourism Area",
+                "info-address-title": "Address",
+                "info-address-text": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
+                "info-hours-title": "Opening Hours",
+                "info-hours-text": "7:00 AM - 5:00 PM daily<br>Open all days of the week",
+                "info-ticket-title": "Ticket Prices",
+                "info-ticket-text": "Adults: 150,000 VND<br>Children: 75,000 VND<br>Children under 5: Free",
+                "highlights-title": "Highlights",
+                "highlights-subtitle": "Unique experiences at Qua Coconut Forest",
+                "feature-boat-title": "Basket Boat",
+                "feature-boat-text": "Experience traditional basket boat rides, weaving through lush coconut groves for unforgettable memories.",
+                "feature-photo-title": "Stunning Photography",
+                "feature-photo-text": "The pristine natural setting is perfect for capturing beautiful photos with majestic scenery.",
+                "feature-food-title": "Local Cuisine",
+                "feature-food-text": "Savor local specialties prepared with fresh, on-site ingredients.",
+                "footer-about-title": "About us",
+                "footer-about-text": "A unique eco-tourism area in Hoi An, offering wonderful nature experiences for domestic and international visitors.",
+                "footer-links-title": "Quick Links",
+                "footer-contact-title": "Contact",
+                "footer-contact-address": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
+                "footer-contact-hours": "Open: 7:00 AM - 5:00 PM daily",
+                "footer-tour-title": "Book a Tour",
+                "footer-tour-text": "Book in advance for the best experience at Qua Coconut Forest",
+                "footer-tour-btn": "Book Now <i class='fas fa-arrow-right'></i>",
+                copyright: "© 2025 Qua Coconut Forest | Eco-Tourism Area. All rights reserved."
+            }
+        };
+
+        function changeLanguage(lang) {
+            localStorage.setItem('language', lang);
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            document.title = translations[lang].title;
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`lang-${lang}`).classList.add('active');
+            document.documentElement.lang = lang;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load saved language
+            const savedLang = localStorage.getItem('language') || 'vi';
+            changeLanguage(savedLang);
+
+
+            // Back to top button
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    backToTopButton.classList.toggle('active', window.pageYOffset > 300);
+                });
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Scroll animation for elements
+            const fadeInElements = document.querySelectorAll('.info-card, .feature-item');
+            const fadeInOptions = {
+                threshold: 0.2,
+                rootMargin: "0px 0px -100px 0px"
+            };
+            const fadeInObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.style.opacity = "0";
+                    entry.target.style.transform = "translateY(30px)";
+                    setTimeout(() => {
+                        entry.target.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }, 200);
+                    observer.unobserve(entry.target);
+                });
+            }, fadeInOptions);
+            fadeInElements.forEach(element => {
+                element.style.opacity = "0";
+                fadeInObserver.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>

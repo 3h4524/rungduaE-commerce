@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-key="title">Liên Hệ - Rừng Dừa Bảy Mẫu</title>
+    <title data-key="title">Liên Hệ - Qua Rừng Dừa</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -12,6 +12,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="/css/header-style.css">
     <script>
         (function () {
             emailjs.init("K-sUjcDKfXdqVAnqD");
@@ -42,6 +43,7 @@
             color: var(--text-color);
             background-color: #f5f5f5;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .contact-info {
@@ -75,12 +77,39 @@
         }
 
         .language-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             display: flex;
             gap: 10px;
+            margin-left: 20px;
+            align-items: center;
         }
+
+        .language-switcher .lang-btn {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            height: 30px;
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .language-switcher .lang-btn.active {
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            border-color: var(--accent-color);
+        }
+
+        .language-switcher .lang-btn:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
 
         .language-switcher button {
             background: none;
@@ -289,143 +318,64 @@
             box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
         }
 
-        /* FOOTER CSS */
-        /* Footer Contact Section */
-        .footer-contact-info {
-            background-color: var(--dark-bg);
-            color: var(--footer-text);
-            padding: 50px 0;
-        }
-
-        .footer-section-title {
-            text-align: center;
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .footer-section-title::after {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 2px;
-            background-color: var(--accent-color);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .footer-contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .footer-contact-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .footer-contact-icon {
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-right: 15px;
-            width: 40px;
-            text-align: center;
-        }
-
-        .footer-contact-text h3 {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .footer-contact-text p {
-            font-size: 0.95rem;
-            opacity: 0.85;
-        }
-
-        /* Main Footer */
-        .main-footer {
+        /* Footer */
+        /* Footer */
+        footer {
             background-color: var(--footer-bg);
             color: var(--footer-text);
-            padding: 50px 0 20px;
+            padding: 4rem 0 2rem;
         }
 
-        .footer-content {
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
         }
 
-        .footer-column h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--accent-color);
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+            color: #ffffff;
         }
 
-        .footer-about p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 15px;
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--footer-link);
         }
 
-        .footer-social {
-            display: flex;
-            gap: 12px;
+        .footer-col p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
         }
 
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.08);
-            color: var(--footer-text);
-            border-radius: 50%;
-            transition: all 0.3s ease;
+        .footer-container .footer-links {
+            list-style: none;
+            padding-left: 0 !important;
         }
 
-        .footer-social a:hover {
-            background-color: var(--accent-color);
-            color: var(--footer-bg);
-            transform: scale(1.1);
-        }
-
-        .footer-links ul {
+        .footer-links {
             list-style: none;
         }
 
         .footer-links li {
-            margin-bottom: 8px;
+            margin-bottom: 15px;
         }
 
         .footer-links a {
             color: var(--footer-link);
             text-decoration: none;
-            font-size: 0.95rem;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-links a i {
-            margin-right: 6px;
-            font-size: 0.75rem;
-            color: var(--accent-color);
+            display: inline-block;
         }
 
         .footer-links a:hover {
@@ -433,39 +383,79 @@
             transform: translateX(5px);
         }
 
-        .footer-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
         }
 
-        .footer-gallery-item {
-            height: 80px;
-            overflow: hidden;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin-right: 15px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-        .footer-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            transform: translateY(-5px);
         }
 
-        .footer-gallery-item:hover img {
-            transform: scale(1.15);
-        }
-
-        .footer-bottom {
+        .copyright {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 0.85rem;
-            opacity: 0.9;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
         }
 
         /* Responsive styles */
+        @media (max-width: 992px) {
+            .banner-title {
+                font-size: 2.5rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .banner-title {
                 font-size: 2.2rem;
@@ -478,22 +468,6 @@
             .contact-info-box,
             .contact-form-box {
                 padding: 30px 20px;
-            }
-
-            .footer-section-title {
-                font-size: 1.5rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-gallery {
-                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -517,35 +491,54 @@
             .submit-btn {
                 padding: 10px 20px;
             }
-
-            .footer-contact-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-contact-icon {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
         }
 
-        
-        .main-footer .footer-links ul {
+        .footer-container .footer-links {
             list-style: none;
-            padding-left: 0;
-            /* Ghi đè margin-left */
+            padding-left: 0 !important;
         }
-
     </style>
 </head>
 
 <body>
+    <!-- Header & Navigation -->
+    <div class="header-container">
+        <header>
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fas fa-tree"></i></span>
+                    <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                </a>
+                <div class="navbar-right">
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="#" class="nav-link" data-key="home">Trang chủ</a></li>
+                            <li><a href="#about" class="nav-link" data-key="about">Giới thiệu</a></li>
+                            <li><a href="#map" class="nav-link" data-key="map">Bản đồ</a></li>
+                            <li><a href="#services" class="nav-link" data-key="services">Dịch vụ</a></li>
+                            <li><a href="#contact" class="nav-link" data-key="contact">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                    <div class="language-switcher">
+                        <button id="lang-vi" class="lang-btn active" onclick="changeLanguage('vi')">VI</button>
+                        <button id="lang-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    </div>
+                </div>
+                <button class="mobile-nav-toggle">
+                    <div class="menu-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </button>
+            </div>
+        </header>
+        <!-- Overlay for mobile menu -->
+        <div class="overlay"></div>
+    </div>
+
     <!-- Banner Section -->
     <section class="banner">
-        <div class="language-switcher">
-            <button id="lang-vi" class="lang-btn active" onclick="changeLanguage('vi')">VI</button>
-            <button id="lang-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
-        </div>
         <div class="container">
             <h1 class="banner-title" data-key="banner-title">LIÊN HỆ</h1>
         </div>
@@ -737,95 +730,68 @@
         </div>
     </section>
 
-
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- About Column -->
-                <div class="footer-column footer-about">
-                    <h3>Về Chúng Tôi</h3>
-                    <p>Khu Du Lịch Sinh Thái Qua Rừng Dừa Bảy Mẫu mang đến trải nghiệm độc đáo với vẻ đẹp hoang sơ của rừng dừa nước Cẩm Thanh - Di sản Văn hóa Phi vật thể Quốc gia.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Zalo"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div class="footer-column footer-links">
-                    <h3>Liên Kết Nhanh</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Trang Chủ</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Giới Thiệu</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Dịch Vụ</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tour Du Lịch</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Liên Hệ</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Services -->
-                <div class="footer-column footer-links">
-                    <h3>Dịch Vụ</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tour Thuyền Thúng</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Ẩm Thực Dân Gian</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Nghề Thủ Công Truyền Thống</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Trải Nghiệm Văn Hóa</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Đặt Tour Nhóm</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Gallery -->
-                <div class="footer-column">
-                    <h3>Thư Viện Ảnh</h3>
-                    <div class="footer-gallery">
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-1.png" alt="Rừng dừa nước">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-2.png" alt="Thuyền thúng">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/contact-1.png" alt="Ngư dân">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-4.png" alt="Ẩm thực">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-5.png" alt="Làng nghề">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-6.png" alt="Cảnh đẹp">
-                        </div>
-                    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 data-key="footer-about-title">Qua Rừng Dừa</h4>
+                <p data-key="footer-about-text">Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên
+                    nhiên tuyệt vời cho du khách trong và ngoài nước.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
                 </div>
             </div>
-            
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>© 2025 Khu Du Lịch Qua Rừng Dừa. Đẹp từ thiên nhiên - Sâu lắng từ văn hóa.</p>
+            <div class="footer-col">
+                <h4 data-key="footer-links-quick-title">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="#" data-key="footer-link-home">Trang chủ</a></li>
+                    <li><a href="#about" data-key="footer-link-intro">Giới thiệu</a></li>
+                    <li><a href="#map" data-key="footer-link-services">Bản đồ</a></li>
+                    <li><a href="#services" data-key="footer-link-tours">Dịch vụ</a></li>
+                    <li><a href="#contact" data-key="footer-link-contact">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-key="contact-title">Liên Hệ</h4>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-key="contact-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh,
+                        Thành phố Hội An, Tỉnh Quảng Nam</span></p>
+                <p><i class="fas fa-phone"></i> <span data-key="contact-phone">0934.098.169</span></p>
+                <p><i class="fas fa-envelope"></i> <span data-key="contact-email">camtran.170580@gmail.com</span></p>
+                <p><i class="fas fa-clock"></i> <span data-key="footer-contact-hours">Mở cửa: 7:00 - 17:00 hàng ngày</span></p>
+            </div>
+            <div class="footer-col">
+                <h4 data-key="footer-tour-title">Đặt Tour</h4>
+                <p data-key="footer-tour-text">Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa</p>
+                <a href="#contact"
+                    style="display: inline-block; background-color: var(--accent-color); color: var(--dark-bg); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">
+                    <span data-key="footer-tour-button">Đặt Ngay</span> <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
+        <div class="copyright">
+            <p data-key="footer-bottom-text">© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu.
+            </p>
+        </div>
     </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Language Switch and Form Validation Script -->
+    <!-- JavaScript -->
     <script>
-        // Object chứa các bản dịch
+        // Language Switch and Form Validation Script
         const translations = {
             vi: {
-                // Tiêu đề trang
-                title: "Liên Hệ - Rừng Dừa Bảy Mẫu",
-
-                // Banner Section
+                title: "Liên Hệ - Qua Rừng Dừa",
                 "banner-title": "LIÊN HỆ",
-
-                // Contact Information Section
                 "contact-section-title": "THÔNG TIN LIÊN HỆ",
                 "contact-intro": "Để không ngừng nâng cao chất lượng dịch vụ và đáp ứng tốt hơn nữa các yêu cầu của Quý khách, chúng tôi mong muốn nhận được các thông tin phản hồi. Nếu Quý khách có bất kỳ thắc mắc hoặc đóng góp nào, xin vui lòng liên hệ với chúng tôi theo thông tin dưới đây. Chúng tôi sẽ phản hồi tới Quý khách trong thời gian sớm nhất.",
                 "customer-service-title": "PHÒNG CHĂM SÓC KHÁCH HÀNG",
@@ -849,8 +815,6 @@
                 "submit-btn": "GỬI NGAY",
                 "success-message": "Gửi phản hồi thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.",
                 "error-message": "Đã có lỗi xảy ra. Vui lòng thử lại sau!",
-
-                // Location Section
                 "location-title": "KHU DU LỊCH SINH THÁI QUA RỪNG DỪA",
                 "location-address": "Tổ 7 – Thôn Vạn Lăng – Cẩm Thanh – Hội An",
                 "quick-form-title": "LIÊN HỆ NGAY",
@@ -861,26 +825,35 @@
                 "quickEmail-placeholder": "Email",
                 "quickEmail-error": "Vui lòng nhập địa chỉ email hợp lệ (@gmail.com)",
                 "quickMessage-placeholder": "Thông điệp",
+                // Thêm các key cho header
+                "logo-text": "Qua Rừng Dừa",
+                "home": "Trang chủ",
+                "about": "Giới thiệu",
+                "map": "Bản đồ",
+                "services": "Dịch vụ",
+                "contact": "Liên hệ",
+                "contact-title": "Liên Hệ",
+                "contact-address": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
+                "contact-phone": "0934.098.169",
+                "contact-email": "camtran.170580@gmail.com",
+                "footer-about-title": "Qua Rừng Dừa",
+                "footer-about-text": "Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên nhiên tuyệt vời cho du khách trong và ngoài nước.",
+                "footer-links-quick-title": "Liên Kết Nhanh",
+                "footer-link-home": "Trang Chủ",
+                "footer-link-intro": "Giới Thiệu",
+                "footer-link-services": "Bản đồ",
+                "footer-link-tours": "Dịch Vụ",
+                "footer-link-contact": "Liên Hệ",
+                "footer-contact-hours": "Mở cửa: 7:00 - 17:00 hàng ngày",
+                "footer-tour-title": "Đặt Tour",
+                "footer-tour-text": "Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa",
+                "footer-tour-button": "Đặt Ngay",
+                "footer-bottom-text": "© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu."
 
-                // Contact Footer Section
-                "contact-footer-title": "LIÊN HỆ KHU DU LỊCH SINH THÁI QUA RỪNG DỪA",
-                "contact-address-label": "Địa chỉ",
-                "contact-address-footer": "Tổ 7 – Thôn Vạn Lăng – Cẩm Thanh – Hội An",
-                "contact-phone-label": "Hotline",
-                "contact-email-label": "Email",
-                "contact-website-label": "Website",
-
-                // Footer
-                "footer-text": "© Khu Du Lịch Qua Rừng Dừa. Đẹp từ thiên nhiên - Sâu lắng từ văn hóa."
             },
             en: {
-                // Tiêu đề trang
                 title: "Contact - Qua Rừng Dừa Eco-Tourism Area",
-
-                // Banner Section
                 "banner-title": "CONTACT",
-
-                // Contact Information Section
                 "contact-section-title": "CONTACT INFORMATION",
                 "contact-intro": "To continuously improve our service quality and better meet your needs, we welcome your feedback. If you have any questions or suggestions, please feel free to contact us using the information below. We will respond to you as soon as possible.",
                 "customer-service-title": "CUSTOMER SUPPORT",
@@ -904,8 +877,6 @@
                 "submit-btn": "SEND NOW",
                 "success-message": "Feedback sent successfully! We will contact you soon.",
                 "error-message": "An error occurred. Please try again later!",
-
-                // Location Section
                 "location-title": "QUA RỪNG DỪA ECO-TOURISM AREA",
                 "location-address": "Group 7 – Vạn Lăng Village – Cẩm Thanh – Hội An",
                 "quick-form-title": "CONTACT NOW",
@@ -916,228 +887,279 @@
                 "quickEmail-placeholder": "Email",
                 "quickEmail-error": "Please enter a valid email address (@gmail.com)",
                 "quickMessage-placeholder": "Message",
+                // Thêm các key cho header
+                "logo-text": "Qua Rừng Dừa Eco-Tourism Area",
+                "home": "Home",
+                "about": "About",
+                "map": "Map",
+                "services": "Services",
+                "contact-title": "Contact",
+                "contact-address": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
+                "contact-phone": "0934.098.169",
+                "contact-email": "camtran.170580@gmail.com",
+                "footer-about-title": "About us",
+                "footer-about-text": "A unique eco-tourism area in Hoi An, offering an exceptional natural experience for both domestic and international visitors.",
+                "footer-links-quick-title": "Quick Links",
+                "footer-link-home": "Home",
+                "footer-link-intro": "Introduction",
+                "footer-link-services": "Map",
+                "footer-link-tours": "Services",
+                "footer-link-contact": "Contact",
+                "footer-tour-title": "Book a Tour",
+                "footer-tour-text": "Book a tour in advance for the best experience at Qua Rừng Dừa",
+                "footer-tour-button": "Book Now",
+                "footer-bottom-text": "© 2025 Qua Rừng Dừa | Eco-Tourism Area. All rights reserved.",
+                "footer-contact-hours": "Open: 7:00 AM - 5:00 PM daily"
 
-                // Contact Footer Section
-                "contact-footer-title": "CONTACT QUA RỪNG DỪA ECO-TOURISM AREA",
-                "contact-address-label": "Address",
-                "contact-address-footer": "Group 7 – Vạn Lăng Village – Cẩm Thanh – Hội An",
-                "contact-phone-label": "Hotline",
-                "contact-email-label": "Email",
-                "contact-website-label": "Website",
-
-                // Footer
-                "footer-text": "© Qua Rừng Dừa Eco-Tourism Area. Beautiful by Nature - Deeply Cultural."
             }
         };
 
-        // Hàm thay đổi ngôn ngữ
         function changeLanguage(lang) {
             localStorage.setItem('language', lang);
             document.querySelectorAll('[data-key]').forEach(element => {
                 const key = element.getAttribute('data-key');
-                element.textContent = translations[lang][key];
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
             });
             document.querySelectorAll('[data-placeholder-key]').forEach(element => {
                 const key = element.getAttribute('data-placeholder-key');
-                element.setAttribute('placeholder', translations[lang][key]);
+                if (translations[lang][key]) {
+                    element.setAttribute('placeholder', translations[lang][key]);
+                }
             });
             document.title = translations[lang]['title'];
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById(`lang-${lang}`).classList.add('active');
             document.documentElement.lang = lang;
         }
 
-        // Khởi tạo ngôn ngữ và xử lý form khi trang tải
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize EmailJS
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init("YOUR_PUBLIC_KEY"); // Thay YOUR_PUBLIC_KEY bằng public key của EmailJS
+            } else {
+                console.error("EmailJS is not loaded. Please check the script inclusion.");
+            }
+
             const savedLang = localStorage.getItem('language') || 'vi';
             changeLanguage(savedLang);
 
-            function validateName(name) {
-                return name.trim() !== '';
+            // Mobile Navigation
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if (mobileNavToggle && navLinks) {
+                mobileNavToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
+                });
             }
 
-            function validatePhone(phone) {
-                return /^[0-9]{9,10}$/.test(phone.trim());
+            // Back to top button
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    backToTopButton.classList.toggle('active', window.pageYOffset > 300);
+                });
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
             }
 
-            function validateEmail(email) {
-                return /^[^\s@]+@gmail\.com$/.test(email.trim());
-            }
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
 
-            function showError(input, errorDiv) {
+            // Validation functions
+            const validateName = name => name.trim().length > 0;
+            const validatePhone = phone => /^[0-9]{9,10}$/.test(phone.trim());
+            const validateEmail = email => /^[^\s@]+@gmail\.com$/.test(email.trim());
+
+            const showError = (input, errorDiv) => {
                 input.classList.add('is-invalid');
-                document.getElementById(errorDiv).style.display = 'block';
-            }
+                const errorElement = document.getElementById(errorDiv);
+                if (errorElement) errorElement.style.display = 'block';
+            };
 
-            function hideError(input, errorDiv) {
+            const hideError = (input, errorDiv) => {
                 input.classList.remove('is-invalid');
-                document.getElementById(errorDiv).style.display = 'none';
-            }
+                const errorElement = document.getElementById(errorDiv);
+                if (errorElement) errorElement.style.display = 'none';
+            };
 
-            function resetForm(formId, successMessageId) {
-                document.getElementById(formId).reset();
+            const resetForm = (formId, successMessageId) => {
+                const form = document.getElementById(formId);
                 const successMessage = document.getElementById(successMessageId);
-                successMessage.style.display = 'block';
-                successMessage.scrollIntoView({ behavior: 'smooth' });
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 5000);
+                if (form && successMessage) {
+                    form.reset();
+                    successMessage.style.display = 'block';
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                }
+            };
+
+            // Handle contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const errorElements = document.querySelectorAll('#contactForm .error-message');
+                    errorElements.forEach(el => el.style.display = 'none');
+                    const formInputs = document.querySelectorAll('#contactForm .form-control');
+                    formInputs.forEach(input => input.classList.remove('is-invalid'));
+
+                    const fullName = document.getElementById('fullName')?.value.trim();
+                    const phone = document.getElementById('phone')?.value.trim();
+                    const email = document.getElementById('email')?.value.trim();
+                    const message = document.getElementById('message')?.value.trim();
+
+                    let hasError = false;
+
+                    if (!validateName(fullName)) {
+                        showError(document.getElementById('fullName'), 'fullNameError');
+                        hasError = true;
+                    } else {
+                        hideError(document.getElementById('fullName'), 'fullNameError');
+                    }
+
+                    if (!validatePhone(phone)) {
+                        showError(document.getElementById('phone'), 'phoneError');
+                        hasError = true;
+                    } else {
+                        hideError(document.getElementById('phone'), 'phoneError');
+                    }
+
+                    if (!validateEmail(email)) {
+                        showError(document.getElementById('email'), 'emailError');
+                        hasError = true;
+                    } else {
+                        hideError(document.getElementById('email'), 'emailError');
+                    }
+
+                    if (!hasError) {
+                        const serviceID = "service_bq65tzk";
+                        const templateID = "template_contact_green_123";
+                        const templateParams = {
+                            fullName,
+                            phone,
+                            email,
+                            message: message || translations[document.documentElement.lang]['message-placeholder'].split(' ').slice(0, 3).join(' '),
+                            time: new Date().toLocaleString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' })
+                        };
+
+                        emailjs.send(serviceID, templateID, templateParams)
+                            .then(() => {
+                                resetForm('contactForm', 'successMessage');
+                            })
+                            .catch(error => {
+                                alert(translations[document.documentElement.lang]['error-message']);
+                                console.error('EmailJS Error:', error);
+                            });
+                    }
+                });
             }
 
-            // Validate and submit main contact form
-            document.getElementById('contactForm').addEventListener('submit', function (event) {
-                event.preventDefault();
-                const errorElements = document.querySelectorAll('.error-message');
-                errorElements.forEach(el => el.style.display = 'none');
-                const formInputs = document.querySelectorAll('#contactForm .form-control');
-                formInputs.forEach(input => input.classList.remove('is-invalid'));
+            // Handle quick contact form submission
+            const quickContactForm = document.getElementById('quickContactForm');
+            if (quickContactForm) {
+                quickContactForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const errorElements = document.querySelectorAll('#quickContactForm .error-message');
+                    errorElements.forEach(el => el.style.display = 'none');
+                    const formInputs = document.querySelectorAll('#quickContactForm .form-control');
+                    formInputs.forEach(input => input.classList.remove('is-invalid'));
 
-                const fullName = document.getElementById('fullName').value.trim();
-                const phone = document.getElementById('phone').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
+                    const quickName = document.getElementById('quickName')?.value.trim();
+                    const quickPhone = document.getElementById('quickPhone')?.value.trim();
+                    const quickEmail = document.getElementById('quickEmail')?.value.trim();
+                    const quickMessage = document.getElementById('quickMessage')?.value.trim();
 
-                let hasError = false;
+                    let hasError = false;
 
-                if (!validateName(fullName)) {
-                    showError(document.getElementById('fullName'), 'fullNameError');
-                    hasError = true;
-                } else {
-                    hideError(document.getElementById('fullName'), 'fullNameError');
-                }
+                    if (!validateName(quickName)) {
+                        showError(document.getElementById('quickName'), 'quickNameError');
+                        hasError = true;
+                    } else {
+                        hideError(document.getElementById('quickName'), 'quickNameError');
+                    }
 
-                if (!validatePhone(phone)) {
-                    showError(document.getElementById('phone'), 'phoneError');
-                    hasError = true;
-                } else {
-                    hideError(document.getElementById('phone'), 'phoneError');
-                }
+                    if (!validatePhone(quickPhone)) {
+                        showError(document.getElementById('quickPhone'), 'quickPhoneError');
+                        hasError = true;
+                    } else {
+                        hideError(document.getElementById('quickPhone'), 'quickPhoneError');
+                    }
 
-                if (!validateEmail(email)) {
-                    showError(document.getElementById('email'), 'emailError');
-                    hasError = true;
-                } else {
-                    hideError(document.getElementById('email'), 'emailError');
-                }
+                    if (!validateEmail(quickEmail)) {
+                        showError(document.getElementById('quickEmail'), 'quickEmailError');
+                        hasError = true;
+                    } else {
+                        hideError(document.getElementById('quickEmail'), 'quickEmailError');
+                    }
 
-                if (!hasError) {
-                    const serviceID = "service_bq65tzk";
-                    const templateID = "template_contact_green_123"; // Thay bằng templateID thực tế
+                    if (!hasError) {
+                        const serviceID = "service_bq65tzk";
+                        const templateID = "template_h3d4efa";
+                        const templateParams = {
+                            fullName: quickName,
+                            phone: quickPhone,
+                            email: quickEmail,
+                            message: quickMessage || translations[document.documentElement.lang]['quickMessage-placeholder'].split(' ').slice(0, 3).join(' '),
+                            time: new Date().toLocaleString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' })
+                        };
 
-                    const templateParams = {
-                        fullName: fullName,
-                        phone: phone,
-                        email: email,
-                        message: message || translations[document.documentElement.lang]['message-placeholder'].split(' ').slice(0, 3).join(' '),
-                        time: new Date().toLocaleString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' })
-                    };
+                        emailjs.send(serviceID, templateID, templateParams)
+                            .then(() => {
+                                resetForm('quickContactForm', 'quickSuccessMessage');
+                            })
+                            .catch(error => {
+                                alert(translations[document.documentElement.lang]['error-message']);
+                                console.error('EmailJS Error:', error);
+                            });
+                    }
+                });
+            }
 
-                    emailjs.send(serviceID, templateID, templateParams)
-                        .then(() => {
-                            resetForm('contactForm', 'successMessage');
-                        }, (error) => {
-                            alert(translations[document.documentElement.lang]['error-message']);
-                            console.log('FAILED...', error);
-                        });
-                }
-            });
-
-            // Validate and submit quick contact form
-            document.getElementById('quickContactForm').addEventListener('submit', function (event) {
-                event.preventDefault();
-                const errorElements = document.querySelectorAll('.error-message');
-                errorElements.forEach(el => el.style.display = 'none');
-                const formInputs = document.querySelectorAll('#quickContactForm .form-control');
-                formInputs.forEach(input => input.classList.remove('is-invalid'));
-
-                const quickName = document.getElementById('quickName').value.trim();
-                const quickPhone = document.getElementById('quickPhone').value.trim();
-                const quickEmail = document.getElementById('quickEmail').value.trim();
-                const quickMessage = document.getElementById('quickMessage').value.trim();
-
-                let hasError = false;
-
-                if (!validateName(quickName)) {
-                    showError(document.getElementById('quickName'), 'quickNameError');
-                    hasError = true;
-                } else {
-                    hideError(document.getElementById('quickName'), 'quickNameError');
-                }
-
-                if (!validatePhone(quickPhone)) {
-                    showError(document.getElementById('quickPhone'), 'quickPhoneError');
-                    hasError = true;
-                } else {
-                    hideError(document.getElementById('quickPhone'), 'quickPhoneError');
-                }
-
-                if (!validateEmail(quickEmail)) {
-                    showError(document.getElementById('quickEmail'), 'quickEmailError');
-                    hasError = true;
-                } else {
-                    hideError(document.getElementById('quickEmail'), 'quickEmailError');
-                }
-
-                if (!hasError) {
-                    const serviceID = "service_bq65tzk";
-                    const templateID = "template_h3d4efa"; // Thay bằng templateID thực tế
-
-                    const templateParams = {
-                        fullName: quickName,
-                        phone: quickPhone,
-                        email: quickEmail,
-                        message: quickMessage || translations[document.documentElement.lang]['quickMessage-placeholder'].split(' ').slice(0, 3).join(' '),
-                        time: new Date().toLocaleString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' })
-                    };
-
-                    emailjs.send(serviceID, templateID, templateParams)
-                        .then(() => {
-                            resetForm('quickContactForm', 'quickSuccessMessage');
-                        }, (error) => {
-                            alert(translations[document.documentElement.lang]['error-message']);
-                            console.log('FAILED...', error);
-                        });
-                }
-            });
-
-            // Real-time validation
+            // Real-time input validation
             const inputs = document.querySelectorAll('input[required], textarea');
             inputs.forEach(input => {
                 input.addEventListener('input', function () {
                     const id = this.id;
-
                     if (id === 'fullName' || id === 'quickName') {
                         const errorDiv = id === 'fullName' ? 'fullNameError' : 'quickNameError';
-                        if (!validateName(this.value)) {
-                            showError(this, errorDiv);
-                        } else {
-                            hideError(this, errorDiv);
-                        }
+                        validateName(this.value) ? hideError(this, errorDiv) : showError(this, errorDiv);
                     }
-
                     if (id === 'phone' || id === 'quickPhone') {
                         const errorDiv = id === 'phone' ? 'phoneError' : 'quickPhoneError';
-                        if (!validatePhone(this.value)) {
-                            showError(this, errorDiv);
-                        } else {
-                            hideError(this, errorDiv);
-                        }
+                        validatePhone(this.value) ? hideError(this, errorDiv) : showError(this, errorDiv);
                     }
-
                     if (id === 'email' || id === 'quickEmail') {
                         const errorDiv = id === 'email' ? 'emailError' : 'quickEmailError';
-                        if (!validateEmail(this.value)) {
-                            showError(this, errorDiv);
-                        } else {
-                            hideError(this, errorDiv);
-                        }
+                        validateEmail(this.value) ? hideError(this, errorDiv) : showError(this, errorDiv);
                     }
                 });
             });
         });
     </script>
+    <script src="/js/header.js"></script>
 </body>
 
 </html>

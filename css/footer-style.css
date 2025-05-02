@@ -1,44 +1,91 @@
-:root {
-    --primary-color: #2e7d32;
-    --secondary-color: #81c784;
-    --accent-color: #f4d35e; /* đổi màu icon tại đây */
-    --text-color: #333;
-    --light-bg: #f8f9fa;
-    --dark-bg: #344e41;
+ /* Footer */
+ footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 4rem 0 2rem;
 }
 
-.footer-contact-info {
-    background-color: var(--dark-bg) !important;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
 }
 
-.footer-contact-details {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+.footer-col h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.footer-contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 200px;
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--footer-link);
 }
 
-.footer-contact-item i {
-    font-size: 2rem;
+.footer-col p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
     margin-bottom: 15px;
-    color: var(--accent-color);
 }
 
-footer {
-    background-color: #222;
+.footer-links a {
+    color: var(--footer-link);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--footer-link-hover);
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    margin-right: 15px;
     color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--accent-color);
+    color: var(--dark-bg);
+    transform: translateY(-5px);
+}
+
+.copyright {
     text-align: center;
-    padding: 20px 0;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
 }

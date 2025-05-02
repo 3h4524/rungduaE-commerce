@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer - Khu Du Lịch Sinh Thái Rừng Dừa</title>
+    <title data-key="title">Footer - Khu Du Lịch Sinh Thái Qua Rừng Dừa</title>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -35,336 +35,188 @@
             padding: 0 20px;
         }
         
-        /* Footer Contact Section */
-        .footer-contact-info {
-            background-color: var(--dark-bg);
-            color: var(--footer-text);
-            padding: 50px 0;
-        }
-        
-        .footer-section-title {
-            text-align: center;
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        
-        .footer-section-title::after {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 2px;
-            background-color: var(--accent-color);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .footer-contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-contact-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
-        }
-        
-        .footer-contact-icon {
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-right: 15px;
-            width: 40px;
-            text-align: center;
-        }
-        
-        .footer-contact-text h3 {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-        
-        .footer-contact-text p {
-            font-size: 0.95rem;
-            opacity: 0.85;
-        }
-        
         /* Main Footer */
-        .main-footer {
+        /* Footer */
+        footer {
             background-color: var(--footer-bg);
             color: var(--footer-text);
-            padding: 50px 0 20px;
+            padding: 4rem 0 2rem;
         }
-        
-        .footer-content {
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
         }
-        
-        .footer-column h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--accent-color);
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
         }
-        
-        .footer-about p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 15px;
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--footer-link);
         }
-        
-        .footer-social {
-            display: flex;
-            gap: 12px;
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
         }
-        
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.08);
-            color: var(--footer-text);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-social a:hover {
-            background-color: var(--accent-color);
-            color: var(--footer-bg);
-            transform: scale(1.1);
-        }
-        
-        .footer-links ul {
+
+        .footer-links {
             list-style: none;
         }
-        
+
         .footer-links li {
-            margin-bottom: 8px;
+            margin-bottom: 15px;
         }
-        
+
         .footer-links a {
             color: var(--footer-link);
             text-decoration: none;
-            font-size: 0.95rem;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
+            display: inline-block;
         }
-        
-        .footer-links a i {
-            margin-right: 6px;
-            font-size: 0.75rem;
-            color: var(--accent-color);
-        }
-        
+
         .footer-links a:hover {
             color: var(--footer-link-hover);
             transform: translateX(5px);
         }
-        
-        .footer-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
+
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
         }
-        
-        .footer-gallery-item {
-            height: 80px;
-            overflow: hidden;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin-right: 15px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
-        
-        .footer-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            transform: translateY(-5px);
         }
-        
-        .footer-gallery-item:hover img {
-            transform: scale(1.15);
-        }
-        
-        .footer-bottom {
+
+        .copyright {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 0.85rem;
-            opacity: 0.9;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
         }
+
+
         
         /* Responsive */
         @media (max-width: 768px) {
-            .footer-section-title {
-                font-size: 1.5rem;
-            }
-            
             .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-contact-grid {
                 grid-template-columns: 1fr;
             }
             
             .footer-gallery {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .language-switcher {
+                right: 15px;
+                gap: 8px;
+            }
+            
+            .language-switcher button {
+                font-size: 0.85rem;
+                padding: 4px 8px;
+            }
         }
         
         @media (max-width: 480px) {
-            .footer-contact-item {
-                flex-direction: column;
-                text-align: center;
+            .footer-column h3 {
+                font-size: 1.1rem;
             }
             
-            .footer-contact-icon {
-                margin-right: 0;
-                margin-bottom: 10px;
+            .footer-links a, .footer-contact a {
+                font-size: 0.9rem;
+            }
+            
+            .language-switcher {
+                right: 10px;
+                gap: 5px;
+            }
+            
+            .language-switcher button {
+                font-size: 0.8rem;
+                padding: 3px 6px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Footer Contact Section -->
-    <section class="footer-contact-info">
-        <div class="container">
-            <h2 class="footer-section-title" data-key="contact-title">
-                LIÊN HỆ KHU DU LỊCH SINH THÁI RỪNG DỪA
-            </h2>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Rừng Dừa Bảy Mẫu</h4>
+                <p>Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên nhiên tuyệt vời cho du khách trong và ngoài nước.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
             
-            <div class="footer-contact-grid">
-                <div class="footer-contact-item">
-                    <div class="footer-contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="footer-contact-text">
-                        <h3 data-key="contact-address-label">Địa chỉ</h3>
-                        <p data-key="contact-address">Tổ 7 – Thôn Vạn Lăng – Cẩm Thanh – Hội An</p>
-                    </div>
-                </div>
-                
-                <div class="footer-contact-item">
-                    <div class="footer-contact-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <div class="footer-contact-text">
-                        <h3 data-key="contact-phone-label">Hotline</h3>
-                        <p>0934.098.169</p>
-                    </div>
-                </div>
-                
-                <div class="footer-contact-item">
-                    <div class="footer-contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="footer-contact-text">
-                        <h3 data-key="contact-email-label">Email</h3>
-                        <p>camtran.170580@gmail.com</p>
-                    </div>
-                </div>
-                
-                <div class="footer-contact-item">
-                    <div class="footer-contact-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="footer-contact-text">
-                        <h3 data-key="contact-website-label">Website</h3>
-                        <p>https://rungduabaymau.vn/</p>
-                    </div>
-                </div>
+            <div class="footer-col">
+                <h4>Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#map">Bản đồ</a></li>
+                    <li><a href="#services">Dịch vụ</a></li>
+                    <li><a href="#gallery">Thư viện ảnh</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Liên Hệ</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Xã Cẩm Thanh, TP. Hội An, Quảng Nam</p>
+                <p><i class="fas fa-phone"></i> +84 234 567 8910</p>
+                <p><i class="fas fa-envelope"></i> info@rungduabaymau.vn</p>
+                <p><i class="fas fa-clock"></i> Mở cửa: 7:00 - 17:00 hàng ngày</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Đặt Tour</h4>
+                <p>Đặt tour trước để có trải nghiệm tốt nhất tại Rừng Dừa Bảy Mẫu</p>
+                <a href="#contact" style="display: inline-block; background-color: var(--accent-color); color: var(--dark-bg); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">
+                    Đặt Ngay <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- About Column -->
-                <div class="footer-column footer-about">
-                    <h3>Về Chúng Tôi</h3>
-                    <p>Khu Du Lịch Sinh Thái Qua Rừng Dừa Bảy Mẫu mang đến trải nghiệm độc đáo với vẻ đẹp hoang sơ của rừng dừa nước Cẩm Thanh - Di sản Văn hóa Phi vật thể Quốc gia.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Zalo"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div class="footer-column footer-links">
-                    <h3>Liên Kết Nhanh</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Trang Chủ</a></li>
-                        <li><a href="Introduction.html"><i class="fas fa-chevron-right"></i> Giới Thiệu</a></li>
-                        <li><a href="Service.html"><i class="fas fa-chevron-right"></i> Dịch Vụ</a></li>
-                        <li><a href="Service.html"><i class="fas fa-chevron-right"></i> Tour Du Lịch</a></li>
-                        <li><a href="Contact.html"><i class="fas fa-chevron-right"></i> Liên Hệ</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Services -->
-                <div class="footer-column footer-links">
-                    <h3>Dịch Vụ</h3>
-                    <ul>
-                        <li><a href="Service.html"><i class="fas fa-chevron-right"></i> Tour Thuyền Thúng</a></li>
-                        <li><a href="Service.html"><i class="fas fa-chevron-right"></i> Ẩm Thực Dân Gian</a></li>
-                        <li><a href="Service.html"><i class="fas fa-chevron-right"></i> Nghề Thủ Công Truyền Thống</a></li>
-                        <li><a href="Service.html"><i class="fas fa-chevron-right"></i> Trải Nghiệm Văn Hóa</a></li>
-                        <li><a href="Service.html"><i class="fas fa-chevron-right"></i> Đặt Tour Nhóm</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Gallery -->
-                <div class="footer-column">
-                    <h3>Thư Viện Ảnh</h3>
-                    <div class="footer-gallery">
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-1.png" alt="Rừng dừa nước">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-2.png" alt="Thuyền thúng">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/contact-1.png" alt="Ngư dân">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-4.png" alt="Ẩm thực">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-5.png" alt="Làng nghề">
-                        </div>
-                        <div class="footer-gallery-item">
-                            <img src="/image/introduction-6.png" alt="Cảnh đẹp">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>© 2025 Khu Du Lịch Qua Rừng Dừa. Đẹp từ thiên nhiên - Sâu lắng từ văn hóa.</p>
-            </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Rừng Dừa Bảy Mẫu | Khu du lịch sinh thái. Tất cả quyền được bảo lưu.</p>
         </div>
     </footer>
 </body>

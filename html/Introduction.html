@@ -4,23 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-key="title">Khu Du Lịch Rừng Dừa Bảy Mẫu - Nét Đẹp Miền Tây Giữa Lòng Quảng Nam</title>
+    <title data-key="title">Khu Du Lịch Qua Rừng Dừa - Nét Đẹp Miền Tây Giữa Lòng Quảng Nam</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header-style.css">
     <style>
         :root {
             --primary-color: #2e7d32;
             --secondary-color: #81c784;
-            --accent-color: #f4d35e;
-            /* Updated accent color */
+            --accent-color: #ffcc80;
             --text-color: #333;
             --light-bg: #f8f9fa;
             --dark-bg: #344e41;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            /* Enable smooth scrolling */
+            --footer-bg: #1c2e1e;
+            --footer-text: #ffffff;
+            --footer-link: #a7c957;
+            --footer-link-hover: #f4d35e;
         }
 
         * {
@@ -30,84 +33,37 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             color: var(--text-color);
             background-color: #f5f5f5;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('/image/introduction-banner.png') center/cover no-repeat;
+        /* Banner Section */
+        .banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/image/introduction-banner.png') center/cover no-repeat;
             color: white;
             padding: 120px 0 80px;
             text-align: center;
             position: relative;
         }
 
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        h1 {
+        .banner-title {
             font-size: 3rem;
-            margin-bottom: 20px;
+            font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--dark-bg);
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .cta-button:hover {
-            background-color: transparent;
-            border: 2px solid var(--accent-color);
-            color: white;
-        }
-
-
-
-        .language-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .language-switcher button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .language-switcher button.active {
-            background: var(--accent-color);
-            color: var(--dark-bg);
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         section {
@@ -123,6 +79,7 @@
             margin-bottom: 50px;
             color: var(--primary-color);
             position: relative;
+            font-weight: 700;
         }
 
         .section-title::after {
@@ -209,20 +166,164 @@
             margin-bottom: 10px;
         }
 
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--footer-link);
+        }
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--footer-link);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-container .footer-links {
+            list-style: none;
+            padding-left: 0 !important;
+        }
+
+        .footer-links a:hover {
+            color: var(--footer-link-hover);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin-right: 15px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            background-color: white;
+            border: 2px solid var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .activities {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        @media (max-width: 992px) {
+            .banner-title {
+                font-size: 3.5rem;
             }
         }
 
         @media (max-width: 768px) {
-            h1 {
+
+            .banner-title {
                 font-size: 2.2rem;
             }
 
@@ -233,18 +334,14 @@
             .info-image {
                 order: -1;
             }
-
-            section {
-                padding: 60px 0;
-            }
         }
 
         @media (max-width: 576px) {
-            h1 {
+            .banner-title {
                 font-size: 1.8rem;
             }
 
-            header {
+            .banner {
                 padding: 80px 0 60px;
             }
 
@@ -259,443 +356,417 @@
             .activities {
                 grid-template-columns: 1fr;
             }
-
-            .cta-button {
-                padding: 10px 20px;
-            }
-        }
-
-        /* Device Preview Frames */
-        .device-preview {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            padding: 40px 0;
-            background-color: #222;
-        }
-
-        .desktop-preview,
-        .mobile-preview {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-
-        .desktop-preview {
-            width: 80%;
-            max-width: 1000px;
-            height: 600px;
-            position: relative;
-            border: 20px solid #333;
-            border-radius: 10px;
-            border-bottom-width: 40px;
-        }
-
-        .desktop-preview:after {
-            content: "";
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 10px;
-            background: #555;
-            border-radius: 5px;
-        }
-
-        .mobile-preview {
-            width: 300px;
-            height: 600px;
-            border: 15px solid #111;
-            border-radius: 30px;
-            position: relative;
-        }
-
-        .mobile-preview:before {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 10px;
-            background: #222;
-            border-radius: 5px;
-            top: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .mobile-preview:after {
-            content: "";
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border: 2px solid #333;
-            border-radius: 50%;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .device-screen {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #f5f5f5;
-        }
-
-        .device-screen img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .device-title {
-            text-align: center;
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
         }
     </style>
 </head>
-
-<body>
+<!-- Header & Navigation -->
+<div class="header-container">
     <header>
-        <div class="language-switcher">
-            <button id="lang-vi" class="lang-btn active" onclick="changeLanguage('vi')">VI</button>
-            <button id="lang-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
-        </div>
-        <div class="container header-content">
-            <h1 data-key="header-title-1">Khu Du Lịch Sinh Thái Qua</h1>
-            <h1 data-key="header-title-2">Rừng Dừa</h1>
-            <p data-key="header-description">Hành trình khám phá miền Tây thu nhỏ giữa lòng miền Trung – Hòa mình vào
-                thiên nhiên xanh mát và trải nghiệm văn hóa đặc sắc của người dân xứ Quảng</p>
-            <a href="#footer-placeholder" class="cta-button" data-key="header-cta">Liên Hệ Ngay</a>
+        <div class="navbar">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-tree"></i></span>
+                <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+            </a>
+            <div class="navbar-right">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#" class="nav-link" data-key="home">Trang chủ</a></li>
+                        <li><a href="#about" class="nav-link" data-key="about">Giới thiệu</a></li>
+                        <li><a href="#map" class="nav-link" data-key="map">Bản đồ</a></li>
+                        <li><a href="#services" class="nav-link" data-key="services">Dịch vụ</a></li>
+                        <li><a href="#contact" class="nav-link" data-key="contact">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switcher">
+                    <button id="lang-vi" class="lang-btn active" onclick="changeLanguage('vi')">VI</button>
+                    <button id="lang-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                </div>
+            </div>
+            <button class="mobile-nav-toggle">
+                <div class="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </button>
         </div>
     </header>
+    <!-- Overlay for mobile menu -->
+    <div class="overlay"></div>
+</div>
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title" data-key="about-title">GIỚI THIỆU CHUNG</h2>
-            <div class="info-box">
-                <div class="info-content">
-                    <div class="info-text">
-                        <p data-key="about-p1">Khu du lịch sinh thái Qua Rừng Dừa là điểm đến không thể bỏ lỡ khi ghé
-                            thăm Hội An – Đà Nẵng. Nằm cách trung tâm phố cổ Hội An chỉ khoảng 3km và cách thành phố Đà
-                            Nẵng 31km, nơi đây sở hữu vẻ đẹp sông nước nên thơ, đậm chất miền Tây giữa lòng miền Trung.
-                        </p>
-                        <p data-key="about-p2">Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi
-                            tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được
-                            bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú. Khí hậu nhiệt đới đặc
-                            trưng góp phần giúp rừng dừa phát triển mạnh mẽ, trải dài trên các thôn: Vạn Lăng, Thanh
-                            Nhứt, Thanh Tam Đông, Thanh Tam Tây và Cồn Nhàn.</p>
-                        <p data-key="about-p3">Du khách khi đến đây sẽ được trải nghiệm không gian đậm chất miền Tây Nam
-                            Bộ – từ việc ngồi thuyền thúng xuyên rừng dừa, chiêm ngưỡng kỹ năng múa thúng điêu luyện đến
-                            thưởng thức các tiết mục dân gian, ẩm thực truyền thống và khám phá văn hóa bản địa độc đáo.
-                        </p>
-                        <p><span class="highlight" data-key="about-hours-label">Giờ mở cửa:</span> <span
-                                data-key="about-hours">Từ 7h30 – 18h30</span></p>
-                        <p><span class="highlight" data-key="about-address-label">Địa Chỉ:</span> <span
-                                data-key="about-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng
-                                Nam</span></p>
-                    </div>
-                    <div class="info-image">
-                        <img src="/image/introduction-1.png" alt="Rừng Dừa Bảy Mẫu">
-                    </div>
+
+<!-- Banner Section -->
+<section class="banner">
+    <div class="container">
+        <h1 class="banner-title" data-key="header-title-1">Khu Du Lịch Sinh Thái Qua Rừng Dừa</h1>
+        <p data-key="header-description">Hành trình khám phá miền Tây thu nhỏ giữa lòng miền Trung – Hòa mình vào
+            thiên nhiên xanh mát và trải nghiệm văn hóa đặc sắc của người dân xứ Quảng</p>
+        <a href="/html/contact.html" class="cta-button" data-key="header-cta">Liên Hệ Ngay</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title" data-key="about-title">GIỚI THIỆU CHUNG</h2>
+        <div class="info-box">
+            <div class="info-content">
+                <div class="info-text">
+                    <p data-key="about-p1">Khu du lịch sinh thái Qua Rừng Dừa là điểm đến không thể bỏ lỡ khi ghé
+                        thăm Hội An – Đà Nẵng. Nằm cách trung tâm phố cổ Hội An chỉ khoảng 3km và cách thành phố Đà
+                        Nẵng 31km, nơi đây sở hữu vẻ đẹp sông nước nên thơ, đậm chất miền Tây giữa lòng miền Trung.
+                    </p>
+                    <p data-key="about-p2">Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi
+                        tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được
+                        bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú. Khí hậu nhiệt đới đặc
+                        trưng góp phần giúp rừng dừa phát triển mạnh mẽ, trải dài trên các thôn: Vạn Lăng, Thanh
+                        Nhứt, Thanh Tam Đông, Thanh Tam Tây và Cồn Nhàn.</p>
+                    <p data-key="about-p3">Du khách khi đến đây sẽ được trải nghiệm không gian đậm chất miền Tây Nam
+                        Bộ – từ việc ngồi thuyền thúng xuyên rừng dừa, chiêm ngưỡng kỹ năng múa thúng điêu luyện đến
+                        thưởng thức các tiết mục dân gian, ẩm thực truyền thống và khám phá văn hóa bản địa độc đáo.
+                    </p>
+                    <p><span class="highlight" data-key="about-hours-label">Giờ mở cửa:</span> <span
+                            data-key="about-hours">Từ 7h30 – 18h30</span></p>
+                    <p><span class="highlight" data-key="about-address-label">Địa Chỉ:</span> <span
+                            data-key="about-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng
+                            Nam</span></p>
+                </div>
+                <div class="info-image">
+                    <img src="/image/introduction-1.png" alt="Qua Rừng Dừa">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="history">
-        <div class="container">
-            <h2 class="section-title" data-key="history-title">LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN</h2>
-            <div class="info-box">
-                <div class="info-content">
-                    <div class="info-image">
-                        <img src="/image/introduction-2.png" alt="Lịch sử Rừng Dừa Bảy Mẫu">
-                    </div>
-                    <div class="info-text">
-                        <p data-key="history-p1">Trong thời kỳ kháng chiến chống thực dân Pháp và đế quốc Mỹ, Rừng dừa
-                            từng là căn cứ địa cách mạng kiên cường, nơi ghi dấu nhiều trận đánh oanh liệt và sự kiện
-                            lịch sử quan trọng. Mảnh đất này từng chứng kiến tinh thần chiến đấu anh dũng, gắn bó máu
-                            thịt giữa quân và dân xứ Quảng.</p>
-                        <p data-key="history-p2">Ngày nay, Rừng dừa Bảy Mẫu không chỉ là di tích mang giá trị lịch sử to
-                            lớn mà còn là khu rừng ngập mặn có hệ sinh thái đa dạng, cảnh quan sông nước hữu tình. Từ
-                            năm 2017, nơi đây được đưa vào quy hoạch và phát triển du lịch, trở thành một khu du lịch
-                            sinh thái đặc sắc – thu hút đông đảo du khách trong và ngoài nước.</p>
-                        <p data-key="history-p3">Dù mới hình thành chưa lâu, khu du lịch sinh thái qua rừng dừa này đã
-                            nhanh chóng khẳng định vị thế với nhiều loại hình trải nghiệm hấp dẫn như: tham quan bằng
-                            thuyền thúng, thưởng thức đặc sản địa phương, vui chơi giải trí và du lịch cộng đồng. Tất cả
-                            góp phần tạo nên một điểm đến lý tưởng cho những ai yêu thiên nhiên, văn hóa và sự bình yên
-                            giữa lòng Hội An.</p>
-                    </div>
+<!-- History Section -->
+<section id="history">
+    <div class="container">
+        <h2 class="section-title" data-key="history-title">LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN</h2>
+        <div class="info-box">
+            <div class="info-content">
+                <div class="info-image">
+                    <img src="/image/introduction-2.png" alt="Lịch sử Rừng Dừa">
+                </div>
+                <div class="info-text">
+                    <p data-key="history-p1">Trong thời kỳ kháng chiến chống thực dân Pháp và đế quốc Mỹ, Rừng dừa
+                        từng là căn cứ địa cách mạng kiên cường, nơi ghi dấu nhiều trận đánh oanh liệt và sự kiện
+                        lịch sử quan trọng. Mảnh đất này từng chứng kiến tinh thần chiến đấu anh dũng, gắn bó máu
+                        thịt giữa quân và dân xứ Quảng.</p>
+                    <p data-key="history-p2">Ngày nay, Qua Rừng dừa không chỉ là di tích mang giá trị lịch sử to
+                        lớn mà còn là khu rừng ngập mặn có hệ sinh thái đa dạng, cảnh quan sông nước hữu tình. Từ
+                        năm 2017, nơi đây được đưa vào quy hoạch và phát triển du lịch, trở thành một khu du lịch
+                        sinh thái đặc sắc – thu hút đông đảo du khách trong và ngoài nước.</p>
+                    <p data-key="history-p3">Dù mới hình thành chưa lâu, khu du lịch sinh thái qua rừng dừa này đã
+                        nhanh chóng khẳng định vị thế với nhiều loại hình trải nghiệm hấp dẫn như: tham quan bằng
+                        thuyền thúng, thưởng thức đặc sản địa phương, vui chơi giải trí và du lịch cộng đồng. Tất cả
+                        góp phần tạo nên một điểm đến lý tưởng cho những ai yêu thiên nhiên, văn hóa và sự bình yên
+                        giữa lòng Hội An.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="team">
-        <div class="container">
-            <h2 class="section-title" data-key="team-title">TẦM NHÌN VÀ SỨ MỆNH</h2>
-            <div class="info-box">
-                <div class="info-content">
-                    <div class="info-image">
-                        <img src="/image/introduction-3.png" alt="Tầm nhìn và sứ mệnh">
-                    </div>
-                    <div class="info-text">
-                        <p data-key="team-p1">Dù là một điểm đến còn khá mới trên bản đồ du lịch, khu du lịch
-                                sinh thái Qua Rừng Dừa đã và đang tạo nên sức hút mạnh mẽ, hứa hẹn sẽ còn phát
-                            triển vượt bậc trong tương lai. Với mong muốn lan tỏa hình ảnh những rặng dừa xanh bạt ngàn,
-                            những chiếc thuyền thúng mộc mạc và nét văn hóa đặc trưng của người dân xứ Quảng, chúng tôi
-                            không ngừng nỗ lực để đưa khu du lịch đến‌ gần hơn với du khách trong và ngoài nước.</p>
-                        <p data-key="team-p2">Khu du lịch luôn chú trọng phát triển nguồn nhân lực chất lượng, nâng cao
-                            dịch vụ nhằm đáp ứng nhanh chóng và tối ưu mọi nhu cầu của du khách. Đồng thời, chúng tôi
-                            tích cực cung cấp thông tin hữu ích, chia sẻ cẩm nang du lịch và những trải nghiệm thực tế
-                            để mỗi hành trình đến với Qua Rừng Dừa trở thành một chuyến đi đáng nhớ – nơi du khách được
-                            hòa mình vào vẻ đẹp yên bình của "miền Tây sông nước giữa lòng miền Trung".</p>
-                    </div>
+<!-- Team Section -->
+<section id="team">
+    <div class="container">
+        <h2 class="section-title" data-key="team-title">TẦM NHÌN VÀ SỨ MỆNH</h2>
+        <div class="info-box">
+            <div class="info-content">
+                <div class="info-image">
+                    <img src="/image/introduction-3.png" alt="Tầm nhìn và sứ mệnh">
+                </div>
+                <div class="info-text">
+                    <p data-key="team-p1">Dù là một điểm đến còn khá mới trên bản đồ du lịch, khu du lịch sinh thái
+                        Qua Rừng Dừa đã và đang tạo nên sức hút mạnh mẽ, hứa hẹn sẽ còn phát triển vượt bậc trong
+                        tương lai. Với mong muốn lan tỏa hình ảnh những rặng dừa xanh bạt ngàn, những chiếc thuyền
+                        thúng mộc mạc và nét văn hóa đặc trưng của người dân xứ Quảng, chúng tôi không ngừng nỗ lực
+                        để đưa khu du lịch đến gần hơn với du khách trong và ngoài nước.</p>
+                    <p data-key="team-p2">Khu du lịch luôn chú trọng phát triển nguồn nhân lực chất lượng, nâng cao
+                        dịch vụ nhằm đáp ứng nhanh chóng và tối ưu mọi nhu cầu của du khách. Đồng thời, chúng tôi
+                        tích cực cung cấp thông tin hữu ích, chia sẻ cẩm nang du lịch và những trải nghiệm thực tế
+                        để mỗi hành trình đến với Qua Rừng Dừa trở thành một chuyến đi đáng nhớ – nơi du khách được
+                        hòa mình vào vẻ đẹp yên bình của "miền Tây sông nước giữa lòng miền Trung".</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="activities">
-        <div class="container">
-            <h2 class="section-title" data-key="activities-title">HOẠT ĐỘNG NỔI BẬT</h2>
-            <p data-key="activities-p">Khi đặt chân đến khu du lịch sinh thái Qua Rừng Dừa, du khách sẽ ngỡ ngàng trước
-                khung cảnh rừng dừa nước bạt ngàn, xen lẫn những mái nhà giản dị được lợp bằng lá dừa mang đậm nét quê
-                yên bình. Không chỉ dừng lại ở cảnh sắc thiên nhiên độc đáo, nơi đây còn mang đến hàng loạt hoạt động
-                hấp dẫn, thú vị phù hợp với mọi lứa tuổi – từ trải nghiệm đi thuyền thúng, múa thúng dân gian cho đến
-                thưởng thức ẩm thực địa phương đậm chất xứ Quảng.</p>
-
-            <div class="activities">
-                <div class="activity-card">
-                    <div class="activity-img">
-                        <img src="/image/introduction-4.png" alt="Đi thuyền thúng">
-                    </div>
-                    <div class="activity-info">
-                        <h3 data-key="activity-1-title">Đi thuyền thúng khám phá rừng dừa</h3>
-                        <p data-key="activity-1-p">Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du khách sẽ
-                            cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc trưng của người
-                            dân xứ Quảng.</p>
-                    </div>
+<!-- Activities Section -->
+<section id="activities">
+    <div class="container">
+        <h2 class="section-title" data-key="activities-title">HOẠT ĐỘNG NỔI BẬT</h2>
+        <p data-key="activities-p">Khi đặt chân đến khu du lịch sinh thái Qua Rừng Dừa, du khách sẽ ngỡ ngàng trước
+            khung cảnh rừng dừa nước bạt ngàn, xen lẫn những mái nhà giản dị được lợp bằng lá dừa mang đậm nét quê
+            yên bình. Không chỉ dừng lại ở cảnh sắc thiên nhiên độc đáo, nơi đây còn mang đến hàng loạt hoạt động
+            hấp dẫn, thú vị phù hợp với mọi lứa tuổi – từ trải nghiệm đi thuyền thúng, múa thúng dân gian cho đến
+            thưởng thức ẩm thực địa phương đậm chất xứ Quảng.</p>
+        <div class="activities">
+            <div class="activity-card">
+                <div class="activity-img">
+                    <img src="/image/introduction-4.png" alt="Đi thuyền thúng">
                 </div>
-
-                <div class="activity-card">
-                    <div class="activity-img">
-                        <img src="/image/introduction-5.png" alt="Ẩm thực địa phương">
-                    </div>
-                    <div class="activity-info">
-                        <h3 data-key="activity-2-title">Thưởng thức ẩm thực địa phương</h3>
-                        <p data-key="activity-2-p">Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua Rừng
-                            Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm dừa béo
-                            ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.</p>
-                    </div>
+                <div class="activity-info">
+                    <h3 data-key="activity-1-title">Đi thuyền thúng khám phá rừng dừa</h3>
+                    <p data-key="activity-1-p">Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du khách sẽ
+                        cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc trưng của người
+                        dân xứ Quảng.</p>
                 </div>
-
-                <div class="activity-card">
-                    <div class="activity-img">
-                        <img src="/image/introduction-6.png" alt="Chụp ảnh lưu niệm">
-                    </div>
-                    <div class="activity-info">
-                        <h3 data-key="activity-3-title">Selfie giữa thiên nhiên</h3>
-                        <p data-key="activity-3-p">Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa xanh
-                            mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.</p>
-                    </div>
+            </div>
+            <div class="activity-card">
+                <div class="activity-img">
+                    <img src="/image/introduction-5.png" alt="Ẩm thực địa phương">
+                </div>
+                <div class="activity-info">
+                    <h3 data-key="activity-2-title">Thưởng thức ẩm thực địa phương</h3>
+                    <p data-key="activity-2-p">Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua Rừng
+                        Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm dừa béo
+                        ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.</p>
+                </div>
+            </div>
+            <div class="activity-card">
+                <div class="activity-img">
+                    <img src="/image/introduction-6.png" alt="Chụp ảnh lưu niệm">
+                </div>
+                <div class="activity-info">
+                    <h3 data-key="activity-3-title">Selfie giữa thiên nhiên</h3>
+                    <p data-key="activity-3-p">Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa xanh
+                        mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <div id="footer-placeholder"></div>
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4 data-key="footer-about-title">Qua Rừng Dừa</h4>
+            <p data-key="footer-about-text">Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên
+                nhiên tuyệt vời cho du khách trong và ngoài nước.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4 data-key="footer-links-quick-title">Liên Kết Nhanh</h4>
+            <ul class="footer-links">
+                <li><a href="#" data-key="footer-link-home">Trang chủ</a></li>
+                <li><a href="#about" data-key="footer-link-intro">Giới thiệu</a></li>
+                <li><a href="#map" data-key="footer-link-services">Bản đồ</a></li>
+                <li><a href="#services" data-key="footer-link-tours">Dịch vụ</a></li>
+                <li><a href="#contact" data-key="footer-link-contact">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 data-key="contact-title">Liên Hệ</h4>
+            <p><i class="fas fa-map-marker-alt"></i> <span data-key="contact-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh,
+                    Thành phố Hội An, Tỉnh Quảng Nam</span></p>
+            <p><i class="fas fa-phone"></i> <span data-key="contact-phone">0934.098.169</span></p>
+            <p><i class="fas fa-envelope"></i> <span data-key="contact-email">camtran.170580@gmail.com</span></p>
+            <p><i class="fas fa-clock"></i> <span data-key="footer-contact-hours">Mở cửa: 7:00 - 17:00 hàng ngày</span></p>
+        </div>
+        <div class="footer-col">
+            <h4 data-key="footer-tour-title">Đặt Tour</h4>
+            <p data-key="footer-tour-text">Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa</p>
+            <a href="#contact"
+                style="display: inline-block; background-color: var(--accent-color); color: var(--dark-bg); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">
+                <span data-key="footer-tour-button">Đặt Ngay</span> <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="copyright">
+        <p data-key="footer-bottom-text">© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu.
+        </p>
+    </div>
+</footer>
 
-    <script>
+<!-- Back to Top Button -->
+<div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
 
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const translations = {
+        vi: {
+            title: "Khu Du Lịch Qua Rừng Dừa - Nét Đẹp Miền Tây Giữa Lòng Quảng Nam",
+            "logo-text": "Qua Rừng Dừa",
+            home: "Trang chủ",
+            about: "Giới thiệu",
+            map: "Bản đồ",
+            services: "Dịch vụ",
+            contact: "Liên hệ",
+            "header-title-1": "Khu Du Lịch Sinh Thái Qua Rừng Dừa",
+            "header-description": "Hành trình khám phá miền Tây thu nhỏ giữa lòng miền Trung – Hòa mình vào thiên nhiên xanh mát và trải nghiệm văn hóa đặc sắc của người dân xứ Quảng",
+            "header-cta": "Liên Hệ Ngay",
+            "about-title": "GIỚI THIỆU CHUNG",
+            "about-p1": "Khu du lịch sinh thái Qua Rừng Dừa là điểm đến không thể bỏ lỡ khi ghé thăm Hội An – Đà Nẵng. Nằm cách trung tâm phố cổ Hội An chỉ khoảng 3km và cách thành phố Đà Nẵng 31km, nơi đây sở hữu vẻ đẹp sông nước nên thơ, đậm chất miền Tây giữa lòng miền Trung.",
+            "about-p2": "Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú. Khí hậu nhiệt đới đặc trưng góp phần giúp rừng dừa phát triển mạnh mẽ, trải dài trên các thôn: Vạn Lăng, Thanh Nhứt, Thanh Tam Đông, Thanh Tam Tây và Cồn Nhàn.",
+            "about-p3": "Du khách khi đến đây sẽ được trải nghiệm không gian đậm chất miền Tây Nam Bộ – từ việc ngồi thuyền thúng xuyên rừng dừa, chiêm ngưỡng kỹ năng múa thúng điêu luyện đến thưởng thức các tiết mục dân gian, ẩm thực truyền thống và khám phá văn hóa bản địa độc đáo.",
+            "about-hours-label": "Giờ mở cửa:",
+            "about-hours": "Từ 7h30 – 18h30",
+            "about-address-label": "Địa Chỉ:",
+            "about-address": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
+            "history-title": "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN",
+            "history-p1": "Trong thời kỳ kháng chiến chống thực dân Pháp và đế quốc Mỹ, Rừng dừa từng là căn cứ địa cách mạng kiên cường, nơi ghi dấu nhiều trận đánh oanh liệt và sự kiện lịch sử quan trọng. Mảnh đất này từng chứng kiến tinh thần chiến đấu anh dũng, gắn bó máu thịt giữa quân và dân xứ Quảng.",
+            "history-p2": "Ngày nay, Qua Rừng dừa không chỉ là di tích mang giá trị lịch sử to lớn mà còn là khu rừng ngập mเง mặn có hệ sinh thái đa dạng, cảnh quan sông nước hữu tình. Từ năm 2017, nơi đây được đưa vào quy hoạch và phát triển du lịch, trở thành một khu du lịch sinh thái đặc sắc – thu hút đông đảo du khách trong và ngoài nước.",
+            "history-p3": "Dù mới hình thành chưa lâu, khu du lịch sinh thái qua rừng dừa này đã nhanh chóng khẳng định vị thế với nhiều loại hình trải nghiệm hấp dẫn như: tham quan bằng thuyền thúng, thưởng thức đặc sản địa phương, vui chơi giải trí và du lịch cộng đồng. Tất cả góp phần tạo nên một điểm đến lý tưởng cho những ai yêu thiên nhiên, văn hóa và sự bình yên giữa lòng Hội An.",
+            "team-title": "TẦM NHÌN VÀ SỨ MỆNH",
+            "team-p1": "Dù là một điểm đến còn khá mới trên bản đồ du lịch, khu du lịch sinh thái Qua Rừng Dừa đã và đang tạo nên sức hút mạnh mẽ, hứa hẹn sẽ còn phát triển vượt bậc trong tương lai. Với mong muốn lan tỏa hình ảnh những rặng dừa xanh bạt ngàn, những chiếc thuyền thúng mộc mạc và nét văn hóa đặc trưng của người dân xứ Quảng, chúng tôi không ngừng nỗ lực để đưa khu du lịch đến gần hơn với du khách trong và ngoài nước.",
+            "team-p2": "Khu du lịch luôn chú trọng phát triển nguồn nhân lực chất lượng, nâng cao dịch vụ nhằm đáp ứng nhanh chóng và tối ưu mọi nhu cầu của du khách. Đồng thời, chúng tôi tích cực cung cấp thông tin hữu ích, chia sẻ cẩm nang du lịch và những trải nghiệm thực tế để mỗi hành trình đến với Qua Rừng Dừa trở thành một chuyến đi đáng nhớ – nơi du khách được hòa mình vào vẻ đẹp yên bình của \"miền Tây sông nước giữa lòng miền Trung\".",
+            "activities-title": "HOẠT ĐỘNG NỔI BẬT",
+            "activities-p": "Khi đặt chân đến khu du lịch sinh thái Qua Rừng Dừa, du khách sẽ ngỡ ngàng trước khung cảnh rừng dừa nước bạt ngàn, xen lẫn những mái nhà giản dị được lợp bằng lá dừa mang đậm nét quê yên bình. Không chỉ dừng lại ở cảnh sắc thiên nhiên độc đáo, nơi đây còn mang đến hàng loạt hoạt động hấp dẫn, thú vị phù hợp với mọi lứa tuổi – từ trải nghiệm đi thuyền thúng, múa thúng dân gian cho đến thưởng thức ẩm thực địa phương đậm chất xứ Quảng.",
+            "activity-1-title": "Đi thuyền thúng khám phá rừng dừa",
+            "activity-1-p": "Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du khách sẽ cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc trưng của người dân xứ Quảng.",
+            "activity-2-title": "Thưởng thức ẩm thực địa phương",
+            "activity-2-p": "Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua Rừng Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm dừa béo ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.",
+            "activity-3-title": "Selfie giữa thiên nhiên",
+            "activity-3-p": "Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa xanh mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.",
+            "contact-title": "Liên Hệ",
+            "contact-address": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
+            "contact-phone": "0934.098.169",
+            "contact-email": "camtran.170580@gmail.com",
+            "footer-about-title": "Qua Rừng Dừa",
+            "footer-about-text": "Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên nhiên tuyệt vời cho du khách trong và ngoài nước.",
+            "footer-links-quick-title": "Liên Kết Nhanh",
+            "footer-link-home": "Trang Chủ",
+            "footer-link-intro": "Giới Thiệu",
+            "footer-link-services": "Bản đồ",
+            "footer-link-tours": "Dịch Vụ",
+            "footer-link-contact": "Liên Hệ",
+            "footer-contact-hours": "Mở cửa: 7:00 - 17:00 hàng ngày",
+            "footer-tour-title": "Đặt Tour",
+            "footer-tour-text": "Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa",
+            "footer-tour-button": "Đặt Ngay",
+            "footer-bottom-text": "© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu."
+        },
+        en: {
+            title: "Qua Rừng Dừa Eco-Tourism Area - The Charm of the Mekong Delta in the Heart of Quảng Nam",
+            "logo-text": "Qua Rừng Dừa Eco-Tourism Area",
+            home: "Home",
+            about: "About",
+            map: "Map",
+            services: "Services",
+            contact: "Contact",
+            "header-title-1": "Qua Rừng Dừa Eco-Tourism Area",
+            "header-description": "A journey to explore a miniature Mekong Delta in the heart of Central Vietnam – Immerse yourself in lush nature and experience the unique culture of the Quảng Nam people.",
+            "header-cta": "Contact Now",
+            "about-title": "INTRODUCTION",
+            "about-p1": "Qua Rừng Dừa Eco-Tourism Area is a must-visit destination when traveling to Hoi An. Located just 3km from the ancient town of Hoi An and 31km from Da Nang city, this place boasts poetic river scenery, embodying the essence of the Mekong Delta in the heart of Central Vietnam.",
+            "about-p2": "Spanning over 100 hectares, this eco-tourism area is situated along three famous rivers – the Hoai River, Thu Bon River, and De Vong River – blending into a brackish water ecosystem, surrounded by lush coconut groves and a rich biodiversity. The tropical climate plays a key role in the thriving coconut forest, stretching across villages such as Van Lang, Thanh Nhut, Thanh Tam Dong, Thanh Tam Tay, and Con Nhan.",
+            "about-p3": "Visitors will experience the authentic vibe of the Mekong Delta – from riding a basket boat through the coconut forest, admiring skillful basket boat dancing, to enjoying folk performances, traditional cuisine, and exploring the unique local culture.",
+            "about-hours-label": "Opening Hours:",
+            "about-hours": "From 7:30 AM to 6:30 PM",
+            "about-address-label": "Address:",
+            "about-address": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
+            "history-title": "HISTORY OF FORMATION AND DEVELOPMENT",
+            "history-p1": "During the resistance wars against French colonialists and American imperialists, the coconut forest served as a resilient revolutionary base, witnessing numerous fierce battles and significant historical events. This land bears the marks of the brave fighting spirit and deep bond between the military and the people of Quang Nam.",
+            "history-p2": "Today, Rừng Dừa is not only a historical relic of great value but also a mangrove forest with a diverse ecosystem and picturesque river scenery. Since 2017, it has been planned and developed for tourism, becoming a unique eco-tourism area that attracts both domestic and international visitors.",
+            "history-p3": "Though newly established, Qua Rừng Dừa Eco-Tourism Area has quickly established its reputation with a variety of engaging activities such as basket boat tours, tasting local specialties, entertainment, and community-based tourism. All these elements make it an ideal destination for those who love nature, culture, and tranquility in the heart of Hoi An.",
+            "team-title": "VISION AND MISSION",
+            "team-p1": "Though a relatively new destination on the tourism map, Qua Rừng Dừa Eco-Tourism Area has been creating a strong attraction, promising significant growth in the future. With the desire to spread the image of vast green coconut groves, rustic basket boats, and the unique culture of the Quang Nam people, we continuously strive to bring the tourism area closer to both domestic and international visitors.",
+            "team-p2": "The tourism area always focuses on developing a high-quality workforce and enhancing services to quickly and optimally meet the needs of visitors. At the same time, we actively provide useful information, share travel guides, and offer authentic experiences so that every journey to Qua Rừng Dừa becomes a memorable trip – where visitors can immerse themselves in the peaceful beauty of a 'Mekong Delta in the heart of Central Vietnam'.",
+            "activities-title": "FEATURED ACTIVITIES",
+            "activities-p": "Upon arriving at Qua Rừng Dừa Eco-Tourism Area, visitors will be amazed by the vast coconut groves interspersed with simple thatched-roof houses, exuding a peaceful rural charm. Beyond the unique natural scenery, this place offers a range of exciting and engaging activities suitable for all ages – from basket boat experiences and folk basket boat dancing to savoring authentic Quang Nam cuisine.",
+            "activity-1-title": "Explore the Coconut Forest by Basket Boat",
+            "activity-1-p": "Experience a basket boat ride weaving through the lush coconut forest, where visitors can feel the tranquility and simplicity of the rural riverside and the unique culture of the Quang Nam people.",
+            "activity-2-title": "Savor Local Cuisine",
+            "activity-2-p": "Enjoy the flavors of Quang Nam with delicious dishes at Qua Rừng Dừa, such as crispy banh xeo, refreshing banana blossom salad, aromatic grilled ca chai fish, and rich coconut rice – all creating an unforgettable rustic meal.",
+            "activity-3-title": "Selfie Amid Nature",
+            "activity-3-p": "Capture memorable moments amidst the lush coconut forest, vast rivers, and stunning clear blue skies.",
+            "contact-title": "Contact",
+            "contact-address": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
+            "contact-phone": "0934.098.169",
+            "contact-email": "camtran.170580@gmail.com",
+            "footer-about-title": "About us",
+            "footer-about-text": "A unique eco-tourism area in Hoi An, offering an exceptional natural experience for both domestic and international visitors.",
+            "footer-links-quick-title": "Quick Links",
+            "footer-link-home": "Home",
+            "footer-link-intro": "Introduction",
+            "footer-link-services": "Map",
+            "footer-link-tours": "Services",
+            "footer-link-contact": "Contact",
+            "footer-tour-title": "Book a Tour",
+            "footer-tour-text": "Book a tour in advance for the best experience at Qua Rừng Dừa",
+            "footer-tour-button": "Book Now",
+            "footer-bottom-text": "© 2025 Qua Rừng Dừa | Eco-Tourism Area. All rights reserved.",
+            "footer-contact-hours": "Open: 7:00 AM - 5:00 PM daily"
+        }
+    };
+
+    function changeLanguage(lang) {
+        localStorage.setItem('language', lang);
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+        document.title = translations[lang]['title'];
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById(`lang-${lang}`).classList.add('active');
+        document.documentElement.lang = lang;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('language') || 'vi';
+        changeLanguage(savedLang);
+
+        // Mobile Navigation
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileNavToggle && navLinks) {
+            mobileNavToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        if (mobileNavClose && navLinks) {
+            mobileNavClose.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        }
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                backToTopButton.classList.toggle('active', window.pageYOffset > 300);
+            });
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1); // Lấy id từ href (bỏ #)
-                const targetElement = document.getElementById(targetId);
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
-        // Object chứa các bản dịch
-        const translations = {
-            vi: {
-                // Tiêu đề trang
-                title: "Khu Du Lịch Rừng Dừa Bảy Mẫu - Nét Đẹp Miền Tây Giữa Lòng Quảng Nam",
-
-                // Header
-                "header-title-1": "Khu Du Lịch Sinh Thái Qua",
-                "header-title-2": "Rừng Dừa",
-                "header-description": "Hành trình khám phá miền Tây thu nhỏ giữa lòng miền Trung – Hòa mình vào thiên nhiên xanh mát và trải nghiệm văn hóa đặc sắc của người dân xứ Quảng",
-                "header-cta": "Liên Hệ Ngay",
-
-                // Section: Giới Thiệu Chung
-                "about-title": "GIỚI THIỆU CHUNG",
-                "about-p1": "Khu du lịch sinh thái Qua Rừng Dừa là điểm đến không thể bỏ lỡ khi ghé thăm Hội An. Nằm cách trung tâm phố cổ Hội An chỉ khoảng 3km và cách thành phố Đà Nẵng 31km, nơi đây sở hữu vẻ đẹp sông nước nên thơ, đậm chất miền Tây giữa lòng miền Trung.",
-                "about-p2": "Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú. Khí hậu nhiệt đới đặc trưng góp phần giúp rừng dừa phát triển mạnh mẽ, trải dài trên các thôn: Vạn Lăng, Thanh Nhứt, Thanh Tam Đông, Thanh Tam Tây và Cồn Nhàn.",
-                "about-p3": "Du khách khi đến đây sẽ được trải nghiệm không gian đậm chất miền Tây Nam Bộ – từ việc ngồi thuyền thúng xuyên rừng dừa, chiêm ngưỡng kỹ năng múa thúng điêu luyện đến thưởng thức các tiết mục dân gian, ẩm thực truyền thống và khám phá văn hóa bản địa độc đáo.",
-                "about-hours-label": "Giờ mở cửa:",
-                "about-hours": "Từ 7h30 – 18h30",
-                "about-address-label": "Địa Chỉ:",
-                "about-address": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
-
-                // Section: Lịch Sử Hình Thành và Phát Triển
-                "history-title": "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN",
-                "history-p1": "Trong thời kỳ kháng chiến chống thực dân Pháp và đế quốc Mỹ, Rừng dừa từng là căn cứ địa cách mạng kiên cường, nơi ghi dấu nhiều trận đánh oanh liệt và sự kiện lịch sử quan trọng. Mảnh đất này từng chứng kiến tinh thần chiến đấu anh dũng, gắn bó máu thịt giữa quân và dân xứ Quảng.",
-                "history-p2": "Ngày nay, Rừng dừa Bảy Mẫu không chỉ là di tích mang giá trị lịch sử to lớn mà còn là khu rừng ngập mặn có hệ sinh thái đa dạng, cảnh quan sông nước hữu tình. Từ năm 2017, nơi đây được đưa vào quy hoạch và phát triển du lịch, trở thành một khu du lịch sinh thái đặc sắc – thu hút đông đảo du khách trong và ngoài nước.",
-                "history-p3": "Dù mới hình thành chưa lâu, khu du lịch sinh thái qua rừng dừa này đã nhanh chóng khẳng định vị thế với nhiều loại hình trải nghiệm hấp dẫn như: tham quan bằng thuyền thúng, thưởng thức đặc sản địa phương, vui chơi giải trí và du lịch cộng đồng. Tất cả góp phần tạo nên một điểm đến lý tưởng cho những ai yêu thiên nhiên, văn hóa và sự bình yên giữa lòng Hội An.",
-
-                // Section: Tầm Nhìn và Sứ Mệnh
-                "team-title": "TẦM NHÌN VÀ SỨ MỆNH",
-                "team-p1": "Dù là một điểm đến còn khá mới trên bản đồ du lịch, khu du lịch sinh thái Qua Rừng Dừa đã và đang tạo nên sức hút mạnh mẽ, hứa hẹn sẽ còn phát triển vượt bậc trong tương lai. Với mong muốn lan tỏa hình ảnh những rặng dừa xanh bạt ngàn, những chiếc thuyền thúng mộc mạc và nét văn hóa đặc trưng của người dân xứ Quảng, chúng tôi không ngừng nỗ lực để đưa khu du lịch đến‌ gần hơn với du khách trong và ngoài nước.",
-                "team-p2": "Khu du lịch luôn chú trọng phát triển nguồn nhân lực chất lượng, nâng cao dịch vụ nhằm đáp ứng nhanh chóng và tối ưu mọi nhu cầu của du khách. Đồng thời, chúng tôi tích cực cung cấp thông tin hữu ích, chia sẻ cẩm nang du lịch và những trải nghiệm thực tế để mỗi hành trình đến với Qua Rừng Dừa trở thành một chuyến đi đáng nhớ – nơi du khách được hòa mình vào vẻ đẹp yên bình của \"miền Tây sông nước giữa lòng miền Trung\".",
-
-                // Section: Hoạt Động Nổi Bật
-                "activities-title": "HOẠT ĐỘNG NỔI BẬT",
-                "activities-p": "Khi đặt chân đến khu du lịch sinh thái Qua Rừng Dừa, du khách sẽ ngỡ ngàng trước khung cảnh forêt dừa nước bạt ngàn, xen lẫn những mái nhà giản dị được lợp bằng lá dừa mang đậm nét quê yên bình. Không chỉ dừng lại ở cảnh sắc thiên nhiên độc đáo, nơi đây còn mang đến hàng loạt hoạt động hấp dẫn, thú vị phù hợp với mọi lứa tuổi – từ trải nghiệm đi thuyền thúng, múa thúng dân gian cho đến thưởng thức ẩm thực địa phương đậm chất xứ Quảng.",
-                "activity-1-title": "Đi thuyền thúng khám phá rừng dừa",
-                "activity-1-p": "Trải nghiệm thuyền thúng len lỏi giữa rừng dừa xanh mát, du khách sẽ cảm nhận được sự bình yên, mộc mạc của miền quê sông nước và nét văn hóa đặc trưng của người dân xứ Quảng.",
-                "activity-2-title": "Thưởng thức ẩm thực địa phương",
-                "activity-2-p": "Thưởng thức hương vị xứ Quảng với những món ngon đậm đà tại Qua Rừng Dừa như bánh xèo giòn rụm, nộm hoa chuối thanh mát, cá chai nướng thơm lừng và cơm dừa béo ngậy – tất cả tạo nên một bữa ăn dân dã nhưng khó quên.",
-                "activity-3-title": "Selfie giữa thiên nhiên",
-                "activity-3-p": "Thỏa sức check-in, lưu giữ khoảnh khắc đáng nhớ giữa rừng dừa xanh mát, sông nước mênh mông và bầu trời trong xanh tuyệt đẹp.",
-
-                // Footer Contact Section
-                "contact-title": "LIÊN HỆ KHU DU LỊCH SINH THÁI QUA RỪNG DỪA",
-                "contact-address-label": "Địa chỉ",
-                "contact-address": "Tổ 7 – Vạn Lăng Village – Cẩm Thanh – Hội An",
-                "contact-phone-label": "Hotline",
-                "contact-email-label": "Email",
-                "contact-website-label": "Website",
-
-                // Footer
-                "footer-text": "© 2025 Khu Du Lịch Qua Rừng Dừa. Đẹp từ thiên nhiên - Sâu lắng từ văn hóa."
-            },
-            en: {
-                // Tiêu đề trang
-                title: "Qua Rừng Dừa Eco-Tourism Area - The Charm of the Mekong Delta in the Heart of Quảng Nam",
-
-                // Header
-                "header-title-1": "Qua Rừng Dừa",
-                "header-title-2": "Eco-Tourism Area",
-                "header-description": "A journey to explore a miniature Mekong Delta in the heart of Central Vietnam – Immerse yourself in lush nature and experience the unique culture of the Quảng Nam people.",
-                "header-cta": "Contact Now",
-
-                // Section: Giới Thiệu Chung
-                "about-title": "INTRODUCTION",
-                "about-p1": "Qua Rừng Dừa Eco-Tourism Area is a must-visit destination when traveling to Hoi An. Located just 3km from the ancient town of Hoi An and 31km from Da Nang city, this place boasts poetic river scenery, embodying the essence of the Mekong Delta in the heart of Central Vietnam.",
-                "about-p2": "Spanning over 100 hectares, this eco-tourism area is situated along three famous rivers – the Hoai River, Thu Bon River, and De Vong River – blending into a brackish water ecosystem, surrounded by lush coconut groves and a rich biodiversity. The tropical climate plays a key role in the thriving coconut forest, stretching across villages such as Van Lang, Thanh Nhut, Thanh Tam Dong, Thanh Tam Tay, and Con Nhan.",
-                "about-p3": "Visitors will experience the authentic vibe of the Mekong Delta – from riding a basket boat through the coconut forest, admiring skillful basket boat dancing, to enjoying folk performances, traditional cuisine, and exploring the unique local culture.",
-                "about-hours-label": "Opening Hours:",
-                "about-hours": "From 7:30 AM to 6:30 PM",
-                "about-address-label": "Address:",
-                "about-address": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
-
-                // Section: Lịch Sử Hình Thành và Phát Triển
-                "history-title": "HISTORY OF FORMATION AND DEVELOPMENT",
-                "history-p1": "During the resistance wars against French colonialists and American imperialists, the coconut forest served as a resilient revolutionary base, witnessing numerous fierce battles and significant historical events. This land bears the marks of the brave fighting spirit and deep bond between the military and the people of Quang Nam.",
-                "history-p2": "Today, Rừng Dừa is not only a historical relic of great value but also a mangrove forest with a diverse ecosystem and picturesque river scenery. Since 2017, it has been planned and developed for tourism, becoming a unique eco-tourism area that attracts both domestic and international visitors.",
-                "history-p3": "Though newly established, Qua Rừng Dừa Eco-Tourism Area has quickly established its reputation with a variety of engaging activities such as basket boat tours, tasting local specialties, entertainment, and community-based tourism. All these elements make it an ideal destination for those who love nature, culture, and tranquility in the heart of Hoi An.",
-
-                // Section: Tầm Nhìn và Sứ Mệnh
-                "team-title": "VISION AND MISSION",
-                "team-p1": "Though a relatively new destination on the tourism map, Qua Rừng Dừa Eco-Tourism Area has been creating a strong attraction, promising significant growth in the future. With the desire to spread the image of vast green coconut groves, rustic basket boats, and the unique culture of the Quang Nam people, we continuously strive to bring the tourism area closer to both domestic and international visitors.",
-                "team-p2": "The tourism area always focuses on developing a high-quality workforce and enhancing services to quickly and optimally meet the needs of visitors. At the same time, we actively provide useful information, share travel guides, and offer authentic experiences so that every journey to Qua Rừng Dừa becomes a memorable trip – where visitors can immerse themselves in the peaceful beauty of a 'Mekong Delta in the heart of Central Vietnam'.",
-
-                // Section: Hoạt Động Nổi Bật
-                "activities-title": "FEATURED ACTIVITIES",
-                "activities-p": "Upon arriving at Qua Rừng Dừa Eco-Tourism Area, visitors will be amazed by the vast coconut groves interspersed with simple thatched-roof houses, exuding a peaceful rural charm. Beyond the unique natural scenery, this place offers a range of exciting and engaging activities suitable for all ages – from basket boat experiences and folk basket boat dancing to savoring authentic Quang Nam cuisine.",
-                "activity-1-title": "Explore the Coconut Forest by Basket Boat",
-                "activity-1-p": "Experience a basket boat ride weaving through the lush coconut forest, where visitors can feel the tranquility and simplicity of the rural riverside and the unique culture of the Quang Nam people.",
-                "activity-2-title": "Savor Local Cuisine",
-                "activity-2-p": "Enjoy the flavors of Quang Nam with delicious dishes at Qua Rừng Dừa, such as crispy banh xeo, refreshing banana blossom salad, aromatic grilled ca chai fish, and rich coconut rice – all creating an unforgettable rustic meal.",
-                "activity-3-title": "Selfie Amid Nature",
-                "activity-3-p": "Capture memorable moments amidst the lush coconut forest, vast rivers, and stunning clear blue skies.",
-
-                // Footer Contact Section
-                "contact-title": "CONTACT QUA RỪNG DỪA ECO-TOURISM AREA",
-                "contact-address-label": "Address",
-                "contact-address": "Tổ 7 - Vạn Lăng - Cẩm Thanh - Hội An",
-                "contact-phone-label": "Hotline",
-                "contact-email-label": "Email",
-                "contact-website-label": "Website",
-
-                // Footer
-                "footer-text": "© 2025 Qua Rừng Dừa Eco-Tourism Area. Beautiful by Nature - Deeply Cultural."
-            }
-        };
-
-        // Hàm thay đổi ngôn ngữ
-        function changeLanguage(lang) {
-            // Lưu ngôn ngữ đã chọn vào localStorage
-            localStorage.setItem('language', lang);
-
-            // Cập nhật nội dung dựa trên ngôn ngữ
-            document.querySelectorAll('[data-key]').forEach(element => {
-                const key = element.getAttribute('data-key');
-                element.textContent = translations[lang][key];
-            });
-
-            // Cập nhật tiêu đề trang
-            document.title = translations[lang]['title'];
-
-            // Cập nhật trạng thái nút active
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.getElementById(`lang-${lang}`).classList.add('active');
-
-            // Cập nhật thuộc tính lang của HTML
-            document.documentElement.lang = lang;
-        }
-
-        // Khởi tạo khi trang tải
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('language') || 'vi';
-
-            // Tải footer.html
-            fetch('footer.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to load footer.html');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    // Tạo một DOM tạm thời để phân tích nội dung footer.html
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(data, 'text/html');
-
-                    // Lấy nội dung HTML của footer (section và footer)
-                    const footerContent = doc.querySelector('body').innerHTML;
-
-                    // Lấy các thẻ <style> từ footer.html
-                    const footerStyles = doc.querySelector('style')?.innerHTML || '';
-
-                    // Thêm styles vào head của trang chính
-                    if (footerStyles) {
-                        const styleElement = document.createElement('style');
-                        styleElement.textContent = footerStyles;
-                        document.head.appendChild(styleElement);
-                    }
-
-                    // Thêm nội dung footer vào placeholder
-                    document.getElementById('footer-placeholder').innerHTML = footerContent;
-
-                    // Cập nhật lại ngôn ngữ cho footer sau khi tải
-                    changeLanguage(savedLang);
-                })
-                .catch(error => {
-                    console.error('Error loading footer:', error);
-                    document.getElementById('footer-placeholder').innerHTML = '<p>Error loading footer. Please try again later.</p>';
-                });
-        });
-    </script>
+    });
+</script>
+<script src="/js/header.js"></script>
 </body>
 
 </html>

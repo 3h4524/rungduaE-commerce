@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám Phá Vẻ Đẹp Rừng Dừa Bảy Mẫu Hội An</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #008000;
+            --secondary-color: #ffc107;
+            --text-color: #333;
+            --light-text: #fff;
+            --background-light: #f9f9f9;
+            --background-dark: #005040;
+        }
+        
+        body {
+            color: var(--text-color);
+            background-color: var(--background-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+    
+        
+        .section-title {
+            text-align: center;
+            margin: 3rem 0;
+            color: var(--primary-color);
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        } */
+        
+        .divider {
+            max-width: 213px;
+            height: 3px;
+            background-color: rgb(81, 144, 7);
+            margin: 0 auto 30px;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .activity-section {
+            padding: 3rem 0;
+        }
+        
+        .activity-section:nth-child(even) {
+            background-color: var(--background-light);
+        }
+        
+        .activity-section:nth-child(odd) {
+            background-color: white;
+        }
+        
+        .activity-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        
+        .activity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .activity-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .activity-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .activity-description {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+        
+        .cta-section {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 5rem 0;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background-color: #e6ac00;
+            color: var(--text-color);
+        }
+        
+        .activity-icon {
+            background-color: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        footer {
+            background-color: var(--background-dark);
+            color: var(--light-text);
+            padding: 3rem 0;
+        }
+        
+        .social-link {
+            color: var(--light-text);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .activity-content {
+                padding: 1rem 1rem;
+            }
+            
+            .activity-img {
+                height: 300px;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+        
+
+
+
+        .hero-banner {
+            width: 100%;
+            height: 500px;
+            background-image: url(https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .banner-title {
+            color: white;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            margin-bottom: 15px;
+        }
+
+        .banner-subtitle {
+            color: #ffffff;
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .banner-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 400px;
+            }
+
+            .banner-title {
+                font-size: 2.5rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .info-item {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-banner {
+                height: 300px;
+            }
+
+            .banner-title {
+                font-size: 2rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1rem;
+            }
+
+            .info-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="hero-banner">
+        <div class="banner-content">
+            <h1 class="banner-title">KHÁM PHÁ VẺ ĐẸP RỪNG DỪA BẢY MẪU</h1>
+            <p class="banner-subtitle">Trải nghiệm kỳ thú với những hoạt động hấp dẫn giữa thiên nhiên hoang sơ tại Khu du lịch sinh thái nổi tiếng Hội An</p>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <section class="container py-5">
+        <p class="intro-text" style="font-size: 18px;">
+            Rừng Dừa Bảy Mẫu là một khu du lịch sinh thái đặc sắc tại Hội An, Quảng Nam. Với hệ thống kênh đào và rừng dừa nước bạt ngàn, nơi đây mang đến cho du khách nhiều hoạt động trải nghiệm thú vị và những khung cảnh tuyệt đẹp. Hãy cùng khám phá những hình ảnh đẹp nhất về các hoạt động tại Rừng Dừa Bảy Mẫu!
+        </p>
+        <h2 class="section-title" style="font-weight: bold; font-size: 40px;">Hoạt Động Nổi Bật Tại Rừng Dừa Bảy Mẫu</h2>
+        <div class="text-center mb-4">
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <!-- Hoạt động 1: Ảnh bên trái -->
+    <section class="activity-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="activity-img">
+                        <img src="https://drt.danang.vn/content/images/2024/02/ve-rung-dua-bay-mau--5-.jpg" alt="Chèo thuyền thúng" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="activity-content">
+                        <div class="activity-icon">
+                            <i class="bi bi-water"></i>
+                        </div>
+                        <h3 class="activity-title">Chèo Thuyền Thúng</h3>
+                        <p class="activity-description">
+                            Trải nghiệm độc đáo với thuyền thúng truyền thống, len lỏi qua những con đường nước giữa rừng dừa xanh mát. Các nghệ nhân địa phương sẽ hướng dẫn bạn cách chèo thuyền và chia sẻ những câu chuyện thú vị về cuộc sống sông nước nơi đây.
+                        </p>
+                        <p>Thời gian: 30-45 phút | Giá vé: 150.000đ/người</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hoạt động 2: Ảnh bên phải -->
+    <section class="activity-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <div class="activity-img">
+                        <img src="https://qta.org.vn/wp-content/uploads/2023/12/tour-rung-duabay-mau-c1.jpg" alt="Biểu diễn đánh cá" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="activity-content">
+                        <div class="activity-icon">
+                            <i class="bi bi-fish"></i>
+                        </div>
+                        <h3 class="activity-title">Biểu Diễn Đánh Cá</h3>
+                        <p class="activity-description">
+                            Chiêm ngưỡng kỹ thuật đánh bắt cá truyền thống của ngư dân địa phương với những dụng cụ thủ công như lưới, rọ, đó... Đây không chỉ là một màn trình diễn mà còn là cách bảo tồn và phát huy văn hóa ngư nghiệp đặc sắc của người dân vùng sông nước.
+                        </p>
+                        <p>Thời gian biểu diễn: 10:00 - 11:00 và 14:00 - 15:00 hàng ngày</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hoạt động 3: Ảnh bên trái -->
+    <section class="activity-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="activity-img">
+                        <img src="https://rungduabaymau.vn/wp-content/uploads/2022/06/di-rung-dua-bay-mau-an-gi-ngon.jpg" alt="Trải nghiệm ẩm thực" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="activity-content">
+                        <div class="activity-icon">
+                            <i class="bi bi-cup-hot"></i>
+                        </div>
+                        <h3 class="activity-title">Ẩm Thực Đặc Sắc</h3>
+                        <p class="activity-description">
+                            Thưởng thức các món ăn đặc sản được chế biến từ nguyên liệu tươi ngon vừa đánh bắt từ sông nước Bảy Mẫu. Những món như cá lóc nướng trui, tôm nướng muối ớt, canh chua cá dứa... sẽ mang đến cho bạn trải nghiệm ẩm thực đậm đà hương vị miền sông nước.
+                        </p>
+                        <p>Nhà hàng phục vụ: 7:00 - 21:00 | Đặt bàn: 0123 456 789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hoạt động 4: Ảnh bên phải -->
+    <section class="activity-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <div class="activity-img">
+                        <img src="https://rungduabaymau.vn/wp-content/uploads/2022/06/y-nghia-lich-su-cua-rung-dua-bay-mau-4.jpg" alt="Cảnh hoàng hôn" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="activity-content">
+                        <div class="activity-icon">
+                            <i class="bi bi-sunset"></i>
+                        </div>
+                        <h3 class="activity-title">Ngắm Hoàng Hôn</h3>
+                        <p class="activity-description">
+                            Chiêm ngưỡng khung cảnh mặt trời lặn tuyệt đẹp phản chiếu trên mặt nước, tạo nên bức tranh thiên nhiên đầy thơ mộng. Đây là thời điểm lý tưởng để bạn có thể chụp những bức ảnh để đời với sắc cam rực rỡ trên nền rừng dừa xanh thẳm.
+                        </p>
+                        <p>Thời gian đẹp nhất: 17:00 - 18:00 | Địa điểm lý tưởng: Cầu gỗ trung tâm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hoạt động 5: Ảnh bên trái -->
+    <section class="activity-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="activity-img">
+                        <img src="https://hluxtown.com/wp-content/uploads/2022/08/Tour-Ru%CC%9B%CC%80ng-Du%CC%9B%CC%80a-Ca%CC%82%CC%89m-Thanh-Xiec-Thung.jpg" alt="Biểu diễn văn nghệ" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="activity-content">
+                        <div class="activity-icon">
+                            <i class="bi bi-music-note-beamed"></i>
+                        </div>
+                        <h3 class="activity-title">Văn Nghệ Dân Gian</h3>
+                        <p class="activity-description">
+                            Thưởng thức các làn điệu dân ca, nhạc cụ truyền thống và múa dân gian của người dân địa phương. Những tiết mục văn nghệ đặc sắc không chỉ giúp bạn hiểu thêm về văn hóa vùng sông nước mà còn tạo nên không gian giải trí thú vị sau một ngày tham quan.
+                        </p>
+                        <p>Thời gian biểu diễn: 19:00 - 20:30 | Địa điểm: Sân khấu trung tâm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hoạt động 6: Ảnh bên phải -->
+    <section class="activity-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <div class="activity-img">
+                        <img src="https://culaochamtour.com/wp-content/uploads/2021/08/rung-dua-bay-mau-cam-thanh-hoi-an-mo-cua-luc-may-gio.jpg" alt="Chụp ảnh cảnh đẹp" class="img-fluid" style="max-height: 500px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="activity-content">
+                        <div class="activity-icon">
+                            <i class="bi bi-camera"></i>
+                        </div>
+                        <h3 class="activity-title">Săn Ảnh Đẹp</h3>
+                        <p class="activity-description">
+                            Lưu giữ những khoảnh khắc tuyệt vời với khung cảnh thiên nhiên hùng vĩ và hoạt động sôi động tại rừng dừa. Nơi đây có nhiều góc chụp đẹp như cầu tre, đường mòn dừa nước, thuyền thúng trên sông... mang đến cho bạn bộ sưu tập ảnh độc đáo.
+                        </p>
+                        <p>Thời điểm đẹp nhất: Sáng sớm (6:00 - 8:00) hoặc chiều tà (16:00 - 18:00)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- CTA -->
+    <section class="cta-section" style="background-color: #005040;">
+        <div class="container">
+            <h2 class="mb-3">Bạn Đã Sẵn Sàng Cho Chuyến Phiêu Lưu?</h2>
+            <p class="mb-4">Hãy đặt tour ngay hôm nay để có cơ hội khám phá vẻ đẹp hoang sơ của Rừng Dừa Bảy Mẫu!</p>
+            <a href="#" class="cta-btn">ĐẶT TOUR NGAY</a>
+        </div>
+    </section>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
