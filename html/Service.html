@@ -64,7 +64,7 @@
 
         /* Banner Section */
         .banner {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/image/service-banner.png') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/image/service-banner.png') center/cover no-repeat;
             color: white;
             height: 43.75rem;
             width: 100%;
@@ -81,10 +81,14 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            width: 700;
             margin-bottom: 1.25rem;
             /* 20px / 16 */
             text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
             /* 2px, 4px */
         }
 
@@ -522,14 +526,13 @@
     <div class="header-container">
         <header>
             <div class="navbar">
-                <a href="#" class="logo">
-                    <span class="logo-icon"><i class="fas fa-tree"></i></span>
-                    <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                <a href="/html/home.html" class="logo">
+                    <img src="/image/logo.png" alt="Rừng Dừa Bảy Mẫu Logo" class="logo-img">
                 </a>
                 <div class="navbar-right">
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
+                            <li><a href="/html/home.html" class="nav-link active" data-key="home">Trang chủ</a></li>
                             <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
                             <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
                             <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
@@ -550,15 +553,13 @@
                 </button>
             </div>
         </header>
-        <!-- Overlay for mobile menu -->
         <div class="overlay"></div>
     </div>
 
     <!-- Banner Section -->
     <section class="banner">
         <div class="container header-content">
-            <h1 data-key="header-title-1">Dịch Vụ Du Lịch</h1>
-            <h1 data-key="header-title-2">Qua Rừng Dừa</h1>
+            <h1 data-key="header-title-1">DỊCH VỤ DU LỊCH</h1>
             <p data-key="header-description">Đặt dịch vụ trải nghiệm độc đáo và thú vị tại Khu Du Lịch Sinh Thái Qua
                 Rừng Dừa</p>
             <a href="#booking" class="cta-button" data-key="header-cta">Đặt Lịch Ngay</a>
@@ -755,7 +756,7 @@
             <div class="footer-col">
                 <h4 data-key="footer-tour-title">Đặt Tour</h4>
                 <p data-key="footer-tour-text">Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa</p>
-                <a href="#contact"
+                <a href="/html/service.html"
                     style="display: inline-block; background-color: var(--accent-color); color: var(--dark-bg); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">
                     <span data-key="footer-tour-button">Đặt Ngay</span> <i class="fas fa-arrow-right"></i>
                 </a>
@@ -788,8 +789,7 @@
                 "map": "Bản đồ",
                 "services": "Dịch vụ",
                 "contact": "Liên hệ",
-                "header-title-1": "Dịch Vụ Du Lịch",
-                "header-title-2": "Qua Rừng Dừa",
+                "header-title-1": "DỊCH VỤ DU LỊCH",
                 "header-description": "Đặt dịch vụ trải nghiệm độc đáo và thú vị tại Khu Du Lịch Sinh Thái Qua Rừng Dừa",
                 "header-cta": "Đặt Lịch Ngay",
                 "featured-services-title": "CÁC DỊCH VỤ NỔI BẬT",
@@ -854,8 +854,7 @@
                 "map": "Map",
                 "services": "Services",
                 "contact": "Contact",
-                "header-title-1": "Qua Rung Dua",
-                "header-title-2": "Tourism Services",
+                "header-title-1": "Tourism Services",
                 "header-description": "Book unique and exciting experiences at Qua Rung Dua Eco-Tourism Area",
                 "header-cta": "Book Now",
                 "featured-services-title": "FEATURED SERVICES",
@@ -947,6 +946,20 @@
             const savedLang = localStorage.getItem('language') || 'vi';
             changeLanguage(savedLang);
 
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
             // Mobile Navigation
             const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
             const mobileNavClose = document.querySelector('.mobile-nav-close');

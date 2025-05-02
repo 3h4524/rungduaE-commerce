@@ -87,11 +87,19 @@
             margin-bottom: 1.25rem;
         }
 
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
         /* Hero Section */
         .hero-section {
             height: 43.75rem;
             width: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg') center/cover no-repeat;
             text-align: center;
             color: #fff;
             position: relative;
@@ -671,14 +679,13 @@
     <div class="header-container">
         <header>
             <div class="navbar">
-                <a href="#" class="logo">
-                    <span class="logo-icon"><i class="fas fa-tree"></i></span>
-                    <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+                <a href="/html/home.html" class="logo">
+                    <img src="/image/logo.png" alt="Rừng Dừa Bảy Mẫu Logo" class="logo-img">
                 </a>
                 <div class="navbar-right">
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
+                            <li><a href="/html/home.html" class="nav-link active" data-key="home">Trang chủ</a></li>
                             <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
                             <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
                             <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
@@ -699,9 +706,9 @@
                 </button>
             </div>
         </header>
-        <!-- Overlay for mobile menu -->
         <div class="overlay"></div>
     </div>
+
 
 
     <main id="main">
@@ -909,7 +916,7 @@
             <div class="footer-col">
                 <h4 data-key="footer-tour-title">Đặt Tour</h4>
                 <p data-key="footer-tour-text">Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa</p>
-                <a href="#contact"
+                <a href="/html/service.html"
                     style="display: inline-block; background-color: var(--accent-color); color: var(--dark-bg); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">
                     <span data-key="footer-tour-button">Đặt Ngay</span> <i class="fas fa-arrow-right"></i>
                 </a>

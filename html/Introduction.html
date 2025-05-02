@@ -46,6 +46,14 @@
             overflow-x: hidden;
         }
 
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
         /* Banner Section */
         .banner {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/image/introduction-banner.png') center/cover no-repeat;
@@ -432,14 +440,13 @@
 <div class="header-container">
     <header>
         <div class="navbar">
-            <a href="#" class="logo">
-                <span class="logo-icon"><i class="fas fa-tree"></i></span>
-                <span class="logo-text" data-key="logo-text">Qua Rừng Dừa</span>
+            <a href="/html/home.html" class="logo">
+                <img src="/image/logo.png" alt="Rừng Dừa Bảy Mẫu Logo" class="logo-img">
             </a>
             <div class="navbar-right">
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
+                        <li><a href="/html/home.html" class="nav-link active" data-key="home">Trang chủ</a></li>
                         <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
                         <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
                         <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
@@ -460,7 +467,6 @@
             </button>
         </div>
     </header>
-    <!-- Overlay for mobile menu -->
     <div class="overlay"></div>
 </div>
 
@@ -468,7 +474,7 @@
 <!-- Banner Section -->
 <section class="banner">
     <div class="container">
-        <h1 class="banner-title" data-key="header-title-1">Khu Du Lịch Sinh Thái Qua Rừng Dừa</h1>
+        <h1 class="banner-title" data-key="header-title-1">KHU DU LỊCH SINH THÁI QUA RỪNG DỪA</h1>
         <p data-key="header-description">Hành trình khám phá miền Tây thu nhỏ giữa lòng miền Trung – Hòa mình vào
             thiên nhiên xanh mát và trải nghiệm văn hóa đặc sắc của người dân xứ Quảng</p>
         <a href="/html/contact.html" class="cta-button" data-key="header-cta">Liên Hệ Ngay</a>
@@ -645,7 +651,7 @@
         <div class="footer-col">
             <h4 data-key="footer-tour-title">Đặt Tour</h4>
             <p data-key="footer-tour-text">Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa</p>
-            <a href="#contact"
+            <a href="/html/service.html"
                 style="display: inline-block; background-color: var(--accent-color); color: var(--dark-bg); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">
                 <span data-key="footer-tour-button">Đặt Ngay</span> <i class="fas fa-arrow-right"></i>
             </a>
@@ -675,7 +681,7 @@
             map: "Bản đồ",
             services: "Dịch vụ",
             contact: "Liên hệ",
-            "header-title-1": "Khu Du Lịch Sinh Thái Qua Rừng Dừa",
+            "header-title-1": "KHU DU LỊCH SINH THÁI QUA RỪNG DỪA",
             "header-description": "Hành trình khám phá miền Tây thu nhỏ giữa lòng miền Trung – Hòa mình vào thiên nhiên xanh mát và trải nghiệm văn hóa đặc sắc của người dân xứ Quảng",
             "header-cta": "Liên Hệ Ngay",
             "about-title": "GIỚI THIỆU CHUNG",
