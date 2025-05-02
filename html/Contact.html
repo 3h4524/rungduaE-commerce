@@ -49,52 +49,73 @@
         .contact-info {
             background-color: var(--dark-bg) !important;
             color: white;
-            padding: 60px 0;
+            padding: 3.75rem 0;
+            /* 60px / 16 = 3.75rem */
             text-align: center;
         }
 
         .contact-details {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 2.5rem;
+            /* 40px / 16 = 2.5rem */
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 1.875rem;
+            /* 30px / 16 = 1.875rem */
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 75rem;
+            /* 1200px / 16 = 75rem */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
+            /* 20px / 16 = 1.25rem */
         }
 
         /* Banner section */
         .banner {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/image/contact-banner.png') center/cover no-repeat;
             color: white;
-            padding: 120px 0 80px;
+            padding: 7.5rem 0 5rem;
+            /* 120px / 16 = 7.5rem, 80px / 16 = 5rem */
             text-align: center;
             position: relative;
+            height: 43.75rem;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .language-switcher {
             display: flex;
-            gap: 10px;
-            margin-left: 20px;
+            gap: 0.625rem;
+            /* 10px / 16 = 0.625rem */
+            margin-left: 1.25rem;
+            /* 20px / 16 = 1.25rem */
             align-items: center;
         }
 
         .language-switcher .lang-btn {
             background: transparent;
-            border: 1px solid white;
+            border: 0.0625rem solid white;
+            /* 1px / 16 = 0.0625rem */
             color: white;
             font-size: 0.9rem;
             cursor: pointer;
-            padding: 5px 10px;
-            border-radius: 4px;
+            padding: 0.3125rem 0.625rem;
+            /* 5px / 16 = 0.3125rem, 10px / 16 = 0.625rem */
+            border-radius: 0.25rem;
+            /* 4px / 16 = 0.25rem */
             transition: all 0.3s ease;
             font-weight: 500;
-            height: 30px;
-            min-width: 40px;
+            height: 1.875rem;
+            /* 30px / 16 = 1.875rem */
+            min-width: 2.5rem;
+            /* 40px / 16 = 2.5rem */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -110,15 +131,16 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-
         .language-switcher button {
             background: none;
             border: none;
             color: white;
             font-size: 1rem;
             cursor: pointer;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 0.3125rem 0.625rem;
+            /* 5px / 16 = 0.3125rem, 10px / 16 = 0.625rem */
+            border-radius: 0.3125rem;
+            /* 5px / 16 = 0.3125rem */
             transition: background 0.3s ease;
         }
 
@@ -130,14 +152,17 @@
         .banner-title {
             font-size: 3rem;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px;
+            text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+            /* 2px / 16 = 0.125rem, 4px / 16 = 0.25rem */
+            margin-bottom: 1.25rem;
+            /* 20px / 16 = 1.25rem */
         }
 
         /* Contact section */
         .section-title {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 1.875rem;
+            /* 30px / 16 = 1.875rem */
             color: var(--primary-color);
             position: relative;
             font-weight: 700;
@@ -146,10 +171,13 @@
         .section-title::after {
             content: "";
             display: block;
-            width: 100px;
-            height: 3px;
+            width: 6.25rem;
+            /* 100px / 16 = 6.25rem */
+            height: 0.1875rem;
+            /* 3px / 16 = 0.1875rem */
             background-color: var(--accent-color);
-            margin: 15px auto;
+            margin: 0.9375rem auto;
+            /* 15px / 16 = 0.9375rem */
         }
 
         .contact-section {
@@ -159,70 +187,90 @@
 
         .contact-intro {
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto 40px;
+            max-width: 50rem;
+            /* 800px / 16 = 50rem */
+            margin: 0 auto 2.5rem;
+            /* 40px / 16 = 2.5rem */
             color: var(--text-color);
             line-height: 1.8;
         }
 
         .contact-box {
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 30px;
+            border-radius: 0.625rem;
+            /* 10px / 16 = 0.625rem */
+            box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+            /* 5px / 16 = 0.3125rem, 15px / 16 = 0.9375rem */
+            padding: 1.875rem;
+            /* 30px / 16 = 1.875rem */
+            margin-bottom: 1.875rem;
+            /* 30px / 16 = 1.875rem */
             height: 100%;
             transition: transform 0.3s ease;
         }
 
         .contact-box:hover {
-            transform: translateY(-5px);
+            transform: translateY(-0.3125rem);
+            /* 5px / 16 = 0.3125rem */
         }
 
         .contact-box h4 {
             color: var(--primary-color);
             font-weight: 600;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 1.25rem;
+            /* 20px / 16 = 1.25rem */
+            padding-bottom: 0.625rem;
+            /* 10px / 16 = 0.625rem */
+            border-bottom: 0.125rem solid var(--primary-color);
+            /* 2px / 16 = 0.125rem */
         }
 
         .contact-item {
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
+            /* 15px / 16 = 0.9375rem */
             display: flex;
             align-items: flex-start;
         }
 
         .contact-icon {
-            margin-right: 15px;
+            margin-right: 0.9375rem;
+            /* 15px / 16 = 0.9375rem */
             color: var(--primary-color);
             font-size: 1.2rem;
-            width: 20px;
+            width: 1.25rem;
+            /* 20px / 16 = 1.25rem */
             text-align: center;
         }
 
         .form-control {
-            border-radius: 8px;
-            padding: 12px 15px;
-            border: 1px solid #e0e0e0;
-            margin-bottom: 15px;
+            border-radius: 0.5rem;
+            /* 8px / 16 = 0.5rem */
+            padding: 0.75rem 0.9375rem;
+            /* 12px / 16 = 0.75rem, 15px / 16 = 0.9375rem */
+            border: 0.0625rem solid #e0e0e0;
+            /* 1px / 16 = 0.0625rem */
+            margin-bottom: 0.9375rem;
+            /* 15px / 16 = 0.9375rem */
         }
 
         .form-control:focus {
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+            box-shadow: 0 0 0 0.125rem rgba(46, 125, 50, 0.25);
+            /* 0.2rem (giữ nguyên vì không có đơn vị px cụ thể để chuyển đổi) */
         }
 
         .contact-item2 {
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-width: 200px;
+            min-width: 12.5rem;
+            /* 200px / 16 = 12.5rem */
         }
 
         .contact-item2 i {
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
+            /* 15px / 16 = 0.9375rem */
             color: var(--accent-color);
         }
 
@@ -235,38 +283,47 @@
             background-color: var(--accent-color);
             color: var(--dark-bg);
             border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
+            padding: 0.75rem 1.875rem;
+            /* 12px / 16 = 0.75rem, 30px / 16 = 1.875rem */
+            border-radius: 3.125rem;
+            /* 50px / 16 = 3.125rem */
             font-weight: 600;
             transition: all 0.3s ease;
-            margin-top: 10px;
+            margin-top: 0.625rem;
+            /* 10px / 16 = 0.625rem */
         }
 
         .submit-btn:hover {
             background-color: #e08e2e;
-            transform: translateY(-2px);
+            transform: translateY(-0.125rem);
+            /* 2px / 16 = 0.125rem */
         }
 
         /* Location section with background image */
         .location-section {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('/image/contact-1.png') center/cover no-repeat;
-            padding: 40px 0;
+            padding: 2.5rem 0;
+            /* 40px / 16 = 2.5rem */
             position: relative;
         }
 
         /* Container for the white box */
         .contact-container {
             background-color: white;
-            border-radius: 15px;
+            border-radius: 0.9375rem;
+            /* 15px / 16 = 0.9375rem */
             overflow: hidden;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            max-width: 1200px;
+            box-shadow: 0 0.3125rem 1.5625rem rgba(0, 0, 0, 0.1);
+            /* 5px / 16 = 0.3125rem, 25px / 16 = 1.5625rem */
+            max-width: 75rem;
+            /* 1200px / 16 = 75rem */
             margin: 0 auto;
         }
 
         /* Left side - Information */
         .contact-info-box {
-            padding: 40px 30px;
+            padding: 2.5rem 1.875rem;
+            /* 40px / 16 = 2.5rem, 30px / 16 = 1.875rem */
             height: 100%;
         }
 
@@ -274,12 +331,14 @@
             color: var(--primary-color);
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 1.875rem;
+            /* 30px / 16 = 1.875rem */
         }
 
         /* Right side - Contact form */
         .contact-form-box {
-            padding: 40px 30px;
+            padding: 2.5rem 1.875rem;
+            /* 40px / 16 = 2.5rem, 30px / 16 = 1.875rem */
             height: 100%;
             background-color: var(--light-bg);
         }
@@ -288,24 +347,30 @@
             color: var(--primary-color);
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 1.875rem;
+            /* 30px / 16 = 1.875rem */
             text-align: center;
         }
 
         .error-message {
             color: #dc3545;
             font-size: 0.85rem;
-            margin-top: -10px;
-            margin-bottom: 10px;
+            margin-top: -0.625rem;
+            /* 10px / 16 = 0.625rem */
+            margin-bottom: 0.625rem;
+            /* 10px / 16 = 0.625rem */
             display: none;
         }
 
         .success-message {
             background-color: #d4edda;
             color: #155724;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            padding: 0.9375rem;
+            /* 15px / 16 = 0.9375rem */
+            border-radius: 0.3125rem;
+            /* 5px / 16 = 0.3125rem */
+            margin-bottom: 1.25rem;
+            /* 20px / 16 = 1.25rem */
             display: none;
             text-align: center;
         }
@@ -315,10 +380,10 @@
         }
 
         .is-invalid:focus {
-            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+            box-shadow: 0 0 0 0.125rem rgba(220, 53, 69, 0.25) !important;
+            /* 0.2rem (giữ nguyên) */
         }
 
-        /* Footer */
         /* Footer */
         footer {
             background-color: var(--footer-bg);
@@ -327,11 +392,14 @@
         }
 
         .footer-container {
-            max-width: 1300px;
+            max-width: 81.25rem;
+            /* 1300px / 16 = 81.25rem */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
+            /* 20px / 16 = 1.25rem */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+            /* 250px / 16 = 15.625rem */
             gap: 3rem;
         }
 
@@ -339,7 +407,8 @@
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 0.625rem;
+            /* 10px / 16 = 0.625rem */
             color: #ffffff;
         }
 
@@ -348,8 +417,10 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
-            height: 2px;
+            width: 3.125rem;
+            /* 50px / 16 = 3.125rem */
+            height: 0.125rem;
+            /* 2px / 16 = 0.125rem */
             background-color: var(--footer-link);
         }
 
@@ -358,17 +429,13 @@
             line-height: 1.8;
         }
 
-        .footer-container .footer-links {
-            list-style: none;
-            padding-left: 0 !important;
-        }
-
         .footer-links {
             list-style: none;
         }
 
         .footer-links li {
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
+            /* 15px / 16 = 0.9375rem */
         }
 
         .footer-links a {
@@ -380,7 +447,8 @@
 
         .footer-links a:hover {
             color: var(--footer-link-hover);
-            transform: translateX(5px);
+            transform: translateX(0.3125rem);
+            /* 5px / 16 = 0.3125rem */
         }
 
         .social-links {
@@ -389,14 +457,17 @@
         }
 
         .social-links a {
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            /* 40px / 16 = 2.5rem */
+            height: 2.5rem;
+            /* 40px / 16 = 2.5rem */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
-            margin-right: 15px;
+            margin-right: 0.9375rem;
+            /* 15px / 16 = 0.9375rem */
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -405,14 +476,16 @@
         .social-links a:hover {
             background: var(--accent-color);
             color: var(--dark-bg);
-            transform: translateY(-5px);
+            transform: translateY(-0.3125rem);
+            /* 5px / 16 = 0.3125rem */
         }
 
         .copyright {
             text-align: center;
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
+            /* 1px / 16 = 0.0625rem */
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.6);
         }
@@ -420,10 +493,14 @@
         /* Back to top button */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
+            bottom: 1.875rem;
+            /* 30px / 16 = 1.875rem */
+            right: 1.875rem;
+            /* 30px / 16 = 1.875rem */
+            width: 3.125rem;
+            /* 50px / 16 = 3.125rem */
+            height: 3.125rem;
+            /* 50px / 16 = 3.125rem */
             border-radius: 50%;
             background-color: var(--primary-color);
             color: white;
@@ -433,10 +510,34 @@
             font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+            /* 5px / 16 = 0.3125rem, 15px / 16 = 0.9375rem */
             z-index: 99;
             opacity: 0;
             visibility: hidden;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 0.75rem 1.875rem;
+            /* 12px, 30px */
+            border-radius: 3.125rem;
+            /* 50px / 16 */
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-btn:hover {
+            background-color: white;
+            transform: translateY(-0.3125rem);
+            /* 5px / 16 */
+            box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
+            /* 10px, 20px */
         }
 
         .back-to-top.active {
@@ -446,7 +547,8 @@
 
         .back-to-top:hover {
             background-color: var(--accent-color);
-            transform: translateY(-5px);
+            transform: translateY(-0.3125rem);
+            /* 5px / 16 = 0.3125rem */
         }
 
         /* Responsive styles */
@@ -462,12 +564,14 @@
             }
 
             .contact-container {
-                margin: 0 15px;
+                margin: 0 0.9375rem;
+                /* 15px / 16 = 0.9375rem */
             }
 
             .contact-info-box,
             .contact-form-box {
-                padding: 30px 20px;
+                padding: 1.875rem 1.25rem;
+                /* 30px / 16 = 1.875rem, 20px / 16 = 1.25rem */
             }
         }
 
@@ -477,7 +581,8 @@
             }
 
             .banner {
-                padding: 80px 0 60px;
+                padding: 5rem 0 3.75rem;
+                /* 80px / 16 = 5rem, 60px / 16 = 3.75rem */
             }
 
             .section-title {
@@ -485,11 +590,13 @@
             }
 
             .contact-box {
-                padding: 20px;
+                padding: 1.25rem;
+                /* 20px / 16 = 1.25rem */
             }
 
             .submit-btn {
-                padding: 10px 20px;
+                padding: 0.625rem 1.25rem;
+                /* 10px / 16 = 0.625rem, 20px / 16 = 1.25rem */
             }
         }
 
@@ -512,11 +619,11 @@
                 <div class="navbar-right">
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="#" class="nav-link" data-key="home">Trang chủ</a></li>
-                            <li><a href="#about" class="nav-link" data-key="about">Giới thiệu</a></li>
-                            <li><a href="#map" class="nav-link" data-key="map">Bản đồ</a></li>
-                            <li><a href="#services" class="nav-link" data-key="services">Dịch vụ</a></li>
-                            <li><a href="#contact" class="nav-link" data-key="contact">Liên hệ</a></li>
+                            <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
+                            <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
+                            <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
+                            <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
+                            <li><a href="/html/map.html" class="nav-link" data-key="map">Bản đồ</a></li>
                         </ul>
                     </nav>
                     <div class="language-switcher">
@@ -541,6 +648,7 @@
     <section class="banner">
         <div class="container">
             <h1 class="banner-title" data-key="banner-title">LIÊN HỆ</h1>
+            <a href="#contact-information" class="hero-btn" data-key="hero-btn">Liên hệ ngay</a>
         </div>
     </section>
 
@@ -558,7 +666,7 @@
 
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <div class="contact-box">
+                    <div class="contact-box" id="contact-information">
                         <h4 data-key="customer-service-title">PHÒNG CHĂM SÓC KHÁCH HÀNG</h4>
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -741,26 +849,27 @@
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
                 </div>
             </div>
             <div class="footer-col">
                 <h4 data-key="footer-links-quick-title">Liên Kết Nhanh</h4>
                 <ul class="footer-links">
-                    <li><a href="#" data-key="footer-link-home">Trang chủ</a></li>
-                    <li><a href="#about" data-key="footer-link-intro">Giới thiệu</a></li>
-                    <li><a href="#map" data-key="footer-link-services">Bản đồ</a></li>
-                    <li><a href="#services" data-key="footer-link-tours">Dịch vụ</a></li>
-                    <li><a href="#contact" data-key="footer-link-contact">Liên hệ</a></li>
+                    <li><a href="/html/home.html" data-key="footer-link-home">Trang chủ</a></li>
+                    <li><a href="/html/Introduction.html" data-key="footer-link-intro">Giới thiệu</a></li>
+                    <li><a href="/html/service.html" data-key="footer-link-tours">Dịch vụ</a></li>
+                    <li><a href="/html/contact.html" data-key="footer-link-contact">Liên hệ</a></li>
+                    <li><a href="/html/map.html" data-key="footer-link-services">Bản đồ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4 data-key="contact-title">Liên Hệ</h4>
-                <p><i class="fas fa-map-marker-alt"></i> <span data-key="contact-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh,
+                <p><i class="fas fa-map-marker-alt"></i> <span data-key="contact-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm
+                        Thanh,
                         Thành phố Hội An, Tỉnh Quảng Nam</span></p>
                 <p><i class="fas fa-phone"></i> <span data-key="contact-phone">0934.098.169</span></p>
                 <p><i class="fas fa-envelope"></i> <span data-key="contact-email">camtran.170580@gmail.com</span></p>
-                <p><i class="fas fa-clock"></i> <span data-key="footer-contact-hours">Mở cửa: 7:00 - 17:00 hàng ngày</span></p>
+                <p><i class="fas fa-clock"></i> <span data-key="footer-contact-hours">Mở cửa: 7:00 - 17:00 hàng
+                        ngày</span></p>
             </div>
             <div class="footer-col">
                 <h4 data-key="footer-tour-title">Đặt Tour</h4>

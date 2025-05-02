@@ -66,10 +66,18 @@
         .banner {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/image/service-banner.png') center/cover no-repeat;
             color: white;
+            height: 43.75rem;
+            width: 100%;
             padding: 7.5rem 0 5rem;
             /* 120px, 80px */
             text-align: center;
             position: relative;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
@@ -521,11 +529,11 @@
                 <div class="navbar-right">
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="#" class="nav-link" data-key="home">Trang chủ</a></li>
-                            <li><a href="#about" class="nav-link" data-key="about">Giới thiệu</a></li>
-                            <li><a href="#map" class="nav-link" data-key="map">Bản đồ</a></li>
-                            <li><a href="#services" class="nav-link" data-key="services">Dịch vụ</a></li>
-                            <li><a href="#contact" class="nav-link" data-key="contact">Liên hệ</a></li>
+                            <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
+                            <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
+                            <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
+                            <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
+                            <li><a href="/html/map.html" class="nav-link" data-key="map">Bản đồ</a></li>
                         </ul>
                     </nav>
                     <div class="language-switcher">
@@ -722,17 +730,16 @@
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
                 </div>
             </div>
             <div class="footer-col">
                 <h4 data-key="footer-links-quick-title">Liên Kết Nhanh</h4>
                 <ul class="footer-links">
-                    <li><a href="#" data-key="footer-link-home">Trang chủ</a></li>
-                    <li><a href="#about" data-key="footer-link-intro">Giới thiệu</a></li>
-                    <li><a href="#map" data-key="footer-link-services">Bản đồ</a></li>
-                    <li><a href="#services" data-key="footer-link-tours">Dịch vụ</a></li>
-                    <li><a href="#contact" data-key="footer-link-contact">Liên hệ</a></li>
+                    <li><a href="/html/home.html" data-key="footer-link-home">Trang chủ</a></li>
+                    <li><a href="/html/Introduction.html" data-key="footer-link-intro">Giới thiệu</a></li>
+                    <li><a href="/html/service.html" data-key="footer-link-tours">Dịch vụ</a></li>
+                    <li><a href="/html/contact.html" data-key="footer-link-contact">Liên hệ</a></li>
+                    <li><a href="/html/map.html" data-key="footer-link-services">Bản đồ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -943,7 +950,7 @@
             // Mobile Navigation
             const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
             const mobileNavClose = document.querySelector('.mobile-nav-close');
-            const navbarRight = document.querySelector('.navbar-right');
+            const navLinks = document.querySelector('.nav-links'); // Sửa lỗi khai báo navLinks
             const menuIcon = document.querySelector('.menu-icon');
             if (mobileNavToggle && navLinks) {
                 mobileNavToggle.addEventListener('click', () => {
@@ -963,12 +970,11 @@
                 });
             });
 
-
             // Back to top button
             const backToTopButton = document.querySelector('.back-to-top');
             if (backToTopButton) {
                 window.addEventListener('scroll', () => {
-                    backToTopButton.classList.toggle('active', window.pageYOffset > 300);
+                    backToTopButton.classList.toggle('active', window.scrollY > 18.75); // 300px / 16 = 18.75rem
                 });
                 backToTopButton.addEventListener('click', () => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1097,7 +1103,7 @@
                     }
                 });
             }
-        });
+        });    
     </script>
 </body>
 

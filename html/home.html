@@ -18,8 +18,8 @@
             --text-color: #333;
             --light-bg: #f8f9fa;
             --dark-bg: #344e41;
-            --shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            --border-radius: 12px;
+            --shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+            --border-radius: 0.75rem;
             --footer-bg: #1c2e1e;
             --footer-text: #ffffff;
             --footer-link: #a7c957;
@@ -30,10 +30,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         html {
+            font-size: 16px;
             scroll-behavior: smooth;
         }
 
@@ -45,15 +46,14 @@
         }
 
         /* Header và Navigation */
-
         .container {
-            max-width: 1200px;
+            max-width: 75rem;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
         }
 
         .section {
-            padding: 80px 0;
+            padding: 5rem 0;
             position: relative;
         }
 
@@ -62,55 +62,59 @@
             font-weight: 700;
             color: var(--primary-color);
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
             position: relative;
         }
 
         h2::after {
             content: '';
-            width: 100px;
-            height: 4px;
+            width: 6.25rem;
+            height: 0.25rem;
             background: var(--accent-color);
             display: block;
-            margin: 15px auto;
+            margin: 0.9375rem auto;
         }
 
         h4 {
             font-size: 1.5rem;
             font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
 
         p {
             font-size: 1.1rem;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
 
         /* Hero Section */
         .hero-section {
-            height: 600px;
+            height: 43.75rem;
+            width: 100%;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://rungduabaymau.vn/wp-content/uploads/2022/02/camnhi-201223051213-rung-dua-bay-mau.jpeg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             text-align: center;
             color: #fff;
             position: relative;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-section h1 {
             font-size: 3.5rem;
             font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         .hero-section p {
             font-size: 1.5rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
+            max-width: 43.75rem;
+            margin: 0 auto 1.875rem;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
         }
 
@@ -118,8 +122,8 @@
             display: inline-block;
             background-color: var(--accent-color);
             color: var(--dark-bg);
-            padding: 12px 30px;
-            border-radius: 50px;
+            padding: 0.75rem 1.875rem;
+            border-radius: 3.125rem;
             font-size: 1.2rem;
             font-weight: 600;
             text-decoration: none;
@@ -129,10 +133,9 @@
 
         .btn-custom:hover {
             background-color: white;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-0.3125rem);
+            box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
         }
-
 
         /* Introduction Section */
         .intro-section {
@@ -142,8 +145,8 @@
         .intro-content {
             display: flex;
             align-items: center;
-            gap: 30px;
-            margin-top: 20px;
+            gap: 1.875rem;
+            margin-top: 1.25rem;
         }
 
         .intro-text {
@@ -159,59 +162,12 @@
 
         .intro-image img {
             width: 100%;
-            height: 400px;
+            height: 25rem;
             object-fit: cover;
             transition: transform 0.3s ease;
             display: block;
         }
 
-        /* Pricing Section */
-        .pricing-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://hoiana.com/wp-content/uploads/2024/12/rung-dua-bay-mau-hoi-an-11.webp') center/cover fixed;
-            color: #fff;
-        }
-
-        .pricing-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .pricing-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            box-shadow: var(--shadow);
-            color: var(--text-color);
-            transition: transform 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .pricing-card h4 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
-        }
-
-        .call-to-action {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: var(--border-radius);
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .notice-box {
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: var(--border-radius);
-            padding: 20px;
-            border-left: 5px solid #d32f2f;
-            margin-top: 30px;
-        }
 
         /* Activities Section */
         .activities-section {
@@ -220,9 +176,9 @@
 
         .activities-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+            gap: 1.5625rem;
+            margin-top: 1.25rem;
         }
 
         .activity-card {
@@ -230,11 +186,12 @@
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow);
+            /* Sửa lỗi từ box ht-shadow */
             transition: transform 0.3s ease;
         }
 
         .activity-img {
-            height: 250px;
+            height: 15.625rem;
             overflow: hidden;
         }
 
@@ -246,13 +203,13 @@
         }
 
         .activity-info {
-            padding: 20px;
+            padding: 1.25rem;
         }
 
         .activity-info h4 {
             color: var(--primary-color);
             font-size: 1.3rem;
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
         }
 
         /* Food Section */
@@ -262,9 +219,9 @@
 
         .food-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+            gap: 1.5625rem;
+            margin-top: 1.25rem;
         }
 
         .food-card {
@@ -277,7 +234,7 @@
         }
 
         .food-img {
-            height: 200px;
+            height: 12.5rem;
             overflow: hidden;
         }
 
@@ -289,13 +246,13 @@
         }
 
         .food-info {
-            padding: 20px;
+            padding: 1.25rem;
         }
 
         .food-info h4 {
             color: var(--primary-color);
             font-size: 1.3rem;
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
         }
 
         /* Map Section */
@@ -307,7 +264,7 @@
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow);
-            height: 450px;
+            height: 28.125rem;
         }
 
         .map-container iframe {
@@ -324,11 +281,11 @@
         }
 
         .footer-container {
-            max-width: 1300px;
+            max-width: 81.25rem;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
             gap: 3rem;
         }
 
@@ -336,7 +293,7 @@
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 0.625rem;
             color: #ffffff;
         }
 
@@ -345,12 +302,13 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
+            width: 3.125rem;
             height: 2px;
             background-color: var(--footer-link);
         }
 
         .footer-col p {
+            font-size: 1rem;
             margin-bottom: 1rem;
             line-height: 1.8;
         }
@@ -360,10 +318,11 @@
         }
 
         .footer-links li {
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
         }
 
         .footer-links a {
+            font-size: 1rem;
             color: var(--footer-link);
             text-decoration: none;
             transition: all 0.3s ease;
@@ -372,7 +331,7 @@
 
         .footer-links a:hover {
             color: var(--footer-link-hover);
-            transform: translateX(5px);
+            transform: translateX(0.3125rem);
         }
 
         .social-links {
@@ -381,14 +340,14 @@
         }
 
         .social-links a {
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
-            margin-right: 15px;
+            margin-right: 0.9375rem;
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -397,7 +356,7 @@
         .social-links a:hover {
             background: var(--accent-color);
             color: var(--dark-bg);
-            transform: translateY(-5px);
+            transform: translateY(-0.3125rem);
         }
 
         .copyright {
@@ -412,10 +371,10 @@
         /* Back to top button */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
+            bottom: 1.875rem;
+            right: 1.875rem;
+            width: 3.125rem;
+            height: 3.125rem;
             border-radius: 50%;
             background-color: var(--primary-color);
             color: white;
@@ -438,14 +397,17 @@
 
         .back-to-top:hover {
             background-color: var(--accent-color);
-            transform: translateY(-5px);
+            transform: translateY(-0.3125rem);
         }
-
 
         /* Responsive Design */
         @media (max-width: 992px) {
+            html {
+                font-size: 15px;
+            }
+
             .hero-section {
-                height: 500px;
+                height: 31.25rem;
             }
 
             .hero-section h1 {
@@ -457,7 +419,7 @@
             }
 
             .section {
-                padding: 60px 0;
+                padding: 3.75rem 0;
             }
 
             h2 {
@@ -470,14 +432,17 @@
 
             .intro-image {
                 order: -1;
-                margin-bottom: 20px;
+                margin-bottom: 1.25rem;
             }
         }
 
         @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
 
             .hero-section {
-                height: 450px;
+                height: 28.125rem;
             }
 
             .hero-section h1 {
@@ -497,7 +462,7 @@
             }
 
             .intro-image img {
-                height: 300px;
+                height: 18.75rem;
             }
 
             .pricing-container,
@@ -508,8 +473,12 @@
         }
 
         @media (max-width: 576px) {
+            html {
+                font-size: 12px;
+            }
+
             .hero-section {
-                height: 400px;
+                height: 25rem;
             }
 
             .hero-section h1 {
@@ -525,23 +494,174 @@
             }
 
             .section {
-                padding: 40px 0;
+                padding: 2.5rem 0;
             }
 
             .btn-custom {
-                padding: 10px 20px;
+                padding: 0.625rem 1.25rem;
                 font-size: 0.9rem;
             }
 
             .intro-image img {
-                height: 250px;
+                height: 15.625rem;
             }
 
             .activity-img,
             .food-img {
-                height: 200px;
+                height: 12.5rem;
+            }
+        }
+
+        .pricing-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://hoiana.com/wp-content/uploads/2024/12/rung-dua-bay-mau-hoi-an-11.webp') center/cover fixed;
+            padding: 5rem 0;
+        }
+
+        .pricing-section h2 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-section h2::after {
+            background: var(--accent-color);
+            width: 6rem;
+        }
+
+        .pricing-subtitle {
+            color: white;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+        }
+
+
+        .pricing-card h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
+            border-bottom: 2px solid var(--accent-color);
+            text-align: center;
+        }
+
+        .price-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .price-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+            font-size: 1.05rem;
+        }
+
+        .price-list li:last-child {
+            border-bottom: none;
+        }
+
+        .price-list li span {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .price-note {
+            text-align: center !important;
+            justify-content: center !important;
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .time-info {
+            text-align: center !important;
+            justify-content: center !important;
+            margin-top: 0.5rem;
+            padding: 0.75rem;
+            background: rgba(129, 199, 132, 0.15);
+            border-radius: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .call-to-action {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border-left: 4px solid var(--accent-color);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .call-to-action h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 0.6rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .pricing-container {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin-left: auto;
+                margin-right: auto;
             }
 
+            .pricing-subtitle {
+                font-size: 1rem;
+            }
+
+            .call-to-action {
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .pricing-section {
+                padding: 3.5rem 0;
+            }
+
+            .pricing-card {
+                padding: 1.25rem;
+            }
+
+            .price-list li {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -558,11 +678,11 @@
                 <div class="navbar-right">
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="#" class="nav-link" data-key="home">Trang chủ</a></li>
-                            <li><a href="#about" class="nav-link" data-key="about">Giới thiệu</a></li>
-                            <li><a href="#map" class="nav-link" data-key="map">Bản đồ</a></li>
-                            <li><a href="#services" class="nav-link" data-key="services">Dịch vụ</a></li>
-                            <li><a href="#contact" class="nav-link" data-key="contact">Liên hệ</a></li>
+                            <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
+                            <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
+                            <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
+                            <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
+                            <li><a href="/html/map.html" class="nav-link" data-key="map">Bản đồ</a></li>
                         </ul>
                     </nav>
                     <div class="language-switcher">
@@ -608,7 +728,7 @@
                         <p data-key="intro-p3">Du khách sẽ trải nghiệm chèo thuyền thúng qua rừng dừa xanh mát, thưởng
                             thức múa thúng điêu luyện, dân ca xứ Quảng và ẩm thực truyền thống, hòa mình vào không gian
                             văn hóa miền Tây Nam Bộ độc đáo.</p>
-                        <a href="gioi-thieu.html" class="btn-custom" data-key="intro-button">Xem Thêm</a>
+                        <a href="/html/Introduction.html" class="btn-custom" data-key="intro-button">Xem Thêm</a>
                     </div>
                     <div class="intro-image">
                         <img src="https://rungduabaymau.vn/wp-content/uploads/2022/02/21.jpg" alt="Qua Rừng Dừa"
@@ -621,27 +741,33 @@
         <section class="pricing-section section">
             <div class="container">
                 <h2 data-key="pricing-title">Bảng Giá Vé</h2>
-                <p class="text-center text-white mb-5" data-key="pricing-subtitle">Khu du lịch hoạt động từ 7h30 sáng
-                    đến 18h30 chiều. Giá vé có thể thay đổi tùy theo sự kiện. Vui lòng liên hệ trực tiếp để cập nhật
-                    thông tin mới nhất.</p>
+                <p class="pricing-subtitle" data-key="pricing-subtitle">Khu du lịch hoạt động từ 7h30 sáng đến 18h30
+                    chiều</p>
+
                 <div class="pricing-container">
                     <div class="pricing-card">
                         <h4 data-key="pricing-boat-title">Vé Thuyền Thúng</h4>
-                        <p data-key="pricing-boat-adult">Người lớn: 100.000 VNĐ/người/chuyến</p>
-                        <p data-key="pricing-boat-child">Trẻ em (5-9 tuổi): 50.000 VNĐ</p>
-                        <p data-key="pricing-boat-infant">Trẻ em dưới 5 tuổi: Miễn phí</p>
+                        <ul class="price-list">
+                            <li>Người lớn: <span>100.000 VNĐ/người</span></li>
+                            <li>Trẻ em (5-9 tuổi): <span>50.000 VNĐ</span></li>
+                            <li>Trẻ em dưới 5 tuổi: <span>Miễn phí</span></li>
+                        </ul>
                     </div>
+
                     <div class="pricing-card">
                         <h4 data-key="pricing-international-title">Giá Vé Cho Du Khách Quốc Tế</h4>
-                        <p data-key="pricing-international-vietnamese">Khách Việt Nam: 200.000 VNĐ/2 khách/thúng</p>
-                        <p data-key="pricing-international-foreigner">Khách Quốc Tế: 250.000 VNĐ/2 khách/thúng</p>
-                        <p data-key="pricing-international-note">(khách trên 100kg: 1 khách/thúng)</p>
-                        <p data-key="pricing-international-time">Thời gian trải nghiệm: 70-90 phút</p>
+                        <ul class="price-list">
+                            <li>Khách Việt Nam: <span>200.000 VNĐ/2 khách/thúng</span></li>
+                            <li>Khách Quốc Tế: <span>250.000 VNĐ/2 khách/thúng</span></li>
+                            <li class="price-note">(khách trên 100kg: 1 khách/thúng)</li>
+                            <li class="time-info">Thời gian trải nghiệm: 70-90 phút</li>
+                        </ul>
                     </div>
                 </div>
+
                 <div class="call-to-action">
-                    <h4 data-key="pricing-contact">Liên Hệ: <a href="tel:0985402302"
-                            class="text-warning">0985.402.302</a> (Zalo)</h4>
+                    <h4 data-key="pricing-contact">Liên Hệ Đặt Vé:</h4>
+                    <a href="tel:0934098169" class="contact-btn">0934.098.169 (Zalo)</a>
                 </div>
             </div>
         </section>
@@ -758,17 +884,16 @@
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
                 </div>
             </div>
             <div class="footer-col">
                 <h4 data-key="footer-links-quick-title">Liên Kết Nhanh</h4>
                 <ul class="footer-links">
-                    <li><a href="#" data-key="footer-link-home">Trang chủ</a></li>
-                    <li><a href="#about" data-key="footer-link-intro">Giới thiệu</a></li>
-                    <li><a href="#map" data-key="footer-link-services">Bản đồ</a></li>
-                    <li><a href="#services" data-key="footer-link-tours">Dịch vụ</a></li>
-                    <li><a href="#contact" data-key="footer-link-contact">Liên hệ</a></li>
+                    <li><a href="/html/home.html" data-key="footer-link-home">Trang chủ</a></li>
+                    <li><a href="/html/Introduction.html" data-key="footer-link-intro">Giới thiệu</a></li>
+                    <li><a href="/html/service.html" data-key="footer-link-tours">Dịch vụ</a></li>
+                    <li><a href="/html/contact.html" data-key="footer-link-contact">Liên hệ</a></li>
+                    <li><a href="/html/map.html" data-key="footer-link-services">Bản đồ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -826,7 +951,7 @@
                 "pricing-international-note": "(khách trên 100kg: 1 khách/thúng)",
                 "pricing-international-time": "Thời gian trải nghiệm: 70-90 phút",
                 "footer-tour-button": "Đặt Ngay",
-                "pricing-contact": "Liên Hệ: <a href='tel:0985402302' class='text-warning'>0985.402.302</a> (Zalo)",
+                "pricing-contact": "Liên Hệ: <a href='tel:0934098169' class='text-warning'>0934.098.169</a> (Zalo)",
                 "pricing-notice-title": "Lưu Ý",
                 "pricing-notice-content": "Để tránh bị tính giá cao, quý khách nên đặt vé trước qua ban quản lý. Nhân viên sẽ đón bạn tại cổng khu du lịch. Ưu đãi chỉ áp dụng cho khách đăng ký trước.",
                 "activities-title": "Hoạt Động Nổi Bật",
@@ -904,7 +1029,7 @@
                 "pricing-international-foreigner": "International Guests: 250,000 VND/2 guests/boat",
                 "pricing-international-note": "(Guests over 100kg: 1 guest/boat)",
                 "pricing-international-time": "Experience duration: 70-90 minutes",
-                "pricing-contact": "Contact: <a href='tel:Lead-in:0985402302' class='text-warning'>0985.402.302</a> (Zalo)",
+                "pricing-contact": "Contact: <a href='tel:Lead-in:0934098169' class='text-warning'>0934.098.169</a> (Zalo)",
                 "pricing-notice-title": "Note",
                 "pricing-notice-content": "To avoid inflated prices, guests should book tickets in advance through the management. Staff will greet you at the entrance. Discounts are only available for pre-registered guests.",
                 "activities-title": "Featured Activities",
