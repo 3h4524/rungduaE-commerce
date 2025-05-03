@@ -317,12 +317,15 @@
             gap: 3rem;
         }
 
+        .footer-col {
+            padding: 1rem 0;
+        }
+
         .footer-col h4 {
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.625rem;
-            color: #ffffff;
         }
 
         .footer-col h4::after {
@@ -337,12 +340,9 @@
 
         .footer-col p {
             margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .footer-container .footer-links {
-            list-style: none;
-            padding-left: 0 !important;
+            text-align: justify;
+            /* Căn đều hai bên */
+            hyphens: auto;
         }
 
         .footer-links {
@@ -360,6 +360,11 @@
             display: inline-block;
         }
 
+        .footer-container .footer-links {
+            list-style: none;
+            padding-left: 0 !important;
+        }
+
         .footer-links a:hover {
             color: var(--footer-link-hover);
             transform: translateX(0.3125rem);
@@ -368,6 +373,7 @@
         .social-links {
             display: flex;
             margin-top: 1.5rem;
+            gap: 0.9375rem;
         }
 
         .social-links a {
@@ -378,7 +384,6 @@
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
-            margin-right: 0.9375rem;
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -397,6 +402,10 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.6);
+        }
+
+        .copyright p{
+            text-align: center;
         }
 
         /* Back to top button */
