@@ -35,7 +35,6 @@
 
         html {
             font-size: 16px;
-            /* Font-size gốc */
             scroll-behavior: smooth;
         }
 
@@ -54,6 +53,39 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
+        /* Container */
+        .container {
+            max-width: 75rem;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* Section General */
+        section {
+            padding: 3rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.125rem;
+            color: var(--primary-color);
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 6.25rem;
+            height: 0.1875rem;
+            background-color: var(--accent-color);
+            margin: 0.9375rem auto;
+        }
+
         /* Banner Section */
         .banner {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/image/introduction-banner.png') center/cover no-repeat;
@@ -67,10 +99,7 @@
             justify-content: center;
             height: 43.75rem;
             width: 100%;
-
-            /* 120px, 80px */
             text-align: center;
-            position: relative;
         }
 
         .banner-title {
@@ -78,78 +107,52 @@
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 1.25rem;
-            /* 20px / 16 */
         }
 
-        .container {
-            max-width: 75rem;
-            /* 1200px / 16 */
-            margin: 0 auto;
-            padding: 0 1.25rem;
-            /* 20px / 16 */
-        }
-
-        section {
-            padding: 3% 0;
-        }
-
-        section:nth-child(even) {
-            background-color: var(--light-bg);
-        }
-
-        .section-title {
+        .banner p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 50rem;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
-            margin-bottom: 3.125rem;
-            /* 50px / 16 */
-            color: var(--primary-color);
-            position: relative;
-            font-weight: 700;
+            /* Giữ căn giữa cho banner */
         }
 
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 6.25rem;
-            /* 100px / 16 */
-            height: 0.1875rem;
-            /* 3px / 16 */
-            background-color: var(--accent-color);
-            margin: 0.9375rem auto;
-            /* 15px / 16 */
-        }
-
+        /* Info Box */
         .info-box {
             background-color: white;
             border-radius: 0.625rem;
-            /* 10px / 16 */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 1.875rem;
-            /* 30px / 16 */
-            margin-bottom: 1.875rem;
-            /* 30px / 16 */
+            padding: 2rem;
+            margin-bottom: 2rem;
             transition: transform 0.3s ease;
         }
 
         .info-content {
             display: flex;
-            align-items: center;
-            gap: 1.875rem;
-            /* 30px / 16 */
+            align-items: flex-start;
+            gap: 2rem;
             flex-wrap: wrap;
         }
 
         .info-text {
             flex: 1;
             min-width: 18.75rem;
-            /* 300px / 16 */
+        }
+
+        .info-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            /* Căn đều hai bên cho văn bản */
+            hyphens: auto;
+            /* Tự động ngắt từ để tránh lộn xộn */
         }
 
         .info-image {
             flex: 1;
             min-width: 18.75rem;
-            /* 300px / 16 */
             border-radius: 0.625rem;
-            /* 10px / 16 */
             overflow: hidden;
         }
 
@@ -165,27 +168,23 @@
             font-weight: bold;
         }
 
+        /* Activities Section */
         .activities {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-            /* 300px / 16 */
-            gap: 1.25rem;
-            /* 20px / 16 */
+            gap: 2rem;
             margin-top: 2.5rem;
-            /* 40px / 16 */
         }
 
         .activity-card {
             background-color: white;
             border-radius: 0.625rem;
-            /* 10px / 16 */
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .activity-img {
             height: 12.5rem;
-            /* 200px / 16 */
             width: 100%;
             overflow: hidden;
         }
@@ -197,14 +196,20 @@
         }
 
         .activity-info {
-            padding: 1.25rem;
-            /* 20px / 16 */
+            padding: 1.5rem;
         }
 
         .activity-info h3 {
             color: var(--primary-color);
-            margin-bottom: 0.625rem;
-            /* 10px / 16 */
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+
+        .activity-info p {
+            margin-bottom: 0;
+            text-align: justify;
+            /* Căn đều hai bên */
+            hyphens: auto;
         }
 
         /* Footer */
@@ -216,14 +221,15 @@
 
         .footer-container {
             max-width: 81.25rem;
-            /* 1300px / 16 */
             margin: 0 auto;
             padding: 0 1.25rem;
-            /* 20px / 16 */
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-            /* 250px / 16 */
             gap: 3rem;
+        }
+
+        .footer-col {
+            padding: 1rem 0;
         }
 
         .footer-col h4 {
@@ -231,7 +237,6 @@
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.625rem;
-            /* 10px / 16 */
         }
 
         .footer-col h4::after {
@@ -240,14 +245,15 @@
             bottom: 0;
             left: 0;
             width: 3.125rem;
-            /* 50px / 16 */
             height: 2px;
             background-color: var(--footer-link);
         }
 
         .footer-col p {
             margin-bottom: 1rem;
-            line-height: 1.8;
+            text-align: justify;
+            /* Căn đều hai bên */
+            hyphens: auto;
         }
 
         .footer-links {
@@ -256,7 +262,6 @@
 
         .footer-links li {
             margin-bottom: 0.9375rem;
-            /* 15px / 16 */
         }
 
         .footer-links a {
@@ -274,26 +279,22 @@
         .footer-links a:hover {
             color: var(--footer-link-hover);
             transform: translateX(0.3125rem);
-            /* 5px / 16 */
         }
 
         .social-links {
             display: flex;
             margin-top: 1.5rem;
+            gap: 0.9375rem;
         }
 
         .social-links a {
             width: 2.5rem;
-            /* 40px / 16 */
             height: 2.5rem;
-            /* 40px / 16 */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
-            margin-right: 0.9375rem;
-            /* 15px / 16 */
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -303,7 +304,6 @@
             background: var(--accent-color);
             color: var(--dark-bg);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
         }
 
         .copyright {
@@ -320,9 +320,7 @@
             background-color: var(--accent-color);
             color: var(--dark-bg);
             padding: 0.75rem 1.875rem;
-            /* 12px, 30px */
             border-radius: 3.125rem;
-            /* 50px / 16 */
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
@@ -333,22 +331,16 @@
             background-color: white;
             border: 2px solid var(--accent-color);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
             box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
-            /* 10px, 20px */
         }
 
         /* Back to top button */
         .back-to-top {
             position: fixed;
             bottom: 1.875rem;
-            /* 30px / 16 */
             right: 1.875rem;
-            /* 30px / 16 */
             width: 3.125rem;
-            /* 50px / 16 */
             height: 3.125rem;
-            /* 50px / 16 */
             border-radius: 50%;
             background-color: var(--primary-color);
             color: white;
@@ -372,25 +364,30 @@
         .back-to-top:hover {
             background-color: var(--accent-color);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
+        }
+
+        p {
+            text-align: justify;
         }
 
         /* Responsive */
         @media (max-width: 992px) {
             html {
                 font-size: 15px;
-                /* Giảm font-size gốc */
             }
 
             .banner-title {
                 font-size: 3.5rem;
+            }
+
+            p {
+                text-align: justify;
             }
         }
 
         @media (max-width: 768px) {
             html {
                 font-size: 14px;
-                /* Giảm font-size gốc */
             }
 
             .banner-title {
@@ -404,12 +401,22 @@
             .info-image {
                 order: -1;
             }
+
+            .info-text p,
+            .activity-info p,
+            .footer-col p {
+                text-align: justify;
+                /* Aligns text like desktop */
+            }
+
+            p {
+                text-align: justify;
+            }
         }
 
         @media (max-width: 576px) {
             html {
                 font-size: 12px;
-                /* Giảm font-size gốc */
             }
 
             .banner-title {
@@ -418,7 +425,6 @@
 
             .banner {
                 padding: 5rem 0 3.75rem;
-                /* 80px, 60px */
             }
 
             .section-title {
@@ -427,11 +433,14 @@
 
             .info-box {
                 padding: 1.25rem;
-                /* 20px / 16 */
             }
 
             .activities {
                 grid-template-columns: 1fr;
+            }
+
+            p {
+                text-align: justify;
             }
         }
     </style>
@@ -440,13 +449,13 @@
 <div class="header-container">
     <header>
         <div class="navbar">
-            <a href="/html/home.html" class="logo">
-                <img src="/image/logo.png" alt="Rừng Dừa Bảy Mẫu Logo" class="logo-img">
+            <a href="#" class="logo">
+                <img src="../image/logo.png" alt="Qua Rừng Dừa Logo" class="logo-icon">
             </a>
             <div class="navbar-right">
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="/html/home.html" class="nav-link active" data-key="home">Trang chủ</a></li>
+                        <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
                         <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
                         <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
                         <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
@@ -467,6 +476,7 @@
             </button>
         </div>
     </header>
+    <!-- Overlay for mobile menu -->
     <div class="overlay"></div>
 </div>
 
@@ -689,7 +699,7 @@
             "about-p2": "Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú. Khí hậu nhiệt đới đặc trưng góp phần giúp rừng dừa phát triển mạnh mẽ, trải dài trên các thôn: Vạn Lăng, Thanh Nhứt, Thanh Tam Đông, Thanh Tam Tây và Cồn Nhàn.",
             "about-p3": "Du khách khi đến đây sẽ được trải nghiệm không gian đậm chất miền Tây Nam Bộ – từ việc ngồi thuyền thúng xuyên rừng dừa, chiêm ngưỡng kỹ năng múa thúng điêu luyện đến thưởng thức các tiết mục dân gian, ẩm thực truyền thống và khám phá văn hóa bản địa độc đáo.",
             "about-hours-label": "Giờ mở cửa:",
-            "about-hours": "Từ 7h30 – 18h30",
+            "about-hours": "Từ 7h00 – 17h00",
             "about-address-label": "Địa Chỉ:",
             "about-address": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
             "history-title": "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN",
@@ -726,14 +736,14 @@
             "footer-bottom-text": "© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu."
         },
         en: {
-            title: "Qua Rừng Dừa Eco-Tourism Area - The Charm of the Mekong Delta in the Heart of Quảng Nam",
+            title: "Qua Coconut Forest Eco-Tourism Area - The Charm of the Mekong Delta in the Heart of Quảng Nam",
             "logo-text": "Qua Rừng Dừa Eco-Tourism Area",
             home: "Home",
             about: "About",
             map: "Map",
             services: "Services",
             contact: "Contact",
-            "header-title-1": "Qua Rừng Dừa Eco-Tourism Area",
+            "header-title-1": "Qua Coconut Forest Eco-Tourism Area",
             "header-description": "A journey to explore a miniature Mekong Delta in the heart of Central Vietnam – Immerse yourself in lush nature and experience the unique culture of the Quảng Nam people.",
             "header-cta": "Contact Now",
             "about-title": "INTRODUCTION",
@@ -741,7 +751,7 @@
             "about-p2": "Spanning over 100 hectares, this eco-tourism area is situated along three famous rivers – the Hoai River, Thu Bon River, and De Vong River – blending into a brackish water ecosystem, surrounded by lush coconut groves and a rich biodiversity. The tropical climate plays a key role in the thriving coconut forest, stretching across villages such as Van Lang, Thanh Nhut, Thanh Tam Dong, Thanh Tam Tay, and Con Nhan.",
             "about-p3": "Visitors will experience the authentic vibe of the Mekong Delta – from riding a basket boat through the coconut forest, admiring skillful basket boat dancing, to enjoying folk performances, traditional cuisine, and exploring the unique local culture.",
             "about-hours-label": "Opening Hours:",
-            "about-hours": "From 7:30 AM to 6:30 PM",
+            "about-hours": "From 7:00 AM to 5:00 PM",
             "about-address-label": "Address:",
             "about-address": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
             "history-title": "HISTORY OF FORMATION AND DEVELOPMENT",

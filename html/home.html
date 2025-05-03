@@ -150,6 +150,10 @@
             background: var(--light-bg);
         }
 
+        .intro-section p {
+            text-align: justify;
+        }
+
         .intro-content {
             display: flex;
             align-items: center;
@@ -181,6 +185,7 @@
         .activities-section {
             background: #fff;
         }
+
 
         .activities-container {
             display: grid;
@@ -214,10 +219,19 @@
             padding: 1.25rem;
         }
 
+        .activities-section p {
+            text-align: justify;
+        }
+
         .activity-info h4 {
             color: var(--primary-color);
             font-size: 1.3rem;
             margin-bottom: 0.9375rem;
+            text-align: center;
+        }
+
+        .text-center {
+            text-align: center;
         }
 
         /* Food Section */
@@ -255,6 +269,10 @@
 
         .food-info {
             padding: 1.25rem;
+        }
+
+        .food-card p {
+            text-align: justify;
         }
 
         .food-info h4 {
@@ -442,6 +460,10 @@
                 order: -1;
                 margin-bottom: 1.25rem;
             }
+
+            .intro-section p {
+                text-align: justify;
+            }
         }
 
         @media (max-width: 768px) {
@@ -459,6 +481,8 @@
 
             .hero-section p {
                 font-size: 1.2rem;
+                text-align: center;
+                ;
             }
 
             h2 {
@@ -495,6 +519,7 @@
 
             .hero-section p {
                 font-size: 1rem;
+                text-align: center;
             }
 
             h2 {
@@ -679,13 +704,13 @@
     <div class="header-container">
         <header>
             <div class="navbar">
-                <a href="/html/home.html" class="logo">
-                    <img src="/image/logo.png" alt="Rừng Dừa Bảy Mẫu Logo" class="logo-img">
+                <a href="#" class="logo">
+                    <img src="../image/logo.png" alt="Qua Rừng Dừa Logo" class="logo-icon">
                 </a>
                 <div class="navbar-right">
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="/html/home.html" class="nav-link active" data-key="home">Trang chủ</a></li>
+                            <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
                             <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
                             <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
                             <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
@@ -706,6 +731,7 @@
                 </button>
             </div>
         </header>
+        <!-- Overlay for mobile menu -->
         <div class="overlay"></div>
     </div>
 
@@ -733,7 +759,7 @@
                             tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được
                             bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú..</p>
                         <p data-key="intro-p3">Du khách sẽ trải nghiệm chèo thuyền thúng qua rừng dừa xanh mát, thưởng
-                            thức múa thúng điêu luyện, dân ca xứ Quảng và ẩm thực truyền thống, hòa mình vào không gian
+                            thức múa thúng điêu luyện, ẩm thực truyền thống và hòa mình vào không gian
                             văn hóa miền Tây Nam Bộ độc đáo.</p>
                         <a href="/html/Introduction.html" class="btn-custom" data-key="intro-button">Xem Thêm</a>
                     </div>
@@ -755,19 +781,20 @@
                     <div class="pricing-card">
                         <h4 data-key="pricing-boat-title">Vé Thuyền Thúng</h4>
                         <ul class="price-list">
-                            <li>Người lớn: <span>100.000 VNĐ/người</span></li>
-                            <li>Trẻ em (5-9 tuổi): <span>50.000 VNĐ</span></li>
-                            <li>Trẻ em dưới 5 tuổi: <span>Miễn phí</span></li>
+                            <li>Người lớn: <span>130.000 VNĐ/người</span></li>
+                            <li>Trẻ em dưới 6 tuổi: <span>Miễn phí</span></li>
                         </ul>
                     </div>
 
                     <div class="pricing-card">
                         <h4 data-key="pricing-international-title">Giá Vé Cho Du Khách Quốc Tế</h4>
                         <ul class="price-list">
-                            <li>Khách Việt Nam: <span>200.000 VNĐ/2 khách/thúng</span></li>
-                            <li>Khách Quốc Tế: <span>250.000 VNĐ/2 khách/thúng</span></li>
-                            <li class="price-note">(khách trên 100kg: 1 khách/thúng)</li>
-                            <li class="time-info">Thời gian trải nghiệm: 70-90 phút</li>
+                            <li data-key="pricing-international-vietnamese">Khách: <span>260.000 VNĐ/2
+                                    khách/thúng</span></li>
+                            <li data-key="pricing-international-note" class="price-note">(khách trên 100kg: 1
+                                khách/thúng)</li>
+                            <li data-key="pricing-international-time" class="time-info">Thời gian trải nghiệm: 70-90
+                                phút</li>
                         </ul>
                     </div>
                 </div>
@@ -782,7 +809,8 @@
         <section class="activities-section section">
             <div class="container">
                 <h2 data-key="activities-title">Hoạt Động Nổi Bật</h2>
-                <p class="text-center mb-5" data-key="activities-subtitle">Tham gia các hoạt động độc đáo như chèo
+                <p class="text-center mb-5" data-key="activities-subtitle" style="text-align: center;">Tham gia các hoạt
+                    động độc đáo như chèo
                     thuyền thúng, thưởng thức ẩm thực địa phương và chụp ảnh giữa thiên nhiên xanh mát.</p>
                 <div class="activities-container">
                     <div class="activity-card">
@@ -853,13 +881,13 @@
                     </div>
                     <div class="food-card">
                         <div class="food-img">
-                            <img src="https://cdn.tgdd.vn/Files/2022/06/22/1441757/cach-lam-banh-bao-banh-vac-hoi-an-don-gian-tai-nha-202206221135418058.jpg"
-                                alt="Bánh Bao - Bánh Vạc" data-key="food3-img-alt">
+                            <img src="/image/tomnuong.png" alt="Hải Sản" data-key="food3-img-alt">
                         </div>
                         <div class="food-info">
-                            <h4 data-key="food3-title">Bánh Bao - Bánh Vạc</h4>
-                            <p data-key="food3-desc">Bánh nhân tôm thịt, được hấp mềm mịn, chấm với nước mắm cay ngọt,
-                                là món ăn tinh tế của Hội An.</p>
+                            <h4 data-key="food3-title">Hải Sản</h4>
+                            <p data-key="food3-desc">Tôm và cua tươi, được nướng thơm lừng hoặc hấp chín tới để giữ trọn
+                                vị ngọt tự nhiên, ăn kèm với muối tiêu chanh hay nước mắm ớt, là những món hải sản dân
+                                dã mà tinh tế, gắn liền với ẩm thực ven biển Việt Nam.</p>
                         </div>
                     </div>
                 </div>
@@ -943,7 +971,7 @@
                 "intro-title": "Giới Thiệu Qua Rừng Dừa",
                 "intro-p1": "Qua Rừng Dừa, điểm du lịch sinh thái nổi bật tại Hội An, chỉ cách phố cổ 3km và Đà Nẵng 31km, mang vẻ đẹp sông nước thơ mộng, đậm chất miền Tây giữa lòng miền Trung.",
                 "intro-p2": "Với diện tích hơn 100 ha, khu sinh thái này tọa lạc ven ba con sông nổi tiếng – sông Hoài, sông Thu Bồn và sông Đế Võng – hòa mình vào hệ sinh thái nước mặn, được bao quanh bởi những rặng dừa xanh mát và hệ động thực vật phong phú.",
-                "intro-p3": "Du khách sẽ trải nghiệm chèo thuyền thúng qua rừng dừa xanh mát, thưởng thức múa thúng điêu luyện, dân ca xứ Quảng và ẩm thực truyền thống, hòa mình vào không gian văn hóa miền Tây Nam Bộ độc đáo.",
+                "intro-p3": "Du khách sẽ trải nghiệm chèo thuyền thúng qua rừng dừa xanh mát, thưởng thức múa thúng điêu luyện và ẩm thực truyền thống, hòa mình vào không gian văn hóa miền Tây Nam Bộ độc đáo.",
                 "intro-button": "Xem Thêm",
                 "intro-img-alt": "Qua Rừng Dừa",
                 "pricing-title": "Bảng Giá Vé",
@@ -952,9 +980,8 @@
                 "pricing-boat-adult": "Người lớn: 100.000 VNĐ/người/chuyến",
                 "pricing-boat-child": "Trẻ em (5-9 tuổi): 50.000 VNĐ",
                 "pricing-boat-infant": "Trẻ em dưới 5 tuổi: Miễn phí",
-                "pricing-international-title": "Giá Vé Cho Du Khách Quốc Tế",
-                "pricing-international-vietnamese": "Khách Việt Nam: 200.000 VNĐ/2 khách/thúng",
-                "pricing-international-foreigner": "Khách Quốc Tế: 250.000 VNĐ/2 khách/thúng",
+                "pricing-international-title": "Giá Vé Cho Du Khách",
+                "pricing-international-vietnamese": "Du Khách: <span>260.000 VNĐ/2 khách/thúng</span>",
                 "pricing-international-note": "(khách trên 100kg: 1 khách/thúng)",
                 "pricing-international-time": "Thời gian trải nghiệm: 70-90 phút",
                 "footer-tour-button": "Đặt Ngay",
@@ -980,9 +1007,9 @@
                 "food2-title": "Bánh Xèo",
                 "food2-desc": "Bánh xèo vàng giòn, nhân đầy đặn với tôm, thịt, giá và hành, ăn kèm rau sống tươi mát và nước mắm chua ngọt đậm đà.",
                 "food2-img-alt": "Bánh Xèo",
-                "food3-title": "Bánh Bao - Bánh Vạc",
-                "food3-desc": "Bánh nhân tôm thịt, được hấp mềm mịn, chấm với nước mắm cay ngọt, là món ăn tinh tế của Hội An.",
-                "food3-img-alt": "Bánh Bao - Bánh Vạc",
+                "food3-title": "Hải Sản",
+                "food3-desc": "Tôm cua tươi, nướng hoặc hấp giữ vị ngọt tự nhiên, chấm muối tiêu chanh – món hải sản dân dã mà đậm đà hương vị biển.",
+                "food3-img-alt": "Seafood",
                 "map-title": "Bản Đồ Khu Du Lịch",
                 // Thêm các key cho header
                 "logo-text": "Qua Rừng Dừa",
@@ -1002,6 +1029,7 @@
                 "footer-link-contact": "Liên Hệ",
                 "footer-contact-hours": "Mở cửa: 7:00 - 17:00 hàng ngày",
                 "footer-tour-title": "Đặt Tour",
+                "footer-contact-address": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
                 "footer-tour-text": "Đặt tour trước để có trải nghiệm tốt nhất tại Qua Rừng Dừa",
                 "footer-tour-button": "Đặt Ngay",
                 "footer-bottom-text": "© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu."
@@ -1014,7 +1042,7 @@
                 "hero-button": "Contact Now",
                 "intro-title": "About Qua Coconut Forest",
                 "intro-p1": "Qua Coconut Forest, a standout eco-tourism destination in Hoi An, is just 3km from the ancient town and 31km from Da Nang, offering poetic riverine beauty reminiscent of the Mekong Delta in Central Vietnam.",
-                "intro-p3": "Visitors can enjoy basket boat rides through lush coconut groves, skillful basket boat dances, Quang folk songs, and traditional cuisine, immersing in the unique Mekong Delta-like cultural vibe.",
+                "intro-p3": "Visitors can enjoy basket boat rides through lush coconut groves, skillful basket boat dances, and traditional cuisine, immersing in the unique Mekong Delta-like cultural vibe.",
                 "intro-p2": "Spanning over 100 hectares, this eco-tourism area is situated along three famous rivers – the Hoai River, Thu Bon River, and De Vong River – blending into a brackish water ecosystem, surrounded by lush coconut groves and a rich biodiversity",
                 "intro-button": "Learn More",
                 "intro-img-alt": "Qua Coconut Forest",
@@ -1028,12 +1056,10 @@
                 "contact": "Contact",
                 "pricing-subtitle": "The eco-tourism area operates from 7:30 AM to 6:30 PM. Ticket prices may vary depending on events. Please contact directly for the latest updates.",
                 "pricing-boat-title": "Basket Boat Ticket",
-                "pricing-boat-adult": "Adult: 100,000 VND/person/trip",
-                "pricing-boat-child": "Children (5-9 years): 50,000 VND",
-                "pricing-boat-infant": "Children under 5 years: Free",
-                "pricing-international-title": "Ticket Prices for International Visitors",
-                "pricing-international-vietnamese": "Vietnamese Guests: 200,000 VND/2 guests/boat",
-                "pricing-international-foreigner": "International Guests: 250,000 VND/2 guests/boat",
+                "pricing-boat-adult": "Adult: 13030,000 VND/person/trip",
+                "pricing-boat-infant": "Children under 66 years: Free",
+                "pricing-international-title": "Ticket Prices for Visitors",
+                "pricing-international-vietnamese": "Guests: <span>260,000 VND/2 guests/boat</span>",
                 "pricing-international-note": "(Guests over 100kg: 1 guest/boat)",
                 "pricing-international-time": "Experience duration: 70-90 minutes",
                 "pricing-contact": "Contact: <a href='tel:Lead-in:0934098169' class='text-warning'>0934.098.169</a> (Zalo)",
@@ -1061,9 +1087,9 @@
                 "food2-title": "Bánh Xèo",
                 "food2-desc": "Crispy golden bánh xèo filled with shrimp, pork, bean sprouts, and scallions, served with fresh herbs and a tangy-sweet fish sauce.",
                 "food2-img-alt": "Bánh Xèo",
-                "food3-title": "Bánh Bao - Bánh Vạc",
-                "food3-desc": "Steamed dumplings with shrimp and pork filling, served with sweet-spicy fish sauce, a refined Hoi An delicacy.",
-                "food3-img-alt": "Bánh Bao - Bánh Vạc",
+                "food3-title": "Seafood",
+                "food3-desc": "Fresh shrimp and crab, grilled or steamed to retain their natural sweetness, served with salt, pepper, and lime — a rustic yet flavorful taste of the sea.",
+                "food3-img-alt": "Seafood",
                 "map-title": "Eco-Tourism Area Map",
                 "footer-contact-hours": "Open: 7:00 AM - 5:00 PM daily",
                 "map-subtitle": "Located in Cam Thanh, Hoi An, Qua Coconut Forest is an ideal destination to explore nature and local culture.",

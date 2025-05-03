@@ -42,11 +42,11 @@
 
         html {
             font-size: 16px;
-            /* Font-size gốc */
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text-color);
             background-color: #f5f5f5;
             line-height: 1.6;
@@ -56,10 +56,8 @@
         /* Container */
         .container {
             max-width: 75rem;
-            /* 1200px / 16 */
             margin: 0 auto;
             padding: 0 1.25rem;
-            /* 20px / 16 */
         }
 
         /* Banner Section */
@@ -69,33 +67,46 @@
             height: 43.75rem;
             width: 100%;
             padding: 7.5rem 0 5rem;
-            /* 120px, 80px */
             text-align: center;
             position: relative;
             background-size: cover;
             background-position: center;
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        .header-title-1 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1.25rem;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 50rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
         h1 {
             font-size: 3.5rem;
-            width: 700;
-            margin-bottom: 1.25rem;
-            /* 20px / 16 */
-            text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+            font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 1.25rem;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            /* 2px, 4px */
         }
 
         section.banner p {
             font-size: 1.2rem;
             margin-bottom: 1.875rem;
-            /* 30px / 16 */
+        }
+
+        p {
+            text-align: justify;
         }
 
         .cta-button {
@@ -103,9 +114,7 @@
             background-color: var(--accent-color);
             color: var(--dark-bg);
             padding: 0.75rem 1.875rem;
-            /* 12px, 30px */
             border-radius: 3.125rem;
-            /* 50px / 16 */
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
@@ -115,16 +124,13 @@
         .cta-button:hover {
             background-color: white;
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
             box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
-            /* 10px, 20px */
             color: #333;
         }
 
         /* Featured Services Section */
         section {
             padding: 5rem 0;
-            /* 80px / 16 */
         }
 
         section:nth-child(even) {
@@ -134,53 +140,42 @@
         .section-title {
             text-align: center;
             margin-bottom: 3.125rem;
-            /* 50px / 16 */
             padding-top: 1.875rem;
-            /* 30px / 16 */
             color: var(--primary-color);
             position: relative;
+            font-weight: 700;
         }
 
         .section-title::after {
             content: "";
             display: block;
             width: 6.25rem;
-            /* 100px / 16 */
             height: 0.1875rem;
-            /* 3px / 16 */
             background-color: var(--accent-color);
             margin: 0.9375rem auto;
-            /* 15px / 16 */
         }
 
         .activities {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-            /* 300px / 16 */
             gap: 1.25rem;
-            /* 20px / 16 */
             margin-top: 2.5rem;
-            /* 40px / 16 */
         }
 
         .activity-card {
             background-color: white;
             border-radius: 0.625rem;
-            /* 10px / 16 */
             overflow: hidden;
             box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
-            /* 5px, 15px */
             transition: transform 0.3s ease;
         }
 
         .activity-card:hover {
             transform: translateY(-0.625rem);
-            /* 10px / 16 */
         }
 
         .activity-img {
             height: 12.5rem;
-            /* 200px / 16 */
             width: 100%;
             overflow: hidden;
         }
@@ -198,54 +193,44 @@
 
         .activity-info {
             padding: 1.25rem;
-            /* 20px / 16 */
         }
 
         .activity-info h3 {
             color: var(--primary-color);
             margin-bottom: 0.625rem;
-            /* 10px / 16 */
+            text-align: center;
         }
 
         /* Booking Form Styles */
         .booking-section {
             background-color: var(--light-bg);
             padding: 5rem 0;
-            /* 80px / 16 */
         }
 
         .booking-form {
             background-color: white;
             border-radius: 0.625rem;
-            /* 10px / 16 */
             box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
-            /* 5px, 15px */
             padding: 2.5rem;
-            /* 40px / 16 */
             max-width: 50rem;
-            /* 800px / 16 */
             margin: 0 auto;
         }
 
         .form-group {
             margin-bottom: 1.25rem;
-            /* 20px / 16 */
         }
 
         .form-label {
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
-            /* 8px / 16 */
             display: block;
         }
 
         .form-control {
             border: 2px solid #eee;
             border-radius: 0.375rem;
-            /* 6px / 16 */
             padding: 0.75rem 0.9375rem;
-            /* 12px, 15px */
             width: 100%;
             transition: all 0.3s ease;
         }
@@ -258,18 +243,14 @@
         .form-select {
             border: 2px solid #eee;
             border-radius: 0.375rem;
-            /* 6px / 16 */
             padding: 0.75rem 0.9375rem;
-            /* 12px, 15px */
             width: 100%;
             transition: all 0.3s ease;
             appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232e7d32' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 0.9375rem center;
-            /* 15px / 16 */
             background-size: 1rem 0.75rem;
-            /* 16px, 12px */
         }
 
         .form-select:focus {
@@ -282,9 +263,7 @@
             color: white;
             border: none;
             border-radius: 3.125rem;
-            /* 50px / 16 */
             padding: 0.75rem 1.875rem;
-            /* 12px, 30px */
             font-weight: bold;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -296,14 +275,12 @@
         .submit-btn:hover {
             background-color: #1b5e20;
             transform: translateY(-0.1875rem);
-            /* 3px / 16 */
         }
 
         .error-feedback {
             color: #dc3545;
             font-size: 0.875rem;
             margin-top: 0.3125rem;
-            /* 5px / 16 */
             display: none;
         }
 
@@ -319,11 +296,8 @@
             background-color: #d4edda;
             color: #155724;
             padding: 0.9375rem;
-            /* 15px / 16 */
             border-radius: 0.3125rem;
-            /* 5px / 16 */
             margin-bottom: 1.25rem;
-            /* 20px / 16 */
             display: none;
         }
 
@@ -336,13 +310,10 @@
 
         .footer-container {
             max-width: 81.25rem;
-            /* 1300px / 16 */
             margin: 0 auto;
             padding: 0 1.25rem;
-            /* 20px / 16 */
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-            /* 250px / 16 */
             gap: 3rem;
         }
 
@@ -351,7 +322,6 @@
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.625rem;
-            /* 10px / 16 */
             color: #ffffff;
         }
 
@@ -361,7 +331,6 @@
             bottom: 0;
             left: 0;
             width: 3.125rem;
-            /* 50px / 16 */
             height: 2px;
             background-color: var(--footer-link);
         }
@@ -382,7 +351,6 @@
 
         .footer-links li {
             margin-bottom: 0.9375rem;
-            /* 15px / 16 */
         }
 
         .footer-links a {
@@ -395,7 +363,6 @@
         .footer-links a:hover {
             color: var(--footer-link-hover);
             transform: translateX(0.3125rem);
-            /* 5px / 16 */
         }
 
         .social-links {
@@ -405,16 +372,13 @@
 
         .social-links a {
             width: 2.5rem;
-            /* 40px / 16 */
             height: 2.5rem;
-            /* 40px / 16 */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
             margin-right: 0.9375rem;
-            /* 15px / 16 */
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -424,7 +388,6 @@
             background: var(--accent-color);
             color: var(--dark-bg);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
         }
 
         .copyright {
@@ -440,13 +403,9 @@
         .back-to-top {
             position: fixed;
             bottom: 1.875rem;
-            /* 30px / 16 */
             right: 1.875rem;
-            /* 30px / 16 */
             width: 3.125rem;
-            /* 50px / 16 */
             height: 3.125rem;
-            /* 50px / 16 */
             border-radius: 50%;
             background-color: var(--primary-color);
             color: white;
@@ -457,7 +416,6 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
-            /* 5px, 15px */
             z-index: 99;
             opacity: 0;
             visibility: hidden;
@@ -471,43 +429,56 @@
         .back-to-top:hover {
             background-color: var(--accent-color);
             transform: translateY(-0.3125rem);
-            /* 5px / 16 */
         }
 
         /* Responsive Styles */
+        @media (max-width: 992px) {
+            html {
+                font-size: 15px;
+            }
+
+            .header-title-1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+
         @media (max-width: 768px) {
             html {
                 font-size: 14px;
-                /* Giảm font-size gốc */
             }
 
-            h1 {
+            .header-title-1 {
                 font-size: 2.2rem;
             }
 
             .booking-form {
                 padding: 1.875rem 1.25rem;
-                /* 30px, 20px */
             }
 
             .footer-container {
                 grid-template-columns: 1fr;
+            }
+
+            p {
+                text-align: justify;
             }
         }
 
         @media (max-width: 576px) {
             html {
                 font-size: 12px;
-                /* Giảm thêm */
             }
 
-            h1 {
+            .header-title-1 {
                 font-size: 1.8rem;
             }
 
             section.banner {
                 padding: 5rem 0 3.75rem;
-                /* 80px, 60px */
             }
 
             .section-title {
@@ -516,6 +487,10 @@
 
             .activities {
                 grid-template-columns: 1fr;
+            }
+
+            p {
+                text-align: justify;
             }
         }
     </style>
@@ -526,13 +501,13 @@
     <div class="header-container">
         <header>
             <div class="navbar">
-                <a href="/html/home.html" class="logo">
-                    <img src="/image/logo.png" alt="Rừng Dừa Bảy Mẫu Logo" class="logo-img">
+                <a href="#" class="logo">
+                    <img src="../image/logo.png" alt="Qua Rừng Dừa Logo" class="logo-icon">
                 </a>
                 <div class="navbar-right">
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="/html/home.html" class="nav-link active" data-key="home">Trang chủ</a></li>
+                            <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
                             <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
                             <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
                             <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
@@ -553,6 +528,7 @@
                 </button>
             </div>
         </header>
+        <!-- Overlay for mobile menu -->
         <div class="overlay"></div>
     </div>
 
@@ -847,18 +823,18 @@
                 "footer-bottom-text": "© 2025 Qua Rừng Dừa | Khu du lịch sinh thái. Tất cả quyền được bảo lưu."
             },
             en: {
-                title: "Services - Qua Rung Dua Eco-Tourism Area",
-                "logo-text": "Qua Rừng Dừa Eco-Tourism Area",
+                title: "Services - Qua Coconut ForestForest Eco-Tourism Area",
+                "logo-text": "Qua Coconut ForestForest Eco-Tourism Area",
                 "home": "Home",
                 "about": "About",
                 "map": "Map",
                 "services": "Services",
                 "contact": "Contact",
                 "header-title-1": "Tourism Services",
-                "header-description": "Book unique and exciting experiences at Qua Rung Dua Eco-Tourism Area",
+                "header-description": "Book unique and exciting experiences at Qua Coconut Forest Eco-Tourism Area",
                 "header-cta": "Book Now",
                 "featured-services-title": "FEATURED SERVICES",
-                "featured-services-p": "Upon arriving at Qua Rung Dua Eco-Tourism Area, visitors will be amazed by the vast coconut groves interspersed with simple thatched-roof houses, exuding a peaceful rural charm. Beyond the unique natural scenery, this place offers a range of exciting and engaging activities suitable for all ages – from basket boat experiences and folk basket boat dancing to savoring authentic Quang Nam cuisine.",
+                "featured-services-p": "Upon arriving at Qua Coconut Forest Eco-Tourism Area, visitors will be amazed by the vast coconut groves interspersed with simple thatched-roof houses, exuding a peaceful rural charm. Beyond the unique natural scenery, this place offers a range of exciting and engaging activities suitable for all ages – from basket boat experiences and folk basket boat dancing to savoring authentic Quang Nam cuisine.",
                 "activity-1-title": "Explore the Coconut Forest by Basket Boat",
                 "activity-1-p": "Experience a basket boat ride weaving through the lush coconut forest, where visitors can feel the tranquility and simplicity of the rural riverside and the unique culture of the Quang Nam people.",
                 "activity-2-title": "Savor Local Cuisine",

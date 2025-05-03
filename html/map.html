@@ -89,7 +89,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             color: white;
             margin-bottom: 2rem;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
@@ -489,6 +489,10 @@
             visibility: hidden;
         }
 
+        .feature-item p {
+            text-align: justify;
+        }
+
         .back-to-top.active {
             opacity: 1;
             visibility: visible;
@@ -518,6 +522,10 @@
             .section-title {
                 font-size: 2.5rem;
             }
+
+            p.feature-item p {
+                text-align: justify;
+            }
         }
 
         @media (max-width: 768px) {
@@ -542,9 +550,14 @@
             .info-card {
                 padding: 2rem;
             }
+
+            .feature-item p {
+                text-align: justify;
+            }
         }
 
         @media (max-width: 576px) {
+
             html {
                 font-size: 12px;
                 /* Giảm font-size gốc */
@@ -555,7 +568,7 @@
             }
 
             .hero-subtitle {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             .hero-btn {
@@ -586,6 +599,10 @@
                 padding: 0.1875rem 0.375rem;
                 /* 3px, 6px */
             }
+
+            .feature-item p {
+                text-align: justify;
+            }
         }
     </style>
 </head>
@@ -595,13 +612,13 @@
     <div class="header-container">
         <header>
             <div class="navbar">
-                <a href="/html/home.html" class="logo">
-                    <img src="/image/logo.png" alt="Rừng Dừa Bảy Mẫu Logo" class="logo-img">
+                <a href="#" class="logo">
+                    <img src="../image/logo.png" alt="Qua Rừng Dừa Logo" class="logo-icon">
                 </a>
                 <div class="navbar-right">
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="/html/home.html" class="nav-link active" data-key="home">Trang chủ</a></li>
+                            <li><a href="/html/home.html" class="nav-link" data-key="home">Trang chủ</a></li>
                             <li><a href="/html/Introduction.html" class="nav-link" data-key="about">Giới thiệu</a></li>
                             <li><a href="/html/service.html" class="nav-link" data-key="services">Dịch vụ</a></li>
                             <li><a href="/html/contact.html" class="nav-link" data-key="contact">Liên hệ</a></li>
@@ -622,6 +639,7 @@
                 </button>
             </div>
         </header>
+        <!-- Overlay for mobile menu -->
         <div class="overlay"></div>
     </div>
 
@@ -675,8 +693,8 @@
                         <i class="fas fa-ticket-alt"></i>
                     </div>
                     <h3 class="info-title" data-key="info-ticket-title">Giá Vé</h3>
-                    <p class="info-text" data-key="info-ticket-text">Người lớn: 150.000 VNĐ<br>Trẻ em: 75.000 VNĐ<br>Trẻ
-                        dưới 5 tuổi: Miễn phí</p>
+                    <p class="info-text" data-key="info-ticket-text">Người lớn: 130.000 VNĐ<br>Trẻ
+                        dưới 6 tuổi: Miễn phí</p>
                 </div>
             </div>
         </div>
@@ -803,7 +821,7 @@
                 "info-hours-title": "Giờ Mở Cửa",
                 "info-hours-text": "7:00 - 17:00 hàng ngày<br>Mở cửa tất cả các ngày trong tuần",
                 "info-ticket-title": "Giá Vé",
-                "info-ticket-text": "Người lớn: 150.000 VNĐ<br>Trẻ em: 75.000 VNĐ<br>Trẻ dưới 5 tuổi: Miễn phí",
+                "info-ticket-text": "Người lớn: 150.000 VNĐ<br>Trẻ dưới 66 tuổi: Miễn phí",
                 "highlights-title": "Điểm Nổi Bật",
                 "highlights-subtitle": "Trải nghiệm độc đáo tại Qua Rừng Dừa",
                 "feature-boat-title": "Thuyền Thúng",
@@ -842,7 +860,7 @@
                 "info-hours-title": "Opening Hours",
                 "info-hours-text": "7:00 AM - 5:00 PM daily<br>Open all days of the week",
                 "info-ticket-title": "Ticket Prices",
-                "info-ticket-text": "Adults: 150,000 VND<br>Children: 75,000 VND<br>Children under 5: Free",
+                "info-ticket-text": "Adults: 150,000 VND<br>Children under 6: Free",
                 "highlights-title": "Highlights",
                 "highlights-subtitle": "Unique experiences at Qua Coconut Forest",
                 "feature-boat-title": "Basket Boat",
