@@ -320,10 +320,12 @@
             font-size: 1.2rem;
         }
 
-        .price-info {
+        price-list li .price-info {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
         }
+        
 
         .price-label {
             font-weight: 500;
@@ -333,21 +335,26 @@
         .price-value {
             font-weight: 600;
             color: var(--primary-color);
+            margin-left: auto; /* Pushes the price value to the right */
         }
 
         .price-note {
-            font-size: 0.9rem;
-            color: #666;
+            text-align: center !important;
+            justify-content: center !important;
             font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
         }
 
         .time-info {
-            font-size: 1rem;
-            color: var(--text-color);
-            margin-top: 1rem;
+            text-align: center !important;
+            justify-content: center !important;
+            margin-top: 0.5rem;
+            padding: 0.75rem;
+            background: rgba(129, 199, 132, 0.15);
+            border-radius: 0.5rem;
+            color: var(--primary-color);
             font-weight: 500;
-            display: flex;
-            align-items: center;
         }
 
         .time-info i {
@@ -854,7 +861,7 @@
                                 <i class="fas fa-child"></i>
                                 <div class="price-info">
                                     <span class="price-label">Trẻ em dưới 6 tuổi</span>
-                                    <span class="price-value"> Miễn phí</span>
+                                    <span class="price-value">Miễn phí</span>
                                 </div>
                             </li>
                             <li data-key="pricing-international-note" class="price-note">
@@ -1019,7 +1026,8 @@
                 <p><i class="fas fa-map-marker-alt"></i> <span data-key="contact-address">Tổ 7, Thôn Vạn Lăng, Xã Cẩm
                         Thanh, Thành phố Hội An, Tỉnh Quảng Nam</span></p>
                 <p><i class="fas fa-phone"></i> <span data-key="contact-phone">0934.098.169</span></p>
-                <p><i class="fas fa-envelope"></i> <span data-key="contact-email">camtran.170580@gmail.com</span></p>
+                <p><i class="fas fa-envelope"></i> <span data-key="contact-email">trancam17051980@gmail.com
+                </span></p>
                 <p><i class="fas fa-clock"></i> <span data-key="footer-contact-hours">Mở cửa: 7:00 - 17:00 hàng
                         ngày</span></p>
             </div>
@@ -1098,7 +1106,7 @@
                 "contact-title": "Liên Hệ",
                 "contact-address": "Tổ 7, Thôn Vạn Lăng, Xã Cẩm Thanh, Thành phố Hội An, Tỉnh Quảng Nam",
                 "contact-phone": "0934.098.169",
-                "contact-email": "camtran.170580@gmail.com",
+                "contact-email": "trancam17051980@gmail.com",
                 "footer-about-title": "Qua Rừng Dừa",
                 "footer-about-text": "Khu du lịch sinh thái độc đáo tại Hội An, mang đến trải nghiệm thiên nhiên tuyệt vời cho du khách trong và ngoài nước.",
                 "footer-links-quick-title": "Liên Kết Nhanh",
@@ -1165,7 +1173,7 @@
                 "contact-title": "Contact",
                 "contact-address": "Group 7, Vạn Lăng Village, Cẩm Thanh Commune, Hội An City, Quảng Nam Province",
                 "contact-phone": "0934.098.169",
-                "contact-email": "camtran.170580@gmail.com",
+                "contact-email": "trancam17051980@gmail.com",
                 "footer-about-title": "About us",
                 "footer-about-text": "A unique eco-tourism area in Hoi An, offering an exceptional natural experience for both domestic and international visitors.",
                 "footer-links-quick-title": "Quick Links",
